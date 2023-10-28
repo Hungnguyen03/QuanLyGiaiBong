@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,9 +47,39 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>C:\Users\Admin\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>C:\Users\Admin\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>C:\Users\Admin\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>C:\Users\Admin\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Admin\Documents\Zalo Received Files\Bunifu\BunifuCrack\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>C:\Users\Admin\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>C:\Users\Admin\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>C:\Users\Admin\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +91,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DSCauThuThiDauForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSCauThuThiDauForm.Designer.cs">
+      <DependentUpon>DSCauThuThiDauForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProcessDataBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLGiaiBongDaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLGiaiBongDaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ThemCTTDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemCTTDForm.Designer.cs">
+      <DependentUpon>ThemCTTDForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DSCauThuThiDauForm.resx">
+      <DependentUpon>DSCauThuThiDauForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +130,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ThemCTTDForm.resx">
+      <DependentUpon>ThemCTTDForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -72,9 +142,131 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLGiaiBongDaDataSet.xsc">
+      <DependentUpon>QLGiaiBongDaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLGiaiBongDaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLGiaiBongDaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLGiaiBongDaDataSet.xss">
+      <DependentUpon>QLGiaiBongDaDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\CauThu\AbdumuminovJakhongir.jpg" />
+    <Content Include="Images\CauThu\AlmeidaSantosJanclesio.jpg" />
+    <Content Include="Images\CauThu\BuiTanTruong.jpg" />
+    <Content Include="Images\CauThu\BuiTienDung.jpg" />
+    <Content Include="Images\CauThu\BuiTienDungVT.jpg" />
+    <Content Include="Images\CauThu\BuiViHao.jpg" />
+    <Content Include="Images\CauThu\dang.png" />
+    <Content Include="Images\CauThu\DangNgocTuan.jpg" />
+    <Content Include="Images\CauThu\DangVanToi.png" />
+    <Content Include="Images\CauThu\DaoVanNam.jpg" />
+    <Content Include="Images\CauThu\DauVanToan.jpg" />
+    <Content Include="Images\CauThu\DinhTienThanh.jpg" />
+    <Content Include="Images\CauThu\DinhXuanTien.jpg" />
+    <Content Include="Images\CauThu\DoanVanHau.jpg" />
+    <Content Include="Images\CauThu\DODUYMANH.jpg" />
+    <Content Include="Images\CauThu\FilipNguyen.jpg" />
+    <Content Include="Images\CauThu\GoncalvesSilvaLucasVinicius.png" />
+    <Content Include="Images\CauThu\HaTrungHau.jpg" />
+    <Content Include="Images\CauThu\HaVanPhuong.jpg" />
+    <Content Include="Images\CauThu\HoangDinhTung.jpg" />
+    <Content Include="Images\CauThu\HoangVanToan.jpg" />
+    <Content Include="Images\CauThu\HoKhacLuong.jpg" />
+    <Content Include="Images\CauThu\HoMinhdi.jpg" />
+    <Content Include="Images\CauThu\HoNgocThang.jpg" />
+    <Content Include="Images\CauThu\HoSyGiap.jpg" />
+    <Content Include="Images\CauThu\HoTanTai.jpg" />
+    <Content Include="Images\CauThu\HoTuanTai.jpg" />
+    <Content Include="Images\CauThu\HuynhTanSinh.jpg" />
+    <Content Include="Images\CauThu\KhuatVanKhang.jpg" />
+    <Content Include="Images\CauThu\LamThuan.jpg" />
+    <Content Include="Images\CauThu\LeCaoHoaiAn.jpg" />
+    <Content Include="Images\CauThu\LeNguyenHoang.jpg" />
+    <Content Include="Images\CauThu\LeTallecDamienVincentDenis.jpg" />
+    <Content Include="Images\CauThu\LeVanThanh.jpg" />
+    <Content Include="Images\CauThu\LuongXuanTruong.jpg" />
+    <Content Include="Images\CauThu\Martinlo.png" />
+    <Content Include="Images\CauThu\MpandeJosephMbolimbo.jpg" />
+    <Content Include="Images\CauThu\NgoTungQuoc.jpg" />
+    <Content Include="Images\CauThu\NgoXuanSon.jpg" />
+    <Content Include="Images\CauThu\NguyenAnhHung.jpg" />
+    <Content Include="Images\CauThu\NguyenCongPhuong.jpg" />
+    <Content Include="Images\CauThu\NguyenDinhTrieu.jpg" />
+    <Content Include="Images\CauThu\NguyenHuuThang.jpg" />
+    <Content Include="Images\CauThu\NguyenMinhTung.jpg" />
+    <Content Include="Images\CauThu\NguyenQuangHai.jpg" />
+    <Content Include="Images\CauThu\NguyenSyNam.jpg" />
+    <Content Include="Images\CauThu\NguyenThaiSon.jpg" />
+    <Content Include="Images\CauThu\NguyenThanhBinh.jpg" />
+    <Content Include="Images\CauThu\NguyenThanhChung.jpg" />
+    <Content Include="Images\CauThu\NguyenThanhDiep.jpg" />
+    <Content Include="Images\CauThu\NguyenThanhLong.jpg" />
+    <Content Include="Images\CauThu\NguyenThanhThao.jpg" />
+    <Content Include="Images\CauThu\NguyenTienLinh.jpg" />
+    <Content Include="Images\CauThu\NguyenTranVietCuong.jpg" />
+    <Content Include="Images\CauThu\NguyenTrongHoang.jpg" />
+    <Content Include="Images\CauThu\NguyenVanDat.jpg" />
+    <Content Include="Images\CauThu\NguyenVanQuyet.jpg" />
+    <Content Include="Images\CauThu\NguyenVanTruong.jpg" />
+    <Content Include="Images\CauThu\NguyenVanTung.jpg" />
+    <Content Include="Images\CauThu\NguyenVanViet.jpg" />
+    <Content Include="Images\CauThu\NguyenVuTin.jpg" />
+    <Content Include="Images\CauThu\NguyenXuanKien.jpg" />
+    <Content Include="Images\CauThu\NguyenXuanNam.jpg" />
+    <Content Include="Images\CauThu\NtepDeMadibaPaulGeorges.jpg" />
+    <Content Include="Images\CauThu\OLAHAMICHAELONYEDIKACH.jpg" />
+    <Content Include="Images\CauThu\PhamManhHung.jpg" />
+    <Content Include="Images\CauThu\PhamTuanHai.jpg" />
+    <Content Include="Images\CauThu\PhamXuanManh.jpg" />
+    <Content Include="Images\CauThu\PhanTuanTai.jpg" />
+    <Content Include="Images\CauThu\QueNgocHai.jpg" />
+    <Content Include="Images\CauThu\RimarioAllandoGordon.jpg" />
+    <Content Include="Images\CauThu\RyanHa.jpg" />
+    <Content Include="Images\CauThu\SLNA_14_NguyenVanViet.jpg" />
+    <Content Include="Images\CauThu\TongAnhTy.jpg" />
+    <Content Include="Images\CauThu\TranDinhHoang.jpg" />
+    <Content Include="Images\CauThu\TranDuyKhanh.jpg" />
+    <Content Include="Images\CauThu\TranManhQuynh.jpg" />
+    <Content Include="Images\CauThu\TranMinhToan.jpg" />
+    <Content Include="Images\CauThu\TranNgocSon.jpg" />
+    <Content Include="Images\CauThu\TrinhVanLoi.jpg" />
+    <Content Include="Images\CauThu\TruongThanhNam.jpg" />
+    <Content Include="Images\CauThu\UongNgocTien.jpg" />
+    <Content Include="Images\CauThu\VoHuyToan.jpg" />
+    <Content Include="Images\CauThu\VoNguyenHoang.jpg" />
+    <Content Include="Images\CauThu\VuDinhHai.jpg" />
+    <Content Include="Images\CauThu\VuongVanHuy.jpg" />
+    <Content Include="Images\CauThu\VuVanQuyet.jpg" />
+    <Content Include="Images\CauThu\VuVanThanh.jpg" />
+    <Content Include="Images\DoiBong\binh-duong.png" />
+    <Content Include="Images\DoiBong\CLB-Dong-A-Thanh-Hoa.png" />
+    <Content Include="Images\DoiBong\cong-an-ha-noi-fc.png" />
+    <Content Include="Images\DoiBong\haiphongfc.jpg" />
+    <Content Include="Images\DoiBong\HCM-FC.png" />
+    <Content Include="Images\DoiBong\HNFC.png" />
+    <Content Include="Images\DoiBong\slna.png" />
+    <Content Include="Images\DoiBong\Viettel.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
