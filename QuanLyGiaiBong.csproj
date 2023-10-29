@@ -76,10 +76,44 @@
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
       <HintPath>C:\Users\Admin\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>D:\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -97,11 +131,38 @@
     <Compile Include="DSCauThuThiDauForm.Designer.cs">
       <DependentUpon>DSCauThuThiDauForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddTranDau.cs">
+    <Compile Include="AddClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClub.Designer.cs">
+      <DependentUpon>AddClub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClubDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClubDetail.Designer.cs">
+      <DependentUpon>ClubDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="connectDB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AddTranDau.Designer.cs">
+      <DependentUpon>AddTranDau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietCauThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietCauThu.Designer.cs">
+      <DependentUpon>ChiTietCauThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\ProcessDataBase.cs" />
+    <Compile Include="AddCauThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCauThu.Designer.cs">
+      <DependentUpon>AddCauThu.cs</DependentUpon>
     </Compile>
     <Compile Include="ProcessDataBase.cs" />
     <Compile Include="Program.cs" />
@@ -119,6 +180,19 @@
     </Compile>
     <EmbeddedResource Include="DSCauThuThiDauForm.resx">
       <DependentUpon>DSCauThuThiDauForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddCauThu.resx">
+      <DependentUpon>AddCauThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTranDau.resx">
+      <DependentUpon>AddTranDau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietCauThu.resx">
+      <DependentUpon>ChiTietCauThu.cs</DependentUpon>
+    <EmbeddedResource Include="AddClub.resx">
+      <DependentUpon>AddClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClubDetail.resx">
+      <DependentUpon>ClubDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -267,6 +341,13 @@
     <Content Include="Images\DoiBong\HNFC.png" />
     <Content Include="Images\DoiBong\slna.png" />
     <Content Include="Images\DoiBong\Viettel.jpg" />
+  <ItemGroup>
+    <Content Include="Images\icons\bong.jpg" />
+    <Content Include="Images\icons\do.png" />
+    <Content Include="Images\icons\vang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\CauThu\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
