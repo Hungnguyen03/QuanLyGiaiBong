@@ -64,6 +64,8 @@
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextBox">
       <HintPath>..\..\..\Downloads\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>D:\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -81,6 +83,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddTranDau.cs">
+    <Compile Include="AddClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClub.Designer.cs">
+      <DependentUpon>AddClub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClubDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClubDetail.Designer.cs">
+      <DependentUpon>ClubDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="connectDB.cs" />
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddTranDau.Designer.cs">
@@ -109,6 +125,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChiTietCauThu.resx">
       <DependentUpon>ChiTietCauThu.cs</DependentUpon>
+    <EmbeddedResource Include="AddClub.resx">
+      <DependentUpon>AddClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClubDetail.resx">
+      <DependentUpon>ClubDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
