@@ -96,6 +96,7 @@
             this.dgvVPL.Size = new System.Drawing.Size(1082, 573);
             this.dgvVPL.TabIndex = 1;
             this.dgvVPL.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvVPL.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVPL_CellContentClick);
             // 
             // VPL
             // 

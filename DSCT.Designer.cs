@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DSCT));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -46,7 +45,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation1 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txbSBT = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txbDB = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -56,7 +54,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDSCT = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuTransition1 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSCT)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +67,6 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.bunifuTransition1.SetDecoration(this.panel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -94,7 +90,6 @@
             this.txbSBT.BorderThickness = 1;
             this.txbSBT.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbSBT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTransition1.SetDecoration(this.txbSBT, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.txbSBT.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.txbSBT.DefaultText = "";
             this.txbSBT.FillColor = System.Drawing.Color.White;
@@ -151,6 +146,7 @@
             this.txbSBT.TextPlaceholder = "Enter text";
             this.txbSBT.UseSystemPasswordChar = false;
             this.txbSBT.WordWrap = true;
+            this.txbSBT.TextChanged += new System.EventHandler(this.txbSBT_TextChanged);
             // 
             // txbDB
             // 
@@ -169,7 +165,6 @@
             this.txbDB.BorderThickness = 1;
             this.txbDB.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbDB.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTransition1.SetDecoration(this.txbDB, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.txbDB.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.txbDB.DefaultText = "";
             this.txbDB.FillColor = System.Drawing.Color.White;
@@ -226,6 +221,7 @@
             this.txbDB.TextPlaceholder = "Enter text";
             this.txbDB.UseSystemPasswordChar = false;
             this.txbDB.WordWrap = true;
+            this.txbDB.TextChanged += new System.EventHandler(this.txbDB_TextChanged);
             // 
             // txbTCT
             // 
@@ -244,7 +240,6 @@
             this.txbTCT.BorderThickness = 1;
             this.txbTCT.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbTCT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTransition1.SetDecoration(this.txbTCT, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.txbTCT.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.txbTCT.DefaultText = "";
             this.txbTCT.FillColor = System.Drawing.Color.White;
@@ -301,6 +296,7 @@
             this.txbTCT.TextPlaceholder = "Enter text";
             this.txbTCT.UseSystemPasswordChar = false;
             this.txbTCT.WordWrap = true;
+            this.txbTCT.TextChanged += new System.EventHandler(this.txbTCT_TextChanged);
             // 
             // btnSearch
             // 
@@ -326,7 +322,6 @@
             borderEdges1.TopLeft = true;
             borderEdges1.TopRight = true;
             this.btnSearch.CustomizableEdges = borderEdges1;
-            this.bunifuTransition1.SetDecoration(this.btnSearch, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnSearch.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSearch.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
             this.btnSearch.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
@@ -376,7 +371,7 @@
             this.btnSearch.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnSearch.OnIdleState.IconLeftImage = null;
             this.btnSearch.OnIdleState.IconRightImage = null;
-            this.btnSearch.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnSearch.OnPressedState.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.btnSearch.OnPressedState.BorderRadius = 1;
             this.btnSearch.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnSearch.OnPressedState.BorderThickness = 1;
@@ -384,6 +379,7 @@
             this.btnSearch.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnSearch.OnPressedState.IconLeftImage = null;
             this.btnSearch.OnPressedState.IconRightImage = null;
+            this.btnSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnSearch.Size = new System.Drawing.Size(109, 39);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -391,11 +387,11 @@
             this.btnSearch.TextMarginLeft = 0;
             this.btnSearch.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnSearch.UseDefaultRadiusAndThickness = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(582, 44);
             this.label3.Name = "label3";
@@ -406,7 +402,6 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(346, 44);
             this.label2.Name = "label2";
@@ -417,7 +412,6 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(33, 44);
             this.label1.Name = "label1";
@@ -463,7 +457,6 @@
             this.dgvDSCT.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvDSCT.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgvDSCT.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.bunifuTransition1.SetDecoration(this.dgvDSCT, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -488,27 +481,6 @@
             this.dgvDSCT.TabIndex = 1;
             this.dgvDSCT.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
-            // bunifuTransition1
-            // 
-            this.bunifuTransition1.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.VertSlide;
-            this.bunifuTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation1;
-            // 
             // DSCT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -516,7 +488,6 @@
             this.ClientSize = new System.Drawing.Size(1143, 648);
             this.Controls.Add(this.dgvDSCT);
             this.Controls.Add(this.panel1);
-            this.bunifuTransition1.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.MinimumSize = new System.Drawing.Size(950, 500);
             this.Name = "DSCT";
             this.Text = "Danh sách cầu thủ";
@@ -539,6 +510,5 @@
         private Bunifu.UI.WinForms.BunifuTextBox txbDB;
         private Bunifu.UI.WinForms.BunifuTextBox txbTCT;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvDSCT;
-        private Bunifu.UI.WinForms.BunifuTransition bunifuTransition1;
     }
 }

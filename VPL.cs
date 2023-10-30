@@ -26,5 +26,10 @@ namespace QLGiaiBongDa
             
             dtVua.Dispose();//Giải phóng bộ nhớ cho DataTable
         }
+
+        private void dgvVPL_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

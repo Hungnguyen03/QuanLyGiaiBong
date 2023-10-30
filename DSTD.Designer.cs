@@ -236,6 +236,7 @@
             this.txbSTD.TextPlaceholder = "Enter text";
             this.txbSTD.UseSystemPasswordChar = false;
             this.txbSTD.WordWrap = true;
+            this.txbSTD.TextChanged += new System.EventHandler(this.txbSTD_TextChanged);
             // 
             // txbSBT
             // 
@@ -310,6 +311,7 @@
             this.txbSBT.TextPlaceholder = "Enter text";
             this.txbSBT.UseSystemPasswordChar = false;
             this.txbSBT.WordWrap = true;
+            this.txbSBT.TextChanged += new System.EventHandler(this.txbSBT_TextChanged);
             // 
             // txbDN
             // 
@@ -384,6 +386,7 @@
             this.txbDN.TextPlaceholder = "Enter text";
             this.txbDN.UseSystemPasswordChar = false;
             this.txbDN.WordWrap = true;
+            this.txbDN.TextChanged += new System.EventHandler(this.txbDN_TextChanged);
             // 
             // label3
             // 
@@ -442,10 +445,10 @@
             this.dgvDSTD.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvDSTD.CurrentTheme.BackColor = System.Drawing.Color.White;
             this.dgvDSTD.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvDSTD.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvDSTD.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
             this.dgvDSTD.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             this.dgvDSTD.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvDSTD.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvDSTD.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             this.dgvDSTD.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvDSTD.CurrentTheme.Name = null;
             this.dgvDSTD.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -464,7 +467,7 @@
             this.dgvDSTD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDSTD.EnableHeadersVisualStyles = false;
             this.dgvDSTD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvDSTD.HeaderBackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvDSTD.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvDSTD.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDSTD.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDSTD.Location = new System.Drawing.Point(0, 91);
@@ -477,6 +480,7 @@
             this.dgvDSTD.Size = new System.Drawing.Size(1082, 482);
             this.dgvDSTD.TabIndex = 1;
             this.dgvDSTD.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvDSTD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTD_CellContentClick);
             // 
             // DSTD
             // 

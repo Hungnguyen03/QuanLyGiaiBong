@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -34,7 +35,36 @@ namespace QLGiaiBongDa
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            
+            string sql = "select Luotdau,VongDau,MaDoiNha,MaDoiKhach, SoTheDoDoiNha from TranDau";
+            //Khi chọn tiêu chí nào sẽ ghép với tiêu chí đó bằng từ and
+            //Tìm kiếm gần đúng với từ khóa like
+            if (txbDN.Text != "")
+                sql = sql + " and MaDoiNha like N'%" + txbDN.Text.Trim() + "%'";
+            if (txbSTD.Text != "")
+                sql = sql + " and SoTheDoDoiNha like N'%" + txbSTD.Text.Trim() + "%'";
+            DataTable dtTranDau = dtBase.DocBang(sql);
+            dgvDSTD.DataSource = null;
+            dgvDSTD.DataSource = dtTranDau;
+        }
+
+        private void dgvDSTD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txbDN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbSBT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbSTD_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
