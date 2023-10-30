@@ -26,5 +26,7 @@ namespace QuanLyGiaiBong.Properties
                 return defaultInstance;
             }
         }
+
+        public string QLGiaiBongDaConnectionString { get; internal set; }
     }
 }
