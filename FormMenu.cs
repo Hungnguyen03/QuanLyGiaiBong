@@ -13,11 +13,11 @@ using System.Runtime.InteropServices;
 
 namespace QuanLyGiaiBong
 {
-    public partial class Form1 : Form
+    public partial class FormMenu : Form
     {
         private Button currentButton;
         private Form activeForm;
-        public Form1()
+        public FormMenu()
         {
             InitializeComponent();
             btnCloseChildForm.Visible = false;
@@ -106,6 +106,10 @@ namespace QuanLyGiaiBong
             btnCloseChildForm.Visible = false;
         }
 
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
 
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {

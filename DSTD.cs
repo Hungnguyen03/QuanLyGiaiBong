@@ -44,5 +44,23 @@ namespace QuanLyGiaiBong
                 ctTD.ShowDialog();
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string sql = "select Luotdau,VongDau,MaDoiNha,MaDoiKhach, SoTheDoDoiNha from TranDau";
+            //Khi chọn tiêu chí nào sẽ ghép với tiêu chí đó bằng từ and
+            //Tìm kiếm gần đúng với từ khóa like
+            if (txbDN.Text != "")
+                sql = sql + " and TenCT like N'%" + txbDN.Text.Trim() + "%'";
+            if (txbSBT.Text != "")
+                sql = sql + " and TenDoi like N'%" + txbSBT.Text.Trim() + "%'";
+            //if (txbSBT.Text != "")
+            //sql = sql + " and TenDoi like N'%" + txbDB.Text.Trim() + "%'";
+            //Trình bày gridView
+            DataTable dtCauThu = dtBase.DocBang(sql);
+            dgvDSTD.DataSource = null;
+            dgvDSTD.DataSource = dtCauThu;
+            dtCauThu.Dispose();
+        }
     }
 }
