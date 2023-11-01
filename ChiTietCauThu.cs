@@ -1,5 +1,4 @@
-﻿using QuanLyGiaiBong.Class;
-using System;
+﻿using System;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -13,8 +12,8 @@ namespace QuanLyGiaiBong
         int maCT;
         public ChiTietCauThu(int maCT)
         {
-            InitializeComponent();
             this.maCT = maCT;
+            InitializeComponent();
         }
         private void ChiTietCauThu_Load(object sender, EventArgs e)
         {
@@ -54,6 +53,11 @@ namespace QuanLyGiaiBong
             }
 
             ctCauThu.Dispose();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

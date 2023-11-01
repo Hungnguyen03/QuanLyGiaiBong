@@ -12,25 +12,24 @@ namespace QuanLyGiaiBong
 {
     public partial class UC_DH : UserControl 
     {
-        public UC_DH()
+        ProcessDataBase dtBase = new ProcessDataBase();
+        int maDoiNha, maDoiKhach;
+        public UC_DH(int maTD)
         {
             InitializeComponent();
-        }
-
-        private void DH1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
+            DataTable ctTranDau = dtBase.DocBang("select MaDoiNha, MaDoiKhach from TranDau where MaTranDau = " + maTD);
+            maDoiNha = Convert.ToInt32(ctTranDau.Rows[0]["MaDoiNha"]);
+            maDoiKhach = Convert.ToInt32(ctTranDau.Rows[0]["MaDoiNha"]);
         }
 
         private void UC_DH_Load(object sender, EventArgs e)
         {
-            Database dtBase = new Database();
-            DataTable dtCauThu1 = dtBase.DocBang("select TenCT from CauThu where MaDoi = 1");
+            DataTable dtCauThu1 = dtBase.DocBang("select TenCT from CauThu where MaDoi = " + maDoiNha);
             dgvDH1.DataSource = dtCauThu1;
             dgvDH1.Columns[0].HeaderText = "Cầu Thủ";
             dtCauThu1.Dispose();
 
-            DataTable dtCauThu2 = dtBase.DocBang("select TenCT from CauThu where MaDoi = 2");
+            DataTable dtCauThu2 = dtBase.DocBang("select TenCT from CauThu where MaDoi = " + maDoiKhach);
             dgvDH2.DataSource = dtCauThu2;
             dgvDH2.Columns[0].HeaderText = "Cầu Thủ";
             dtCauThu2.Dispose();

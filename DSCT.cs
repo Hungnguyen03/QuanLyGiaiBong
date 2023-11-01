@@ -21,15 +21,10 @@ namespace QuanLyGiaiBong
 
         private void DSCT_Load(object sender, EventArgs e)
         {
-            DataTable dtCauThu = dtBase.DocBang("select Anh, TenDoi, TenCT, ViTri  from CauThu left join DoiBong on CauThu.MaDoi = DoiBong.MaDoi");
+            DataTable dtCauThu = dtBase.DocBang("select MaCT, Anh, TenDoi, TenCT, ViTri  from CauThu left join DoiBong on CauThu.MaDoi = DoiBong.MaDoi");
             dgvDSCT.DataSource = dtCauThu;
-            //Định dạng dataGrid
-            //dgvDSCT.Columns[0].HeaderText = "Ten Cau Thu";
-            //dgvDSCT.Columns[1].HeaderText = "So Ban Thang";
-            
-            //dgvDSCT.Size= new Size(600 ,600);
-            //dgvDSCT.BackgroundColor = Color.LightBlue;
-            dtCauThu.Dispose();//Giải phóng bộ nhớ cho DataTable
+            dgvDSCT.Columns["MaCT"].Visible = false;
+            dtCauThu.Dispose();
         }
 
         private void SearchData(string searchValue)
@@ -52,5 +47,17 @@ namespace QuanLyGiaiBong
             }
         }
 
+        private void dgvDSCT_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left && e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedCT = dgvDSCT.Rows[e.RowIndex];
+                int maCT = Convert.ToInt32(selectedCT.Cells["MaCT"].Value);
+
+
+                ChiTietCauThu ctCauThu = new ChiTietCauThu(maCT);
+                ctCauThu.ShowDialog();
+            }
+        }
     }
 }
