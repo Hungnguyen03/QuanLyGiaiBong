@@ -21,7 +21,7 @@ namespace QuanLyGiaiBong
 
         private void DSCT_Load(object sender, EventArgs e)
         {
-            DataTable dtCauThu = dtBase.DocBang("select Anh, TenDoi, TenCT, ViTri  from CauThu left join DoiBong on CauThu.MaDoi = DoiBong.MaDoi");
+            DataTable dtCauThu = dtBase.DocBang("select Anh, TenDoi, TenCT, ViTri  from CauThu inner join DoiBong on CauThu.MaDoi = DoiBong.MaDoi");
             dgvDSCT.DataSource = dtCauThu;
             //Định dạng dataGrid
             //dgvDSCT.Columns[0].HeaderText = "Ten Cau Thu";
@@ -32,24 +32,32 @@ namespace QuanLyGiaiBong
             dtCauThu.Dispose();//Giải phóng bộ nhớ cho DataTable
         }
 
-        private void SearchData(string searchValue)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-            dgvDSCT.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            try
-            {
-                foreach (DataGridViewRow row in dgvDSCT.Rows)
-                {
-                    if (row.Cells[1].Value.ToString().Equals(searchValue))
-                    {
-                        row.Selected = true;
-                        break;
-                    }
-                }
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
+            string sql = "select Anh, TenDoi, TenCT, ViTri  from CauThu inner join DoiBong on CauThu.MaDoi = DoiBong.MaDoi";
+            //Khi chọn tiêu chí nào sẽ ghép với tiêu chí đó bằng từ and
+            //Tìm kiếm gần đúng với từ khóa like
+            if (txbTCT.Text != "")
+                sql = sql + " and TenCT like N'%" + txbTCT.Text.Trim() + "%'";
+            if (txbDB.Text != "")
+                sql = sql + " and TenDoi like N'%" + txbDB.Text.Trim() + "%'";
+            //if (txbSBT.Text != "")
+            //sql = sql + " and TenDoi like N'%" + txbDB.Text.Trim() + "%'";
+            //Trình bày gridView
+            DataTable dtCauThu = dtBase.DocBang(sql);
+            dgvDSCT.DataSource = null;
+            dgvDSCT.DataSource = dtCauThu;
+            
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
