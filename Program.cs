@@ -17,7 +17,7 @@ namespace QuanLyGiaiBong
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChiTietTranDau());
+            Application.Run(new Form1());
         }
     }
 }

@@ -54,10 +54,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbDoi = new System.Windows.Forms.Label();
             this.pTitlebar = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbVang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pTitlebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuLabel6
@@ -330,12 +332,29 @@
             this.pTitlebar.BorderColor = System.Drawing.Color.Transparent;
             this.pTitlebar.BorderRadius = 3;
             this.pTitlebar.BorderThickness = 1;
+            this.pTitlebar.Controls.Add(this.btnClose);
             this.pTitlebar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pTitlebar.Location = new System.Drawing.Point(0, 0);
             this.pTitlebar.Name = "pTitlebar";
             this.pTitlebar.ShowBorders = true;
             this.pTitlebar.Size = new System.Drawing.Size(527, 40);
             this.pTitlebar.TabIndex = 34;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnClose.Location = new System.Drawing.Point(492, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(24, 37);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.Text = "O";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ChiTietCauThu
             // 
@@ -374,6 +393,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pTitlebar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,6 +424,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbDoi;
         private Bunifu.UI.WinForms.BunifuPanel pTitlebar;
+        private System.Windows.Forms.Button btnClose;
     }
 }
 

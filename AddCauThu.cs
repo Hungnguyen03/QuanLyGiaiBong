@@ -1,5 +1,4 @@
-﻿using QuanLyGiaiBong.Class;
-using System;
+﻿using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -63,6 +62,11 @@ namespace QuanLyGiaiBong
                     pbAnh.Image = Image.FromFile(imagePath);
                 }
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

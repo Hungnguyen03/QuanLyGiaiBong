@@ -88,22 +88,26 @@
             this.dgvVPL.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvVPL.HeaderForeColor = System.Drawing.Color.White;
             this.dgvVPL.Location = new System.Drawing.Point(0, 0);
+            this.dgvVPL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvVPL.Name = "dgvVPL";
+            this.dgvVPL.ReadOnly = true;
             this.dgvVPL.RowHeadersVisible = false;
             this.dgvVPL.RowHeadersWidth = 51;
             this.dgvVPL.RowTemplate.Height = 40;
             this.dgvVPL.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVPL.Size = new System.Drawing.Size(1082, 573);
+            this.dgvVPL.Size = new System.Drawing.Size(812, 466);
             this.dgvVPL.TabIndex = 1;
             this.dgvVPL.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvVPL.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvVPL_CellMouseDoubleClick);
             // 
             // VPL
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 573);
+            this.ClientSize = new System.Drawing.Size(812, 466);
             this.Controls.Add(this.dgvVPL);
-            this.MinimumSize = new System.Drawing.Size(950, 500);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(716, 414);
             this.Name = "VPL";
             this.Text = "Vua phá lưới";
             this.Load += new System.EventHandler(this.VPL_Load);

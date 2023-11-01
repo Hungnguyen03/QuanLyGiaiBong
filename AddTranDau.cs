@@ -1,5 +1,4 @@
-﻿using QuanLyGiaiBong.Class;
-using System;
+﻿using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;

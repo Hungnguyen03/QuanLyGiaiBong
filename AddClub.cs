@@ -13,7 +13,7 @@ namespace QuanLyGiaiBong
 {
     public partial class AddClub : Form
     {
-        connectDB conn = new connectDB();
+        ProcessDataBase conn = new ProcessDataBase();
         public AddClub()
         {
             InitializeComponent();
