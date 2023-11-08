@@ -69,7 +69,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(812, 74);
             this.panel1.TabIndex = 0;
@@ -122,7 +122,7 @@
             this.btnSearch.IdleIconRightImage = null;
             this.btnSearch.IndicateFocus = false;
             this.btnSearch.Location = new System.Drawing.Point(708, 31);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
             this.btnSearch.OnDisabledState.BorderRadius = 1;
@@ -192,7 +192,7 @@
             this.txbSTD.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txbSTD.Lines = new string[0];
             this.txbSTD.Location = new System.Drawing.Point(572, 31);
-            this.txbSTD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbSTD.Margin = new System.Windows.Forms.Padding(2);
             this.txbSTD.MaxLength = 32767;
             this.txbSTD.MinimumSize = new System.Drawing.Size(1, 1);
             this.txbSTD.Modified = false;
@@ -218,7 +218,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txbSTD.OnIdleState = stateProperties4;
-            this.txbSTD.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbSTD.Padding = new System.Windows.Forms.Padding(2);
             this.txbSTD.PasswordChar = '\0';
             this.txbSTD.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txbSTD.PlaceholderText = "Enter text";
@@ -267,7 +267,7 @@
             this.txbSBT.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txbSBT.Lines = new string[0];
             this.txbSBT.Location = new System.Drawing.Point(350, 31);
-            this.txbSBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbSBT.Margin = new System.Windows.Forms.Padding(2);
             this.txbSBT.MaxLength = 32767;
             this.txbSBT.MinimumSize = new System.Drawing.Size(1, 1);
             this.txbSBT.Modified = false;
@@ -293,7 +293,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txbSBT.OnIdleState = stateProperties8;
-            this.txbSBT.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbSBT.Padding = new System.Windows.Forms.Padding(2);
             this.txbSBT.PasswordChar = '\0';
             this.txbSBT.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txbSBT.PlaceholderText = "Enter text";
@@ -342,7 +342,7 @@
             this.txbDN.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txbDN.Lines = new string[0];
             this.txbDN.Location = new System.Drawing.Point(100, 31);
-            this.txbDN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbDN.Margin = new System.Windows.Forms.Padding(2);
             this.txbDN.MaxLength = 32767;
             this.txbDN.MinimumSize = new System.Drawing.Size(1, 1);
             this.txbDN.Modified = false;
@@ -368,7 +368,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txbDN.OnIdleState = stateProperties12;
-            this.txbDN.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbDN.Padding = new System.Windows.Forms.Padding(2);
             this.txbDN.PasswordChar = '\0';
             this.txbDN.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txbDN.PlaceholderText = "Enter text";
@@ -425,6 +425,7 @@
             // dgvDSTD
             // 
             this.dgvDSTD.AllowCustomTheming = false;
+            this.dgvDSTD.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvDSTD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -475,7 +476,7 @@
             this.dgvDSTD.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDSTD.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDSTD.Location = new System.Drawing.Point(0, 74);
-            this.dgvDSTD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDSTD.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDSTD.Name = "dgvDSTD";
             this.dgvDSTD.ReadOnly = true;
             this.dgvDSTD.RowHeadersVisible = false;
@@ -494,7 +495,7 @@
             this.ClientSize = new System.Drawing.Size(812, 466);
             this.Controls.Add(this.dgvDSTD);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(716, 414);
             this.Name = "DSTD";
             this.Text = "Danh sách trận đấu";

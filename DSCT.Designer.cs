@@ -56,6 +56,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDSCT = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.anhCT = new System.Windows.Forms.DataGridViewImageColumn();
             this.bunifuTransition1 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSCT)).BeginInit();
@@ -73,7 +74,7 @@
             this.bunifuTransition1.SetDecoration(this.panel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(857, 81);
             this.panel1.TabIndex = 0;
@@ -107,7 +108,7 @@
             this.txbSBT.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txbSBT.Lines = new string[0];
             this.txbSBT.Location = new System.Drawing.Point(543, 27);
-            this.txbSBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbSBT.Margin = new System.Windows.Forms.Padding(2);
             this.txbSBT.MaxLength = 32767;
             this.txbSBT.MinimumSize = new System.Drawing.Size(1, 1);
             this.txbSBT.Modified = false;
@@ -133,7 +134,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txbSBT.OnIdleState = stateProperties4;
-            this.txbSBT.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbSBT.Padding = new System.Windows.Forms.Padding(2);
             this.txbSBT.PasswordChar = '\0';
             this.txbSBT.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txbSBT.PlaceholderText = "Enter text";
@@ -183,7 +184,7 @@
             this.txbDB.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txbDB.Lines = new string[0];
             this.txbDB.Location = new System.Drawing.Point(336, 29);
-            this.txbDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbDB.Margin = new System.Windows.Forms.Padding(2);
             this.txbDB.MaxLength = 32767;
             this.txbDB.MinimumSize = new System.Drawing.Size(1, 1);
             this.txbDB.Modified = false;
@@ -209,7 +210,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txbDB.OnIdleState = stateProperties8;
-            this.txbDB.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbDB.Padding = new System.Windows.Forms.Padding(2);
             this.txbDB.PasswordChar = '\0';
             this.txbDB.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txbDB.PlaceholderText = "Enter text";
@@ -259,7 +260,7 @@
             this.txbTCT.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txbTCT.Lines = new string[0];
             this.txbTCT.Location = new System.Drawing.Point(121, 29);
-            this.txbTCT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbTCT.Margin = new System.Windows.Forms.Padding(2);
             this.txbTCT.MaxLength = 32767;
             this.txbTCT.MinimumSize = new System.Drawing.Size(1, 1);
             this.txbTCT.Modified = false;
@@ -285,7 +286,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txbTCT.OnIdleState = stateProperties12;
-            this.txbTCT.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbTCT.Padding = new System.Windows.Forms.Padding(2);
             this.txbTCT.PasswordChar = '\0';
             this.txbTCT.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txbTCT.PlaceholderText = "Enter text";
@@ -355,7 +356,7 @@
             this.btnSearch.IdleIconRightImage = null;
             this.btnSearch.IndicateFocus = false;
             this.btnSearch.Location = new System.Drawing.Point(701, 30);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
             this.btnSearch.OnDisabledState.BorderRadius = 1;
@@ -436,6 +437,7 @@
             // dgvDSCT
             // 
             this.dgvDSCT.AllowCustomTheming = false;
+            this.dgvDSCT.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvDSCT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -453,6 +455,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDSCT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDSCT.ColumnHeadersHeight = 40;
+            this.dgvDSCT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.anhCT});
             this.dgvDSCT.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvDSCT.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvDSCT.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -487,7 +491,7 @@
             this.dgvDSCT.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDSCT.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDSCT.Location = new System.Drawing.Point(0, 81);
-            this.dgvDSCT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDSCT.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDSCT.Name = "dgvDSCT";
             this.dgvDSCT.ReadOnly = true;
             this.dgvDSCT.RowHeadersVisible = false;
@@ -498,6 +502,13 @@
             this.dgvDSCT.TabIndex = 1;
             this.dgvDSCT.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvDSCT.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDSCT_CellMouseDoubleClick);
+            // 
+            // anhCT
+            // 
+            this.anhCT.HeaderText = "Ảnh";
+            this.anhCT.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.anhCT.Name = "anhCT";
+            this.anhCT.ReadOnly = true;
             // 
             // bunifuTransition1
             // 
@@ -528,7 +539,7 @@
             this.Controls.Add(this.dgvDSCT);
             this.Controls.Add(this.panel1);
             this.bunifuTransition1.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(716, 414);
             this.Name = "DSCT";
             this.Text = "Danh sách cầu thủ";
@@ -552,5 +563,6 @@
         private Bunifu.UI.WinForms.BunifuTextBox txbTCT;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvDSCT;
         private Bunifu.UI.WinForms.BunifuTransition bunifuTransition1;
+        private System.Windows.Forms.DataGridViewImageColumn anhCT;
     }
 }

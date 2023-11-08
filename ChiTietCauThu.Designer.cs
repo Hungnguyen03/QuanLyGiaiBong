@@ -50,7 +50,7 @@
             this.pbVang = new System.Windows.Forms.PictureBox();
             this.pbDo = new System.Windows.Forms.PictureBox();
             this.pbBong = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pbAnhCT = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lbDoi = new System.Windows.Forms.Label();
             this.pTitlebar = new Bunifu.UI.WinForms.BunifuPanel();
@@ -58,7 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbVang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAnhCT)).BeginInit();
             this.pTitlebar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -293,14 +293,14 @@
             this.pbBong.TabStop = false;
             this.pbBong.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // pictureBox3
+            // pbAnhCT
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(320, 62);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(172, 126);
-            this.pictureBox3.TabIndex = 33;
-            this.pictureBox3.TabStop = false;
+            this.pbAnhCT.Location = new System.Drawing.Point(320, 62);
+            this.pbAnhCT.Margin = new System.Windows.Forms.Padding(2);
+            this.pbAnhCT.Name = "pbAnhCT";
+            this.pbAnhCT.Size = new System.Drawing.Size(172, 126);
+            this.pbAnhCT.TabIndex = 33;
+            this.pbAnhCT.TabStop = false;
             // 
             // label7
             // 
@@ -362,7 +362,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 321);
             this.Controls.Add(this.pTitlebar);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pbAnhCT);
             this.Controls.Add(this.pbBong);
             this.Controls.Add(this.pbDo);
             this.Controls.Add(this.pbVang);
@@ -392,7 +392,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbVang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAnhCT)).EndInit();
             this.pTitlebar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -420,7 +420,7 @@
         private System.Windows.Forms.PictureBox pbVang;
         private System.Windows.Forms.PictureBox pbDo;
         private Bunifu.UI.WinForms.BunifuPictureBox pbBong;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pbAnhCT;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbDoi;
         private Bunifu.UI.WinForms.BunifuPanel pTitlebar;

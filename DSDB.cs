@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,12 +25,17 @@ namespace QuanLyGiaiBong
             DataTable dtDoiBong = dtBase.DocBang("select Madoi, LoGo, Tendoi,Diem from DoiBong");
             dgvDSDB.DataSource = dtDoiBong;
             dgvDSDB.Columns["Madoi"].Visible = false;
-            //Định dạng dataGrid
-            // dgvDSDB.Columns[0].HeaderText = "Mã Doi Bong";
-            //dgvDSDB.Columns[1].HeaderText = "Tên Doi Bong";
-            //dgvDSDB.Columns[0].Height = 150;
-            //dgvDSDB.Columns[1].Width = 250;
-            //dgvDSDB.BackgroundColor = Color.LightBlue;
+            dgvDSDB.Columns["LoGo"].Visible = false;
+            string appPath = Application.StartupPath;
+            string projectRootPath = Path.GetFullPath(Path.Combine(appPath, @"..\.."));
+            string cauthuPath = Path.Combine(projectRootPath, "Images", "DoiBong");
+            int slg = dtDoiBong.Rows.Count;
+            for (var i = 0; i < slg; i++)
+            {
+                string dbPath = Path.Combine(cauthuPath, dtDoiBong.Rows[i]["LoGo"].ToString());
+                Image anhDB = Image.FromFile(dbPath);
+                dgvDSDB["anhDB", i].Value = anhDB;
+            }
             dtDoiBong.Dispose();
         }
 

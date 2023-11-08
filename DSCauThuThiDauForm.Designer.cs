@@ -44,9 +44,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(235, 21);
+            this.label2.Location = new System.Drawing.Point(176, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(288, 25);
+            this.label2.Size = new System.Drawing.Size(234, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Chọn danh sách cầu thủ thi đấu";
             // 
@@ -103,13 +104,14 @@
             this.dgvDSCauThu.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvDSCauThu.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDSCauThu.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvDSCauThu.Location = new System.Drawing.Point(12, 67);
+            this.dgvDSCauThu.Location = new System.Drawing.Point(9, 54);
+            this.dgvDSCauThu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDSCauThu.Name = "dgvDSCauThu";
             this.dgvDSCauThu.RowHeadersVisible = false;
             this.dgvDSCauThu.RowHeadersWidth = 51;
             this.dgvDSCauThu.RowTemplate.Height = 40;
             this.dgvDSCauThu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSCauThu.Size = new System.Drawing.Size(1019, 385);
+            this.dgvDSCauThu.Size = new System.Drawing.Size(764, 313);
             this.dgvDSCauThu.TabIndex = 3;
             this.dgvDSCauThu.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -160,7 +162,8 @@
             this.LuuBtn.IdleIconLeftImage = null;
             this.LuuBtn.IdleIconRightImage = null;
             this.LuuBtn.IndicateFocus = false;
-            this.LuuBtn.Location = new System.Drawing.Point(881, 467);
+            this.LuuBtn.Location = new System.Drawing.Point(661, 379);
+            this.LuuBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LuuBtn.Name = "LuuBtn";
             this.LuuBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LuuBtn.OnDisabledState.BorderRadius = 1;
@@ -194,7 +197,7 @@
             this.LuuBtn.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.LuuBtn.OnPressedState.IconLeftImage = null;
             this.LuuBtn.OnPressedState.IconRightImage = null;
-            this.LuuBtn.Size = new System.Drawing.Size(150, 39);
+            this.LuuBtn.Size = new System.Drawing.Size(112, 32);
             this.LuuBtn.TabIndex = 4;
             this.LuuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LuuBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -211,13 +214,14 @@
             // 
             // DSCauThuThiDauForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1043, 518);
+            this.ClientSize = new System.Drawing.Size(782, 421);
             this.Controls.Add(this.LuuBtn);
             this.Controls.Add(this.dgvDSCauThu);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DSCauThuThiDauForm";
             this.Text = "DSCauThuThiDauForm";
             this.Load += new System.EventHandler(this.DSCauThuThiDauForm_Load);

@@ -22,7 +22,7 @@ namespace QuanLyGiaiBong
 
         private void ClubDetail_Load(object sender, EventArgs e)
         {
-            DataTable dataTable = conn.DocBang("select MaCT,MaDoi,TenCT,ViTri,NgaySinh,SoAo from CauThu where madoi = " + maDB);
+            DataTable dataTable = conn.DocBang("select MaCT,MaDoi,TenCT,TenViTri,NgaySinh,SoAo from CauThu join ViTri on ViTri.MaViTri = CauThu.MaViTri where madoi = " + maDB);
             DsCauThu.DataSource= dataTable;
             DsCauThu.Columns[0].HeaderText = "Mã CT";
             DsCauThu.Columns[1].HeaderText = "Mã DB";
