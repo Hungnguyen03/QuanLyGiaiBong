@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnVPL = new System.Windows.Forms.Button();
             this.btnDSTD = new System.Windows.Forms.Button();
@@ -41,8 +42,11 @@
             this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -57,7 +61,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 553);
+            this.panelMenu.Size = new System.Drawing.Size(220, 574);
             this.panelMenu.TabIndex = 0;
             // 
             // btnVPL
@@ -67,7 +71,7 @@
             this.btnVPL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVPL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVPL.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnVPL.Location = new System.Drawing.Point(0, 380);
+            this.btnVPL.Location = new System.Drawing.Point(0, 476);
             this.btnVPL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVPL.Name = "btnVPL";
             this.btnVPL.Size = new System.Drawing.Size(220, 100);
@@ -83,7 +87,7 @@
             this.btnDSTD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDSTD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSTD.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDSTD.Location = new System.Drawing.Point(0, 280);
+            this.btnDSTD.Location = new System.Drawing.Point(0, 376);
             this.btnDSTD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDSTD.Name = "btnDSTD";
             this.btnDSTD.Size = new System.Drawing.Size(220, 100);
@@ -99,7 +103,7 @@
             this.btnDSCT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDSCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSCT.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDSCT.Location = new System.Drawing.Point(0, 180);
+            this.btnDSCT.Location = new System.Drawing.Point(0, 276);
             this.btnDSCT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDSCT.Name = "btnDSCT";
             this.btnDSCT.Size = new System.Drawing.Size(220, 100);
@@ -115,7 +119,7 @@
             this.btnDSDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDSDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSDB.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDSDB.Location = new System.Drawing.Point(0, 80);
+            this.btnDSDB.Location = new System.Drawing.Point(0, 176);
             this.btnDSDB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDSDB.Name = "btnDSDB";
             this.btnDSDB.Size = new System.Drawing.Size(220, 100);
@@ -127,11 +131,12 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(48)))), ((int)(((byte)(98)))));
+            this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 80);
+            this.panelLogo.Size = new System.Drawing.Size(220, 176);
             this.panelLogo.TabIndex = 0;
             // 
             // panelTitleBar
@@ -146,7 +151,7 @@
             this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1062, 80);
+            this.panelTitleBar.Size = new System.Drawing.Size(961, 80);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -157,7 +162,7 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMinimize.Location = new System.Drawing.Point(953, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(852, 0);
             this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(32, 46);
@@ -174,7 +179,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Location = new System.Drawing.Point(992, 0);
+            this.button2.Location = new System.Drawing.Point(891, 0);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(32, 46);
@@ -190,7 +195,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnClose.Location = new System.Drawing.Point(1030, 0);
+            this.btnClose.Location = new System.Drawing.Point(929, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(32, 46);
@@ -220,7 +225,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblTitle.Location = new System.Drawing.Point(478, 25);
+            this.lblTitle.Location = new System.Drawing.Point(427, 25);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(96, 33);
             this.lblTitle.TabIndex = 0;
@@ -233,14 +238,25 @@
             this.panelDesktop.Location = new System.Drawing.Point(220, 80);
             this.panelDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1062, 473);
+            this.panelDesktop.Size = new System.Drawing.Size(961, 494);
             this.panelDesktop.TabIndex = 2;
             // 
-            // FormMenu
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(220, 176);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 553);
+            this.ClientSize = new System.Drawing.Size(1181, 574);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
@@ -251,8 +267,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.panelMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -272,6 +290,7 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
