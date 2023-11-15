@@ -330,6 +330,7 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="Images\bg.jpg" />
     <Content Include="Images\CauThu\AbdumuminovJakhongir.jpg" />
     <Content Include="Images\CauThu\AlmeidaSantosJanclesio.jpg" />
     <Content Include="Images\CauThu\BuiTanTruong.jpg" />
