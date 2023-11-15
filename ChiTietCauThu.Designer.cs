@@ -55,6 +55,7 @@
             this.lbDoi = new System.Windows.Forms.Label();
             this.pTitlebar = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbVang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBong)).BeginInit();
@@ -70,7 +71,7 @@
             this.bunifuLabel6.CursorType = null;
             this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuLabel6.Location = new System.Drawing.Point(48, 309);
-            this.bunifuLabel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel6.Size = new System.Drawing.Size(0, 19);
@@ -93,7 +94,7 @@
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.Location = new System.Drawing.Point(48, 309);
-            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(0, 19);
@@ -216,7 +217,7 @@
             // 
             this.lbVang.AutoSize = true;
             this.lbVang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVang.Location = new System.Drawing.Point(433, 348);
+            this.lbVang.Location = new System.Drawing.Point(462, 333);
             this.lbVang.Name = "lbVang";
             this.lbVang.Size = new System.Drawing.Size(20, 24);
             this.lbVang.TabIndex = 30;
@@ -226,7 +227,7 @@
             // 
             this.lbDo.AutoSize = true;
             this.lbDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDo.Location = new System.Drawing.Point(529, 348);
+            this.lbDo.Location = new System.Drawing.Point(564, 333);
             this.lbDo.Name = "lbDo";
             this.lbDo.Size = new System.Drawing.Size(20, 24);
             this.lbDo.TabIndex = 30;
@@ -236,7 +237,7 @@
             // 
             this.lbBanThang.AutoSize = true;
             this.lbBanThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBanThang.Location = new System.Drawing.Point(624, 348);
+            this.lbBanThang.Location = new System.Drawing.Point(641, 333);
             this.lbBanThang.Name = "lbBanThang";
             this.lbBanThang.Size = new System.Drawing.Size(30, 24);
             this.lbBanThang.TabIndex = 30;
@@ -247,7 +248,7 @@
             this.pbVang.ErrorImage = null;
             this.pbVang.Image = ((System.Drawing.Image)(resources.GetObject("pbVang.Image")));
             this.pbVang.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbVang.InitialImage")));
-            this.pbVang.Location = new System.Drawing.Point(427, 276);
+            this.pbVang.Location = new System.Drawing.Point(457, 276);
             this.pbVang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbVang.Name = "pbVang";
             this.pbVang.Size = new System.Drawing.Size(36, 44);
@@ -257,7 +258,7 @@
             // pbDo
             // 
             this.pbDo.Image = ((System.Drawing.Image)(resources.GetObject("pbDo.Image")));
-            this.pbDo.Location = new System.Drawing.Point(523, 276);
+            this.pbDo.Location = new System.Drawing.Point(558, 276);
             this.pbDo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbDo.Name = "pbDo";
             this.pbDo.Size = new System.Drawing.Size(36, 44);
@@ -272,7 +273,7 @@
             this.pbBong.BorderRadius = 30;
             this.pbBong.Image = ((System.Drawing.Image)(resources.GetObject("pbBong.Image")));
             this.pbBong.IsCircle = true;
-            this.pbBong.Location = new System.Drawing.Point(609, 270);
+            this.pbBong.Location = new System.Drawing.Point(625, 267);
             this.pbBong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbBong.Name = "pbBong";
             this.pbBong.Size = new System.Drawing.Size(61, 61);
@@ -283,7 +284,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(427, 76);
+            this.pictureBox3.Location = new System.Drawing.Point(457, 108);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(229, 155);
@@ -312,20 +313,56 @@
             // 
             // pTitlebar
             // 
-            this.pTitlebar.BackgroundColor = System.Drawing.Color.Transparent;
+            this.pTitlebar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(48)))), ((int)(((byte)(98)))));
             this.pTitlebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pTitlebar.BackgroundImage")));
             this.pTitlebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pTitlebar.BorderColor = System.Drawing.Color.Transparent;
             this.pTitlebar.BorderRadius = 3;
             this.pTitlebar.BorderThickness = 1;
             this.pTitlebar.Controls.Add(this.btnClose);
+            this.pTitlebar.Controls.Add(this.btnMinimize);
             this.pTitlebar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pTitlebar.Location = new System.Drawing.Point(0, 0);
-            this.pTitlebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pTitlebar.Margin = new System.Windows.Forms.Padding(4);
             this.pTitlebar.Name = "pTitlebar";
             this.pTitlebar.ShowBorders = true;
-            this.pTitlebar.Size = new System.Drawing.Size(703, 49);
+            this.pTitlebar.Size = new System.Drawing.Size(800, 60);
             this.pTitlebar.TabIndex = 34;
+            this.pTitlebar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTitlebar_MouseDown);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(48)))), ((int)(((byte)(98)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnClose.Location = new System.Drawing.Point(765, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(32, 46);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "O";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(48)))), ((int)(((byte)(98)))));
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnMinimize.Location = new System.Drawing.Point(727, 2);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(32, 46);
+            this.btnMinimize.TabIndex = 7;
+            this.btnMinimize.Text = "O";
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnClose
             // 
@@ -347,7 +384,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 395);
+            this.ClientSize = new System.Drawing.Size(800, 400);
             this.Controls.Add(this.pTitlebar);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pbBong);
@@ -412,6 +449,7 @@
         private System.Windows.Forms.Label lbDoi;
         private Bunifu.UI.WinForms.BunifuPanel pTitlebar;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnMinimize;
     }
 }
 

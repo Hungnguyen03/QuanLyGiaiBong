@@ -130,5 +130,10 @@ namespace QuanLyGiaiBong
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

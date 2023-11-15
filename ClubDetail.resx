@@ -187,4 +187,19 @@
         fyerrQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pTitlebar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAA6UAAAA8CAYAAACeoBxQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHLSURBVHhe7dexbcIAAERRlxkjZToTIZOSFdjAwRVjsHkS
+        CzeRaM1v3kmvuwX+YGZmZmZmZpbva5zfp/F6BwAAgD0dj/PHlqKPTeN8OB2WHwAAAHiJcblsSbpG6fX+
+        9AQAAAA7WDt0S1JRCgAAwGuJUgAAADKiFAAAgIwoBQAAICNKAQAAyIhSAAAAMqIUAACAjCgFAAAgI0oB
+        AADIiFIAAAAyohQAAICMKAUAACAjSgEAAMiIUgAAADKiFAAAgIwoBQAAICNKAQAAyIhSAAAAMqIUAACA
+        jCgFAAAgI0oBAADIiFIAAAAyohQAAICMKAUAACAjSgEAAMiIUgAAADKiFAAAgIwoBQAAICNKAQAAyIhS
+        AAAAMqIUAACAjCgFAAAgI0oBAADIiFIAAAAyohQAAICMKAUAACAjSgEAAMiIUgAAADKiFAAAgIwoBQAA
+        ICNKAQAAyIhSAAAAMqIUAACAjCgFAAAgI0oBAADIiFIAAAAyohQAAICMKAUAACAjSgEAAMiIUgAAADKi
+        FAAAgIwoBQAAICNKAQAAyPyL0tO4XJ6dAAAAYA/T53LbkvSxaVy+11IFAACAXf0F6fk8v205amZmZmZm
+        ZlZsGH4BJfoKdsARvQoAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

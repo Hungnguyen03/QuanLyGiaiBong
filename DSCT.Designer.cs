@@ -101,7 +101,7 @@
             this.txbSBT.IconRight = null;
             this.txbSBT.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txbSBT.Lines = new string[0];
-            this.txbSBT.Location = new System.Drawing.Point(724, 36);
+            this.txbSBT.Location = new System.Drawing.Point(733, 36);
             this.txbSBT.MaxLength = 32767;
             this.txbSBT.MinimumSize = new System.Drawing.Size(1, 1);
             this.txbSBT.Modified = false;
@@ -345,7 +345,7 @@
             this.btnSearch.IdleIconLeftImage = null;
             this.btnSearch.IdleIconRightImage = null;
             this.btnSearch.IndicateFocus = false;
-            this.btnSearch.Location = new System.Drawing.Point(878, 36);
+            this.btnSearch.Location = new System.Drawing.Point(898, 37);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
             this.btnSearch.OnDisabledState.BorderRadius = 1;
@@ -392,7 +392,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(583, 44);
+            this.label3.Location = new System.Drawing.Point(592, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 20);
             this.label3.TabIndex = 3;

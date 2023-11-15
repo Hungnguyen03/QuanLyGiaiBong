@@ -37,8 +37,7 @@ namespace QuanLyGiaiBong
         {
             DataTable dtBang = new DataTable();
             KetNoiCSDL();
-            SqlDataAdapter sqldataAdapte = new SqlDataAdapter(sql,
-           sqlConnect);
+            SqlDataAdapter sqldataAdapte = new SqlDataAdapter(sql,sqlConnect);
             sqldataAdapte.Fill(dtBang);
             DongKetNoiCSDL();
             return dtBang;
