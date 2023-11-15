@@ -44,5 +44,16 @@ namespace QuanLyGiaiBong
                 ctTD.ShowDialog();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            //if (dgvDSTD.SelectedRows.Count > 0)
+            //{
+            //    DataGridViewRow selectedRow = dgvDSTD.SelectedRows[0];
+            //    int id = Convert.ToInt32(selectedRow.Cells["MaTranDau"].Value);
+            //    dtBase.CapNhatDuLieu("DELETE FROM TranDau WHERE MaTranDau = " + id);
+            //}
+            //getDanhSach();
+        }
     }
 }

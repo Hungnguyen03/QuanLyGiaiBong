@@ -18,9 +18,28 @@ namespace QuanLyGiaiBong
         public VPL()
         {
             InitializeComponent();
+            getVPL();
         }
 
         private void VPL_Load(object sender, EventArgs e)
+        {
+            getVPL();
+        }
+
+        private void dgvVPL_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left && e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedCT = dgvVPL.Rows[e.RowIndex];
+                int maCT = Convert.ToInt32(selectedCT.Cells["MaCT"].Value);
+
+
+                ChiTietCauThu ctCauThu = new ChiTietCauThu(maCT);
+                ctCauThu.ShowDialog();
+            }
+        }
+
+        private void getVPL()
         {
             DataTable dtVua = dtBase.DocBang("SELECT TOP 3 MaCT, Anh, TenCT, TenViTri, SoBanThang FROM CauThu join ViTri on CauThu.MaViTri = ViTri.MaViTri ORDER BY SoBanThang DESC");
             dgvVPL.DataSource = dtVua;
@@ -37,19 +56,6 @@ namespace QuanLyGiaiBong
                 dgvVPL["anhCT", i].Value = anhCT;
             }
             dtVua.Dispose();//Giải phóng bộ nhớ cho DataTable
-        }
-
-        private void dgvVPL_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left && e.RowIndex >= 0)
-            {
-                DataGridViewRow selectedCT = dgvVPL.Rows[e.RowIndex];
-                int maCT = Convert.ToInt32(selectedCT.Cells["MaCT"].Value);
-
-
-                ChiTietCauThu ctCauThu = new ChiTietCauThu(maCT);
-                ctCauThu.ShowDialog();
-            }
         }
     }
 }

@@ -107,6 +107,7 @@
             // anhCT
             // 
             this.anhCT.HeaderText = "Anh";
+            this.anhCT.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.anhCT.Name = "anhCT";
             this.anhCT.ReadOnly = true;
             // 

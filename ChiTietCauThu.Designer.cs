@@ -104,7 +104,7 @@
             // 
             this.lbTen.AutoSize = true;
             this.lbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTen.Location = new System.Drawing.Point(36, 62);
+            this.lbTen.Location = new System.Drawing.Point(21, 62);
             this.lbTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTen.Name = "lbTen";
             this.lbTen.Size = new System.Drawing.Size(188, 31);
@@ -225,7 +225,7 @@
             // 
             this.lbVang.AutoSize = true;
             this.lbVang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVang.Location = new System.Drawing.Point(325, 283);
+            this.lbVang.Location = new System.Drawing.Point(338, 278);
             this.lbVang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbVang.Name = "lbVang";
             this.lbVang.Size = new System.Drawing.Size(16, 18);
@@ -236,7 +236,7 @@
             // 
             this.lbDo.AutoSize = true;
             this.lbDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDo.Location = new System.Drawing.Point(397, 283);
+            this.lbDo.Location = new System.Drawing.Point(410, 278);
             this.lbDo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDo.Name = "lbDo";
             this.lbDo.Size = new System.Drawing.Size(16, 18);
@@ -247,7 +247,7 @@
             // 
             this.lbBanThang.AutoSize = true;
             this.lbBanThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBanThang.Location = new System.Drawing.Point(468, 283);
+            this.lbBanThang.Location = new System.Drawing.Point(468, 278);
             this.lbBanThang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbBanThang.Name = "lbBanThang";
             this.lbBanThang.Size = new System.Drawing.Size(24, 18);
@@ -259,7 +259,7 @@
             this.pbVang.ErrorImage = null;
             this.pbVang.Image = ((System.Drawing.Image)(resources.GetObject("pbVang.Image")));
             this.pbVang.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbVang.InitialImage")));
-            this.pbVang.Location = new System.Drawing.Point(320, 224);
+            this.pbVang.Location = new System.Drawing.Point(333, 219);
             this.pbVang.Margin = new System.Windows.Forms.Padding(2);
             this.pbVang.Name = "pbVang";
             this.pbVang.Size = new System.Drawing.Size(27, 36);
@@ -269,7 +269,7 @@
             // pbDo
             // 
             this.pbDo.Image = ((System.Drawing.Image)(resources.GetObject("pbDo.Image")));
-            this.pbDo.Location = new System.Drawing.Point(392, 224);
+            this.pbDo.Location = new System.Drawing.Point(405, 219);
             this.pbDo.Margin = new System.Windows.Forms.Padding(2);
             this.pbDo.Name = "pbDo";
             this.pbDo.Size = new System.Drawing.Size(27, 36);
@@ -284,7 +284,7 @@
             this.pbBong.BorderRadius = 23;
             this.pbBong.Image = ((System.Drawing.Image)(resources.GetObject("pbBong.Image")));
             this.pbBong.IsCircle = true;
-            this.pbBong.Location = new System.Drawing.Point(457, 219);
+            this.pbBong.Location = new System.Drawing.Point(462, 219);
             this.pbBong.Margin = new System.Windows.Forms.Padding(2);
             this.pbBong.Name = "pbBong";
             this.pbBong.Size = new System.Drawing.Size(46, 46);
@@ -295,10 +295,10 @@
             // 
             // pbAnhCT
             // 
-            this.pbAnhCT.Location = new System.Drawing.Point(320, 62);
+            this.pbAnhCT.Location = new System.Drawing.Point(343, 62);
             this.pbAnhCT.Margin = new System.Windows.Forms.Padding(2);
             this.pbAnhCT.Name = "pbAnhCT";
-            this.pbAnhCT.Size = new System.Drawing.Size(172, 126);
+            this.pbAnhCT.Size = new System.Drawing.Size(149, 126);
             this.pbAnhCT.TabIndex = 33;
             this.pbAnhCT.TabStop = false;
             // 
@@ -337,7 +337,7 @@
             this.pTitlebar.Location = new System.Drawing.Point(0, 0);
             this.pTitlebar.Name = "pTitlebar";
             this.pTitlebar.ShowBorders = true;
-            this.pTitlebar.Size = new System.Drawing.Size(527, 40);
+            this.pTitlebar.Size = new System.Drawing.Size(537, 40);
             this.pTitlebar.TabIndex = 34;
             // 
             // btnClose
@@ -347,7 +347,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnClose.Location = new System.Drawing.Point(492, 0);
+            this.btnClose.Location = new System.Drawing.Point(502, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(24, 37);
@@ -360,7 +360,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 321);
+            this.ClientSize = new System.Drawing.Size(537, 320);
             this.Controls.Add(this.pTitlebar);
             this.Controls.Add(this.pbAnhCT);
             this.Controls.Add(this.pbBong);

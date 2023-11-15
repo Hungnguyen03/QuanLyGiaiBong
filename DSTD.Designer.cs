@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DSTD));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -46,6 +47,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnSearch = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txbSTD = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txbSBT = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -60,6 +62,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.txbSTD);
             this.panel1.Controls.Add(this.txbSBT);
@@ -73,6 +76,97 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(812, 74);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.AllowAnimations = true;
+            this.btnDelete.AllowMouseEffects = true;
+            this.btnDelete.AllowToggling = false;
+            this.btnDelete.AnimationSpeed = 200;
+            this.btnDelete.AutoGenerateColors = false;
+            this.btnDelete.AutoRoundBorders = false;
+            this.btnDelete.AutoSizeLeftIcon = true;
+            this.btnDelete.AutoSizeRightIcon = true;
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
+            this.btnDelete.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDelete.ButtonText = "Xóa";
+            this.btnDelete.ButtonTextMarginLeft = 0;
+            this.btnDelete.ColorContrastOnClick = 45;
+            this.btnDelete.ColorContrastOnHover = 45;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnDelete.CustomizableEdges = borderEdges1;
+            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDelete.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDelete.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnDelete.IconMarginLeft = 11;
+            this.btnDelete.IconPadding = 10;
+            this.btnDelete.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDelete.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnDelete.IconSize = 25;
+            this.btnDelete.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.IdleBorderRadius = 1;
+            this.btnDelete.IdleBorderThickness = 1;
+            this.btnDelete.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.IdleIconLeftImage = null;
+            this.btnDelete.IdleIconRightImage = null;
+            this.btnDelete.IndicateFocus = false;
+            this.btnDelete.Location = new System.Drawing.Point(730, 31);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.OnDisabledState.BorderRadius = 1;
+            this.btnDelete.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDelete.OnDisabledState.BorderThickness = 1;
+            this.btnDelete.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.OnDisabledState.IconLeftImage = null;
+            this.btnDelete.OnDisabledState.IconRightImage = null;
+            this.btnDelete.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.onHoverState.BorderRadius = 1;
+            this.btnDelete.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDelete.onHoverState.BorderThickness = 1;
+            this.btnDelete.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.onHoverState.IconLeftImage = null;
+            this.btnDelete.onHoverState.IconRightImage = null;
+            this.btnDelete.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.OnIdleState.BorderRadius = 1;
+            this.btnDelete.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDelete.OnIdleState.BorderThickness = 1;
+            this.btnDelete.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.OnIdleState.IconLeftImage = null;
+            this.btnDelete.OnIdleState.IconRightImage = null;
+            this.btnDelete.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.OnPressedState.BorderRadius = 1;
+            this.btnDelete.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDelete.OnPressedState.BorderThickness = 1;
+            this.btnDelete.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnDelete.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.OnPressedState.IconLeftImage = null;
+            this.btnDelete.OnPressedState.IconRightImage = null;
+            this.btnDelete.Size = new System.Drawing.Size(71, 32);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDelete.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDelete.TextMarginLeft = 0;
+            this.btnDelete.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnDelete.UseDefaultRadiusAndThickness = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSearch
             // 
@@ -93,11 +187,11 @@
             this.btnSearch.ColorContrastOnClick = 45;
             this.btnSearch.ColorContrastOnHover = 45;
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnSearch.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnSearch.CustomizableEdges = borderEdges2;
             this.btnSearch.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSearch.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
             this.btnSearch.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
@@ -121,7 +215,7 @@
             this.btnSearch.IdleIconLeftImage = null;
             this.btnSearch.IdleIconRightImage = null;
             this.btnSearch.IndicateFocus = false;
-            this.btnSearch.Location = new System.Drawing.Point(708, 31);
+            this.btnSearch.Location = new System.Drawing.Point(649, 31);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
@@ -191,7 +285,7 @@
             this.txbSTD.IconRight = null;
             this.txbSTD.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txbSTD.Lines = new string[0];
-            this.txbSTD.Location = new System.Drawing.Point(572, 31);
+            this.txbSTD.Location = new System.Drawing.Point(524, 31);
             this.txbSTD.Margin = new System.Windows.Forms.Padding(2);
             this.txbSTD.MaxLength = 32767;
             this.txbSTD.MinimumSize = new System.Drawing.Size(1, 1);
@@ -266,7 +360,7 @@
             this.txbSBT.IconRight = null;
             this.txbSBT.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txbSBT.Lines = new string[0];
-            this.txbSBT.Location = new System.Drawing.Point(350, 31);
+            this.txbSBT.Location = new System.Drawing.Point(322, 31);
             this.txbSBT.Margin = new System.Windows.Forms.Padding(2);
             this.txbSBT.MaxLength = 32767;
             this.txbSBT.MinimumSize = new System.Drawing.Size(1, 1);
@@ -393,7 +487,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(491, 31);
+            this.label3.Location = new System.Drawing.Point(438, 31);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 20);
@@ -404,7 +498,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(244, 31);
+            this.label2.Location = new System.Drawing.Point(216, 31);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 20);
@@ -518,5 +612,6 @@
         private Bunifu.UI.WinForms.BunifuTextBox txbSBT;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSearch;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvDSTD;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDelete;
     }
 }

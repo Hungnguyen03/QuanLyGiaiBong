@@ -120,4 +120,13 @@
   <metadata name="anhDB.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnDelete.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFIAAAAgCAYAAACBxi9RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB3SURBVGhD7dChEYNAAADB7+IL/3RHGRhQgQIQZHJyxapz
+        N841t/Mzv/zhfjgeAz8zMmJkxMiIkREjI0ZGjIwYGTEyYmTEyIiRESMjRkaMjBgZMTJiZMTIiJERIyNG
+        RoyMGBkxMmJkxMiIkREjI+NYc38KvHesuV/lmQfw8zN/oAAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>
