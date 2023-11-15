@@ -13,13 +13,11 @@ using System.Runtime.InteropServices;
 
 namespace QuanLyGiaiBong
 {
-    public partial class Form1 : Form
+    public partial class FormMenu : Form
     {
         private Button currentButton;
-        private int tempIndex;
         private Form activeForm;
-        ProcessDataBase dtBase = new ProcessDataBase();
-        public Form1()
+        public FormMenu()
         {
             InitializeComponent();
             btnCloseChildForm.Visible = false;
@@ -140,6 +138,11 @@ namespace QuanLyGiaiBong
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

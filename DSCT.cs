@@ -21,36 +21,47 @@ namespace QuanLyGiaiBong
 
         private void DSCT_Load(object sender, EventArgs e)
         {
-            DataTable dtCauThu = dtBase.DocBang("select Anh, TenDoi, TenCT, ViTri  from CauThu left join DoiBong on CauThu.MaDoi = DoiBong.MaDoi");
+            DataTable dtCauThu = dtBase.DocBang("select Anh, TenCT,TenViTri, TenDoi,CauThu.SoBanThang from CauThu " +
+                "inner join DoiBong on CauThu.MaDoi = DoiBong.MaDoi " +
+                "inner join ViTri on CauThu.MaViTri=ViTri.MaViTri");
             dgvDSCT.DataSource = dtCauThu;
             //Định dạng dataGrid
-            //dgvDSCT.Columns[0].HeaderText = "Ten Cau Thu";
-            //dgvDSCT.Columns[1].HeaderText = "So Ban Thang";
-            
+            dgvDSCT.Columns[0].HeaderText = "Ảnh";
+            dgvDSCT.Columns[1].HeaderText = "Tên cầu thủ";
+            dgvDSCT.Columns[2].HeaderText = "Vị trí";
+            dgvDSCT.Columns[3].HeaderText = "Tên đội bóng";
+            dgvDSCT.Columns[4].HeaderText = "Số bàn thắng";
+            dgvDSCT.Columns[4].Width = 100;
+
             //dgvDSCT.Size= new Size(600 ,600);
             //dgvDSCT.BackgroundColor = Color.LightBlue;
             dtCauThu.Dispose();//Giải phóng bộ nhớ cho DataTable
         }
 
-        private void SearchData(string searchValue)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-            dgvDSCT.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            try
-            {
-                foreach (DataGridViewRow row in dgvDSCT.Rows)
-                {
-                    if (row.Cells[1].Value.ToString().Equals(searchValue))
-                    {
-                        row.Selected = true;
-                        break;
-                    }
-                }
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
+            string sql = "select Anh,TenCT,TenViTri,TenDoi,CauThu.SoBanThang from CauThu " +
+                "inner join DoiBong on CauThu.MaDoi = DoiBong.MaDoi " +
+                "inner join ViTri on CauThu.MaViTri=ViTri.MaViTri";
+            //Khi chọn tiêu chí nào sẽ ghép với tiêu chí đó bằng từ and
+            //Tìm kiếm gần đúng với từ khóa like
+            if (txbTCT.Text != "")
+                sql = sql + " and TenCT like N'%" + txbTCT.Text.Trim() + "%'";
+            if (txbDB.Text != "")
+                sql = sql + " and TenDoi like N'%" + txbDB.Text.Trim() + "%'";
+            if (txbSBT.Text != "")
+            sql = sql + " and CauThu.SoBanThang = '" + txbSBT.Text.Trim() + "'";
+            //Trình bày gridView
+            DataTable dtCauThu = dtBase.DocBang(sql);
+            dgvDSCT.DataSource = null;
+            dgvDSCT.DataSource = dtCauThu;
+            //Định dạng dataGrid
+            dgvDSCT.Columns[0].HeaderText = "Ảnh";
+            dgvDSCT.Columns[1].HeaderText = "Tên cầu thủ";
+            dgvDSCT.Columns[2].HeaderText = "Vị trí";
+            dgvDSCT.Columns[3].HeaderText = "Tên đội bóng";
+            dgvDSCT.Columns[4].HeaderText = "Số bàn thắng";
+            dgvDSCT.Columns[4].Width = 100;
         }
-
     }
 }

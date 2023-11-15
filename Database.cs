@@ -12,7 +12,7 @@ namespace QuanLyGiaiBong
 {
     internal class Database
     {
-        string connectionString = $"Data Source=HUNGNGUYEN\\SQLEXPRESS;Initial Catalog=QLGiaiBongDa;Integrated Security=True";
+        string connectionString = @"Data Source=LAPTOP-7DP7U4ND\SQLEXPRESS;Initial Catalog=QLGiaiBongDa;Integrated Security=True";
         //string connectionString = $"Server={config.SERVER};Database={config.DATABASE};Integrated Security={config.Integrated_Security};";
         SqlConnection con;
         private SqlCommand command;

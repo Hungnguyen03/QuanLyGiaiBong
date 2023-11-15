@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,7 +23,10 @@ namespace QuanLyGiaiBong
             MaDoi =madoi;
             MaTranDau = matrandau;
         }
-
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void DSCauThuThiDauForm_Load(object sender, EventArgs e)
         {
             string query = "Select Anh, TenCT, TenViTri , SoAo,MaCT from CauThu join ViTri ON ViTri.MaViTri = CauThu.MaViTri where MaDoi = '" + MaDoi + "'";
@@ -56,6 +60,22 @@ namespace QuanLyGiaiBong
             }
 
  
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pTitlebar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void LuuBtn_Click(object sender, EventArgs e)

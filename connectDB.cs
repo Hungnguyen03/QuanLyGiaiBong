@@ -10,7 +10,7 @@ namespace QuanLyGiaiBong
 {
     public class connectDB
     {
-        string strConnect = @"Data Source=HUNGNGUYEN\sqlexpress;Initial Catalog=QLGiaiBongDa;Integrated Security=True";
+        string strConnect = @"Data Source=LAPTOP-7DP7U4ND\SQLEXPRESS;Initial Catalog=QLGiaiBongDa;Integrated Security=True";
         SqlConnection sqlConnect = null;
 
 

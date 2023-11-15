@@ -11,7 +11,7 @@ namespace QuanLyGiaiBong
 {
     public class ProcessDataBase
     {
-        string strConnect = @"Data Source=HUNGNGUYEN\SQLEXPRESS;Initial Catalog=QLGiaiBongDa;Integrated Security=True";
+        string strConnect = @"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=QLGiaiBongDa;Integrated Security=True";
         SqlConnection sqlConnect =null;
         //Hàm mở kết nối CSDL
         private void KetNoiCSDL()
@@ -37,8 +37,7 @@ namespace QuanLyGiaiBong
         {
             DataTable dtBang = new DataTable();
             KetNoiCSDL();
-            SqlDataAdapter sqldataAdapte = new SqlDataAdapter(sql,
-           sqlConnect);
+            SqlDataAdapter sqldataAdapte = new SqlDataAdapter(sql,sqlConnect);
             sqldataAdapte.Fill(dtBang);
             DongKetNoiCSDL();
             return dtBang;

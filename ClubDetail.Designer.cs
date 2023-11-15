@@ -31,8 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClubDetail));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtMaTenDoi = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,39 +44,30 @@
             this.txtDiem = new System.Windows.Forms.Label();
             this.txtSoBan = new System.Windows.Forms.Label();
             this.DsCauThu = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.pTitlebar = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DsCauThu)).BeginInit();
+            this.pTitlebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(60, 63);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(80, 78);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 153);
+            this.pictureBox1.Size = new System.Drawing.Size(184, 188);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // txtMaTenDoi
-            // 
-            this.txtMaTenDoi.AutoSize = true;
-            this.txtMaTenDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaTenDoi.Location = new System.Drawing.Point(306, 18);
-            this.txtMaTenDoi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtMaTenDoi.Name = "txtMaTenDoi";
-            this.txtMaTenDoi.Size = new System.Drawing.Size(187, 37);
-            this.txtMaTenDoi.TabIndex = 1;
-            this.txtMaTenDoi.Text = "mã - tên đội";
-            this.txtMaTenDoi.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(243, 63);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(324, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 24);
+            this.label2.Size = new System.Drawing.Size(100, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên sân";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -85,10 +76,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(243, 96);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(324, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 24);
+            this.label3.Size = new System.Drawing.Size(182, 29);
             this.label3.TabIndex = 1;
             this.label3.Text = "Huấn luyện viên";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -97,10 +87,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(243, 129);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(324, 159);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 24);
+            this.label4.Size = new System.Drawing.Size(100, 29);
             this.label4.TabIndex = 1;
             this.label4.Text = "Tên tỉnh";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -109,10 +98,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(243, 163);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(324, 201);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 24);
+            this.label5.Size = new System.Drawing.Size(70, 29);
             this.label5.TabIndex = 1;
             this.label5.Text = "Điểm";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -121,10 +109,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(243, 194);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(324, 239);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 24);
+            this.label6.Size = new System.Drawing.Size(218, 29);
             this.label6.TabIndex = 1;
             this.label6.Text = "Số bàn thắng / thua";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -133,10 +120,9 @@
             // 
             this.txtTenSan.AutoSize = true;
             this.txtTenSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenSan.Location = new System.Drawing.Point(419, 63);
-            this.txtTenSan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtTenSan.Location = new System.Drawing.Point(559, 78);
             this.txtTenSan.Name = "txtTenSan";
-            this.txtTenSan.Size = new System.Drawing.Size(79, 24);
+            this.txtTenSan.Size = new System.Drawing.Size(100, 29);
             this.txtTenSan.TabIndex = 1;
             this.txtTenSan.Text = "Ten san";
             // 
@@ -144,10 +130,9 @@
             // 
             this.txtHLV.AutoSize = true;
             this.txtHLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHLV.Location = new System.Drawing.Point(419, 96);
-            this.txtHLV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtHLV.Location = new System.Drawing.Point(559, 118);
             this.txtHLV.Name = "txtHLV";
-            this.txtHLV.Size = new System.Drawing.Size(47, 24);
+            this.txtHLV.Size = new System.Drawing.Size(58, 29);
             this.txtHLV.TabIndex = 1;
             this.txtHLV.Text = "HVL";
             this.txtHLV.Click += new System.EventHandler(this.label8_Click);
@@ -156,10 +141,9 @@
             // 
             this.txtTinh.AutoSize = true;
             this.txtTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTinh.Location = new System.Drawing.Point(419, 129);
-            this.txtTinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtTinh.Location = new System.Drawing.Point(559, 159);
             this.txtTinh.Name = "txtTinh";
-            this.txtTinh.Size = new System.Drawing.Size(79, 24);
+            this.txtTinh.Size = new System.Drawing.Size(100, 29);
             this.txtTinh.TabIndex = 1;
             this.txtTinh.Text = "Ten tinh";
             this.txtTinh.Click += new System.EventHandler(this.label9_Click);
@@ -168,10 +152,9 @@
             // 
             this.txtDiem.AutoSize = true;
             this.txtDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiem.Location = new System.Drawing.Point(419, 163);
-            this.txtDiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtDiem.Location = new System.Drawing.Point(559, 201);
             this.txtDiem.Name = "txtDiem";
-            this.txtDiem.Size = new System.Drawing.Size(79, 24);
+            this.txtDiem.Size = new System.Drawing.Size(102, 29);
             this.txtDiem.TabIndex = 1;
             this.txtDiem.Text = "Diem so";
             this.txtDiem.Click += new System.EventHandler(this.label10_Click);
@@ -180,10 +163,9 @@
             // 
             this.txtSoBan.AutoSize = true;
             this.txtSoBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoBan.Location = new System.Drawing.Point(419, 194);
-            this.txtSoBan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtSoBan.Location = new System.Drawing.Point(559, 239);
             this.txtSoBan.Name = "txtSoBan";
-            this.txtSoBan.Size = new System.Drawing.Size(45, 24);
+            this.txtSoBan.Size = new System.Drawing.Size(58, 29);
             this.txtSoBan.TabIndex = 1;
             this.txtSoBan.Text = "0 / 0";
             this.txtSoBan.Click += new System.EventHandler(this.label11_Click);
@@ -238,22 +220,76 @@
             this.DsCauThu.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.DsCauThu.HeaderBgColor = System.Drawing.Color.Empty;
             this.DsCauThu.HeaderForeColor = System.Drawing.Color.White;
-            this.DsCauThu.Location = new System.Drawing.Point(9, 253);
-            this.DsCauThu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DsCauThu.Location = new System.Drawing.Point(12, 311);
+            this.DsCauThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DsCauThu.Name = "DsCauThu";
             this.DsCauThu.RowHeadersVisible = false;
             this.DsCauThu.RowHeadersWidth = 51;
             this.DsCauThu.RowTemplate.Height = 40;
             this.DsCauThu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DsCauThu.Size = new System.Drawing.Size(682, 202);
+            this.DsCauThu.Size = new System.Drawing.Size(909, 249);
             this.DsCauThu.TabIndex = 2;
             this.DsCauThu.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
+            // pTitlebar
+            // 
+            this.pTitlebar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(48)))), ((int)(((byte)(98)))));
+            this.pTitlebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pTitlebar.BackgroundImage")));
+            this.pTitlebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pTitlebar.BorderColor = System.Drawing.Color.Transparent;
+            this.pTitlebar.BorderRadius = 3;
+            this.pTitlebar.BorderThickness = 1;
+            this.pTitlebar.Controls.Add(this.btnClose);
+            this.pTitlebar.Controls.Add(this.btnMinimize);
+            this.pTitlebar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pTitlebar.Location = new System.Drawing.Point(0, 0);
+            this.pTitlebar.Margin = new System.Windows.Forms.Padding(4);
+            this.pTitlebar.Name = "pTitlebar";
+            this.pTitlebar.ShowBorders = true;
+            this.pTitlebar.Size = new System.Drawing.Size(933, 60);
+            this.pTitlebar.TabIndex = 35;
+            this.pTitlebar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTitlebar_MouseDown);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(48)))), ((int)(((byte)(98)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnClose.Location = new System.Drawing.Point(898, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(32, 46);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "O";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(48)))), ((int)(((byte)(98)))));
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnMinimize.Location = new System.Drawing.Point(860, 2);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(32, 46);
+            this.btnMinimize.TabIndex = 7;
+            this.btnMinimize.Text = "O";
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
             // ClubDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 465);
+            this.ClientSize = new System.Drawing.Size(933, 572);
+            this.Controls.Add(this.pTitlebar);
             this.Controls.Add(this.DsCauThu);
             this.Controls.Add(this.txtSoBan);
             this.Controls.Add(this.label6);
@@ -265,14 +301,14 @@
             this.Controls.Add(this.txtTenSan);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtMaTenDoi);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ClubDetail";
             this.Text = "ClubDetail";
             this.Load += new System.EventHandler(this.ClubDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DsCauThu)).EndInit();
+            this.pTitlebar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,7 +317,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label txtMaTenDoi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -293,5 +328,8 @@
         private System.Windows.Forms.Label txtDiem;
         private System.Windows.Forms.Label txtSoBan;
         private Bunifu.UI.WinForms.BunifuDataGridView DsCauThu;
+        private Bunifu.UI.WinForms.BunifuPanel pTitlebar;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnMinimize;
     }
 }

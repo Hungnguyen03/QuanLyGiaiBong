@@ -5,7 +5,7 @@ namespace QuanLyGiaiBong.Class
 {
     internal class ProcessDataBase
     {
-        string strConnect = @"Data Source=HUNGNGUYEN\SQLEXPRESS;Initial Catalog=QLGiaiBongDa;Integrated Security=True";
+        string strConnect = @"Data Source=LAPTOP-7DP7U4ND\SQLEXPRESS;Initial Catalog=QLGiaiBongDa;Integrated Security=True";
         SqlConnection sqlConnect = null;
         //Hàm mở kết nối CSDL
         private void KetNoiCSDL()
