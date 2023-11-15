@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClubDetail));
             this.txtMaTenDoi = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,27 +44,20 @@
             this.txtDiem = new System.Windows.Forms.Label();
             this.txtSoBan = new System.Windows.Forms.Label();
             this.DsCauThu = new Bunifu.UI.WinForms.BunifuDataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txt_demCT = new System.Windows.Forms.Label();
+            this.btn_addCT = new System.Windows.Forms.Button();
+            this.Logo = new Bunifu.UI.WinForms.BunifuPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DsCauThu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(60, 63);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 153);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // txtMaTenDoi
             // 
             this.txtMaTenDoi.AutoSize = true;
             this.txtMaTenDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaTenDoi.Location = new System.Drawing.Point(306, 18);
-            this.txtMaTenDoi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtMaTenDoi.Location = new System.Drawing.Point(368, 75);
             this.txtMaTenDoi.Name = "txtMaTenDoi";
-            this.txtMaTenDoi.Size = new System.Drawing.Size(187, 37);
+            this.txtMaTenDoi.Size = new System.Drawing.Size(230, 46);
             this.txtMaTenDoi.TabIndex = 1;
             this.txtMaTenDoi.Text = "mã - tên đội";
             // 
@@ -72,10 +65,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(243, 63);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(284, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 24);
+            this.label2.Size = new System.Drawing.Size(100, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên sân";
             // 
@@ -83,10 +75,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(243, 96);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(284, 171);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 24);
+            this.label3.Size = new System.Drawing.Size(182, 29);
             this.label3.TabIndex = 1;
             this.label3.Text = "Huấn luyện viên";
             // 
@@ -94,10 +85,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(243, 129);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(284, 212);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 24);
+            this.label4.Size = new System.Drawing.Size(100, 29);
             this.label4.TabIndex = 1;
             this.label4.Text = "Tên tỉnh";
             // 
@@ -105,10 +95,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(243, 163);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(284, 254);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 24);
+            this.label5.Size = new System.Drawing.Size(70, 29);
             this.label5.TabIndex = 1;
             this.label5.Text = "Điểm";
             // 
@@ -116,10 +105,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(243, 194);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(284, 292);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 24);
+            this.label6.Size = new System.Drawing.Size(218, 29);
             this.label6.TabIndex = 1;
             this.label6.Text = "Số bàn thắng / thua";
             // 
@@ -127,10 +115,9 @@
             // 
             this.txtTenSan.AutoSize = true;
             this.txtTenSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenSan.Location = new System.Drawing.Point(419, 63);
-            this.txtTenSan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtTenSan.Location = new System.Drawing.Point(519, 131);
             this.txtTenSan.Name = "txtTenSan";
-            this.txtTenSan.Size = new System.Drawing.Size(79, 24);
+            this.txtTenSan.Size = new System.Drawing.Size(100, 29);
             this.txtTenSan.TabIndex = 1;
             this.txtTenSan.Text = "Ten san";
             // 
@@ -138,10 +125,9 @@
             // 
             this.txtHLV.AutoSize = true;
             this.txtHLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHLV.Location = new System.Drawing.Point(419, 96);
-            this.txtHLV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtHLV.Location = new System.Drawing.Point(519, 171);
             this.txtHLV.Name = "txtHLV";
-            this.txtHLV.Size = new System.Drawing.Size(47, 24);
+            this.txtHLV.Size = new System.Drawing.Size(58, 29);
             this.txtHLV.TabIndex = 1;
             this.txtHLV.Text = "HVL";
             // 
@@ -149,10 +135,9 @@
             // 
             this.txtTinh.AutoSize = true;
             this.txtTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTinh.Location = new System.Drawing.Point(419, 129);
-            this.txtTinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtTinh.Location = new System.Drawing.Point(519, 212);
             this.txtTinh.Name = "txtTinh";
-            this.txtTinh.Size = new System.Drawing.Size(79, 24);
+            this.txtTinh.Size = new System.Drawing.Size(100, 29);
             this.txtTinh.TabIndex = 1;
             this.txtTinh.Text = "Ten tinh";
             // 
@@ -160,10 +145,9 @@
             // 
             this.txtDiem.AutoSize = true;
             this.txtDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiem.Location = new System.Drawing.Point(419, 163);
-            this.txtDiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtDiem.Location = new System.Drawing.Point(519, 254);
             this.txtDiem.Name = "txtDiem";
-            this.txtDiem.Size = new System.Drawing.Size(79, 24);
+            this.txtDiem.Size = new System.Drawing.Size(102, 29);
             this.txtDiem.TabIndex = 1;
             this.txtDiem.Text = "Diem so";
             // 
@@ -171,10 +155,9 @@
             // 
             this.txtSoBan.AutoSize = true;
             this.txtSoBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoBan.Location = new System.Drawing.Point(419, 194);
-            this.txtSoBan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtSoBan.Location = new System.Drawing.Point(519, 292);
             this.txtSoBan.Name = "txtSoBan";
-            this.txtSoBan.Size = new System.Drawing.Size(45, 24);
+            this.txtSoBan.Size = new System.Drawing.Size(58, 29);
             this.txtSoBan.TabIndex = 1;
             this.txtSoBan.Text = "0 / 0";
             // 
@@ -228,24 +211,64 @@
             this.DsCauThu.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.DsCauThu.HeaderBgColor = System.Drawing.Color.Empty;
             this.DsCauThu.HeaderForeColor = System.Drawing.Color.White;
-            this.DsCauThu.Location = new System.Drawing.Point(9, 253);
-            this.DsCauThu.Margin = new System.Windows.Forms.Padding(2);
+            this.DsCauThu.Location = new System.Drawing.Point(12, 364);
+            this.DsCauThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DsCauThu.Name = "DsCauThu";
             this.DsCauThu.ReadOnly = true;
             this.DsCauThu.RowHeadersVisible = false;
             this.DsCauThu.RowHeadersWidth = 51;
             this.DsCauThu.RowTemplate.Height = 40;
             this.DsCauThu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DsCauThu.Size = new System.Drawing.Size(682, 202);
+            this.DsCauThu.Size = new System.Drawing.Size(909, 249);
             this.DsCauThu.TabIndex = 2;
             this.DsCauThu.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.DsCauThu.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DsCauThu_CellMouseDoubleClick);
             // 
+            // txt_demCT
+            // 
+            this.txt_demCT.AutoSize = true;
+            this.txt_demCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_demCT.Location = new System.Drawing.Point(650, 334);
+            this.txt_demCT.Name = "txt_demCT";
+            this.txt_demCT.Size = new System.Drawing.Size(117, 25);
+            this.txt_demCT.TabIndex = 3;
+            this.txt_demCT.Text = "Số cầu thủ: ";
+            this.txt_demCT.Click += new System.EventHandler(this.txt_demCT_Click);
+            // 
+            // btn_addCT
+            // 
+            this.btn_addCT.Location = new System.Drawing.Point(798, 322);
+            this.btn_addCT.Name = "btn_addCT";
+            this.btn_addCT.Size = new System.Drawing.Size(123, 37);
+            this.btn_addCT.TabIndex = 4;
+            this.btn_addCT.Text = "Thêm Cầu thủ";
+            this.btn_addCT.UseVisualStyleBackColor = true;
+            this.btn_addCT.Click += new System.EventHandler(this.btn_addCT_Click);
+            // 
+            // Logo
+            // 
+            this.Logo.AllowFocused = false;
+            this.Logo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Logo.AutoSizeHeight = true;
+            this.Logo.BorderRadius = 72;
+            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
+            this.Logo.IsCircle = true;
+            this.Logo.Location = new System.Drawing.Point(82, 138);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(145, 145);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logo.TabIndex = 5;
+            this.Logo.TabStop = false;
+            this.Logo.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
             // ClubDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 465);
+            this.ClientSize = new System.Drawing.Size(933, 624);
+            this.Controls.Add(this.Logo);
+            this.Controls.Add(this.btn_addCT);
+            this.Controls.Add(this.txt_demCT);
             this.Controls.Add(this.DsCauThu);
             this.Controls.Add(this.txtSoBan);
             this.Controls.Add(this.label6);
@@ -258,21 +281,18 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMaTenDoi);
-            this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ClubDetail";
             this.Text = "ClubDetail";
             this.Load += new System.EventHandler(this.ClubDetail_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DsCauThu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label txtMaTenDoi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -285,5 +305,8 @@
         private System.Windows.Forms.Label txtDiem;
         private System.Windows.Forms.Label txtSoBan;
         private Bunifu.UI.WinForms.BunifuDataGridView DsCauThu;
+        private System.Windows.Forms.Label txt_demCT;
+        private System.Windows.Forms.Button btn_addCT;
+        private Bunifu.UI.WinForms.BunifuPictureBox Logo;
     }
 }
