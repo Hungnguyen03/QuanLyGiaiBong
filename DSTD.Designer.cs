@@ -474,7 +474,7 @@
             this.dgvDSTD.RowHeadersWidth = 51;
             this.dgvDSTD.RowTemplate.Height = 40;
             this.dgvDSTD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSTD.Size = new System.Drawing.Size(1082, 482);
+            this.dgvDSTD.Size = new System.Drawing.Size(1082, 462);
             this.dgvDSTD.TabIndex = 1;
             this.dgvDSTD.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -482,7 +482,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 573);
+            this.ClientSize = new System.Drawing.Size(1082, 553);
             this.Controls.Add(this.dgvDSTD);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(950, 500);
