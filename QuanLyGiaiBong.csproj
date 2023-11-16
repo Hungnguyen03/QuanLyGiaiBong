@@ -330,6 +330,7 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="Images\bg.jpg" />
     <Content Include="Images\CauThu\AbdumuminovJakhongir.jpg" />
     <Content Include="Images\CauThu\AlmeidaSantosJanclesio.jpg" />
     <Content Include="Images\CauThu\BuiTanTruong.jpg" />
@@ -426,6 +427,7 @@
     <Content Include="Images\DoiBong\HNFC.png" />
     <Content Include="Images\DoiBong\slna.png" />
     <Content Include="Images\DoiBong\Viettel.jpg" />
+    <Content Include="Images\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\icons\bong.jpg" />
