@@ -13,12 +13,13 @@ using System.Runtime.InteropServices;
 
 namespace QuanLyGiaiBong
 {
-    public partial class FormMenu : Form
+    public partial class Form1 : Form
     {
         private Button currentButton;
         private int tempIndex;
         private Form activeForm;
-        public FormMenu()
+        ProcessDataBase dtBase = new ProcessDataBase();
+        public Form1()
         {
             InitializeComponent();
             btnCloseChildForm.Visible = false;
@@ -92,6 +93,11 @@ namespace QuanLyGiaiBong
             OpenChildForm(new VPL(), sender);
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnCloseChildForm_Click(object sender, EventArgs e)
         {
             if (activeForm != null)
@@ -105,6 +111,11 @@ namespace QuanLyGiaiBong
             lblTitle.Text = "HOME";
             currentButton = null;
             btnCloseChildForm.Visible = false;
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+
         }
 
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)

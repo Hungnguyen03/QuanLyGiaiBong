@@ -93,7 +93,7 @@
             this.dgvDSDB.RowHeadersWidth = 51;
             this.dgvDSDB.RowTemplate.Height = 40;
             this.dgvDSDB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSDB.Size = new System.Drawing.Size(1082, 553);
+            this.dgvDSDB.Size = new System.Drawing.Size(1082, 573);
             this.dgvDSDB.TabIndex = 1;
             this.dgvDSDB.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 553);
+            this.ClientSize = new System.Drawing.Size(1082, 573);
             this.Controls.Add(this.dgvDSDB);
             this.MinimumSize = new System.Drawing.Size(950, 500);
             this.Name = "DSDB";
