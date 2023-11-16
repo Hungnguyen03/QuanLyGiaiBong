@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace QuanLyGiaiBong
+﻿namespace QuanLyGiaiBong
 {
     partial class UC_TK
     {
@@ -91,6 +89,7 @@ namespace QuanLyGiaiBong
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(95, 338);
             this.bunifuPanel1.TabIndex = 0;
+            this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
             // 
             // bunifuPanel3
             // 
@@ -182,7 +181,6 @@ namespace QuanLyGiaiBong
             this.dgvGoal2.HeaderForeColor = System.Drawing.Color.White;
             this.dgvGoal2.Location = new System.Drawing.Point(414, 0);
             this.dgvGoal2.Name = "dgvGoal2";
-            this.dgvGoal2.ReadOnly = true;
             this.dgvGoal2.RowHeadersVisible = false;
             this.dgvGoal2.RowTemplate.Height = 40;
             this.dgvGoal2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -245,7 +243,6 @@ namespace QuanLyGiaiBong
             this.dgvGoal1.HeaderForeColor = System.Drawing.Color.White;
             this.dgvGoal1.Location = new System.Drawing.Point(0, 0);
             this.dgvGoal1.Name = "dgvGoal1";
-            this.dgvGoal1.ReadOnly = true;
             this.dgvGoal1.RowHeadersVisible = false;
             this.dgvGoal1.RowTemplate.Height = 40;
             this.dgvGoal1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -343,7 +340,6 @@ namespace QuanLyGiaiBong
             this.dgvYellow2.HeaderForeColor = System.Drawing.Color.White;
             this.dgvYellow2.Location = new System.Drawing.Point(414, 0);
             this.dgvYellow2.Name = "dgvYellow2";
-            this.dgvYellow2.ReadOnly = true;
             this.dgvYellow2.RowHeadersVisible = false;
             this.dgvYellow2.RowTemplate.Height = 40;
             this.dgvYellow2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -406,7 +402,6 @@ namespace QuanLyGiaiBong
             this.dgvYellow1.HeaderForeColor = System.Drawing.Color.White;
             this.dgvYellow1.Location = new System.Drawing.Point(0, 0);
             this.dgvYellow1.Name = "dgvYellow1";
-            this.dgvYellow1.ReadOnly = true;
             this.dgvYellow1.RowHeadersVisible = false;
             this.dgvYellow1.RowTemplate.Height = 40;
             this.dgvYellow1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -484,7 +479,6 @@ namespace QuanLyGiaiBong
             this.dgvRed1.HeaderForeColor = System.Drawing.Color.White;
             this.dgvRed1.Location = new System.Drawing.Point(0, 0);
             this.dgvRed1.Name = "dgvRed1";
-            this.dgvRed1.ReadOnly = true;
             this.dgvRed1.RowHeadersVisible = false;
             this.dgvRed1.RowTemplate.Height = 40;
             this.dgvRed1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -547,7 +541,6 @@ namespace QuanLyGiaiBong
             this.dgvRed2.HeaderForeColor = System.Drawing.Color.White;
             this.dgvRed2.Location = new System.Drawing.Point(414, 0);
             this.dgvRed2.Name = "dgvRed2";
-            this.dgvRed2.ReadOnly = true;
             this.dgvRed2.RowHeadersVisible = false;
             this.dgvRed2.RowTemplate.Height = 40;
             this.dgvRed2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

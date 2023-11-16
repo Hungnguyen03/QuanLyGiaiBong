@@ -51,7 +51,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(60, 63);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(138, 153);
             this.pictureBox1.TabIndex = 0;
@@ -67,6 +67,7 @@
             this.txtMaTenDoi.Size = new System.Drawing.Size(187, 37);
             this.txtMaTenDoi.TabIndex = 1;
             this.txtMaTenDoi.Text = "mã - tên đội";
+            this.txtMaTenDoi.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -78,6 +79,7 @@
             this.label2.Size = new System.Drawing.Size(79, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên sân";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -89,6 +91,7 @@
             this.label3.Size = new System.Drawing.Size(147, 24);
             this.label3.TabIndex = 1;
             this.label3.Text = "Huấn luyện viên";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -100,6 +103,7 @@
             this.label4.Size = new System.Drawing.Size(79, 24);
             this.label4.TabIndex = 1;
             this.label4.Text = "Tên tỉnh";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -111,6 +115,7 @@
             this.label5.Size = new System.Drawing.Size(54, 24);
             this.label5.TabIndex = 1;
             this.label5.Text = "Điểm";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -122,6 +127,7 @@
             this.label6.Size = new System.Drawing.Size(173, 24);
             this.label6.TabIndex = 1;
             this.label6.Text = "Số bàn thắng / thua";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtTenSan
             // 
@@ -144,6 +150,7 @@
             this.txtHLV.Size = new System.Drawing.Size(47, 24);
             this.txtHLV.TabIndex = 1;
             this.txtHLV.Text = "HVL";
+            this.txtHLV.Click += new System.EventHandler(this.label8_Click);
             // 
             // txtTinh
             // 
@@ -155,6 +162,7 @@
             this.txtTinh.Size = new System.Drawing.Size(79, 24);
             this.txtTinh.TabIndex = 1;
             this.txtTinh.Text = "Ten tinh";
+            this.txtTinh.Click += new System.EventHandler(this.label9_Click);
             // 
             // txtDiem
             // 
@@ -166,6 +174,7 @@
             this.txtDiem.Size = new System.Drawing.Size(79, 24);
             this.txtDiem.TabIndex = 1;
             this.txtDiem.Text = "Diem so";
+            this.txtDiem.Click += new System.EventHandler(this.label10_Click);
             // 
             // txtSoBan
             // 
@@ -177,6 +186,7 @@
             this.txtSoBan.Size = new System.Drawing.Size(45, 24);
             this.txtSoBan.TabIndex = 1;
             this.txtSoBan.Text = "0 / 0";
+            this.txtSoBan.Click += new System.EventHandler(this.label11_Click);
             // 
             // DsCauThu
             // 
@@ -229,9 +239,8 @@
             this.DsCauThu.HeaderBgColor = System.Drawing.Color.Empty;
             this.DsCauThu.HeaderForeColor = System.Drawing.Color.White;
             this.DsCauThu.Location = new System.Drawing.Point(9, 253);
-            this.DsCauThu.Margin = new System.Windows.Forms.Padding(2);
+            this.DsCauThu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DsCauThu.Name = "DsCauThu";
-            this.DsCauThu.ReadOnly = true;
             this.DsCauThu.RowHeadersVisible = false;
             this.DsCauThu.RowHeadersWidth = 51;
             this.DsCauThu.RowTemplate.Height = 40;
@@ -239,7 +248,6 @@
             this.DsCauThu.Size = new System.Drawing.Size(682, 202);
             this.DsCauThu.TabIndex = 2;
             this.DsCauThu.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            this.DsCauThu.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DsCauThu_CellMouseDoubleClick);
             // 
             // ClubDetail
             // 
@@ -259,7 +267,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMaTenDoi);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ClubDetail";
             this.Text = "ClubDetail";
             this.Load += new System.EventHandler(this.ClubDetail_Load);

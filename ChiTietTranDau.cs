@@ -13,12 +13,10 @@ namespace QuanLyGiaiBong
 {
     public partial class ChiTietTranDau : Form
     {
-        ProcessDataBase db = new ProcessDataBase();
-        int maTD;
-        public ChiTietTranDau(int maTD)
+        public int matrandau = 1;
+        public ChiTietTranDau()
         {
-            this.maTD = maTD;
-            InitializeComponent(maTD);
+            InitializeComponent();
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
@@ -33,18 +31,41 @@ namespace QuanLyGiaiBong
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DataTable ctTranDau = db.DocBang("select * from TranDau" + 
-                " join DoiBong on TranDau.MaDoiNha = DoiBong.MaDoi" + 
-                " join SanBong on SanBong.MaSan = DoiBong.MaSan" +
-                " where MaTranDau = " + maTD);
-            if (ctTranDau != null && ctTranDau.Rows.Count > 0)
-            {
-                LuotDau.Text = ctTranDau.Rows[0]["LuotDau"].ToString();
-                VongDau.Text = ctTranDau.Rows[0]["VongDau"].ToString();
-                Goal1.Text = ctTranDau.Rows[0]["SoBanThangDoiNha"].ToString();
-                Goal2.Text = ctTranDau.Rows[0]["SoBanThuaDoiNha"].ToString();
-                San.Text = ctTranDau.Rows[0]["TenSan"].ToString();
-            }
+            Database db = new Database();
+            string ldquery = "select LuotDau from TranDau ";
+            db.SetQuery(ldquery);
+            Dictionary<String,object> ld = db.LoadRow();
+            LuotDau.Text = ld["LuotDau"].ToString();
+
+            string vdquery = "select VongDau from TranDau ";
+            db.SetQuery(vdquery);
+            Dictionary<String, object> vd = db.LoadRow();
+            VongDau.Text = vd["VongDau"].ToString();
+
+            string goalNhaquery = "select SoBanThangDoiNha from TranDau ";
+            db.SetQuery(goalNhaquery);
+            Dictionary<String, object> goalNha = db.LoadRow();
+            Goal1.Text = goalNha["SoBanThangDoiNha"].ToString();
+
+            string goalKhachquery = "select SoBanThuaDoiNha from TranDau ";
+            db.SetQuery(goalKhachquery);
+            Dictionary<String, object> goalKhach = db.LoadRow();
+            Goal2.Text = goalKhach["SoBanThuaDoiNha"].ToString();
+
+            string sandauquery = "select TenSan from SanBong";
+            db.SetQuery(sandauquery);
+            Dictionary<String, object> sandau = db.LoadRow();
+            San.Text = sandau["TenSan"].ToString();
+
+            string logo1query = "select Logo from DoiBong where MaDoi = 1;";
+            db.SetQuery(logo1query);
+            Dictionary<String, object> logo1 = db.LoadRow();
+
+            string logo2query = "select Logo from DoiBong where MaDoi = 2;";
+            db.SetQuery(logo2query);
+            Dictionary<String, object> logo2 = db.LoadRow();
         }
+
+    
     }
 }

@@ -134,13 +134,13 @@
             this.dgvDH1.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDH1.Location = new System.Drawing.Point(95, 0);
             this.dgvDH1.Name = "dgvDH1";
-            this.dgvDH1.ReadOnly = true;
             this.dgvDH1.RowHeadersVisible = false;
             this.dgvDH1.RowTemplate.Height = 40;
             this.dgvDH1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDH1.Size = new System.Drawing.Size(240, 296);
             this.dgvDH1.TabIndex = 2;
             this.dgvDH1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvDH1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DH1_CellContentClick);
             // 
             // dgvDH2
             // 
@@ -197,7 +197,6 @@
             this.dgvDH2.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDH2.Location = new System.Drawing.Point(498, 0);
             this.dgvDH2.Name = "dgvDH2";
-            this.dgvDH2.ReadOnly = true;
             this.dgvDH2.RowHeadersVisible = false;
             this.dgvDH2.RowTemplate.Height = 40;
             this.dgvDH2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

@@ -26,15 +26,15 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent(int maTD)
+        private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChiTietTranDau));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPanel6 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.uC_TK1 = new QuanLyGiaiBong.UC_TK(maTD);
-            this.uC_DH1 = new QuanLyGiaiBong.UC_DH(maTD);
+            this.uC_TK1 = new QuanLyGiaiBong.UC_TK();
+            this.uC_DH1 = new QuanLyGiaiBong.UC_DH();
             this.bunifuPanel7 = new Bunifu.UI.WinForms.BunifuPanel();
             this.San = new Bunifu.UI.WinForms.BunifuLabel();
             this.Goal2 = new Bunifu.UI.WinForms.BunifuLabel();
