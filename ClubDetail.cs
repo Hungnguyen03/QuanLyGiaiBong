@@ -19,24 +19,49 @@ namespace QuanLyGiaiBong
             InitializeComponent();
             this.maDB = maDB;
         }
-
+        private void DemCT(int maDB)
+        {
+            DataTable dem = conn.DocBang("select count(cauthu.maCT) as Tong from cauthu where madoi = "+ maDB);
+            txt_demCT.Text = "Số cầu thủ: " + dem.Rows[0]["Tong"].ToString();
+        }
+        public void getDB(int maDB)
+        {
+            DataTable ctDB = conn.DocBang("select Madoi,TenDoi,SanBong.TenSan,HLV,Tinh.TenTinh,Diem,Sobanthang,Sobanthua from Doibong " +
+                "join SanBong on Doibong.masan = Sanbong.masan " +
+                "join Tinh on Doibong.matinh = tinh.matinh where madoi = " + maDB);
+            if(ctDB.Rows.Count == 0)
+            {
+                MessageBox.Show("Đội bóng không có trong Database!");
+            }
+            else
+            {
+                txtMaTenDoi.Text = ctDB.Rows[0]["madoi"].ToString() + " - " + ctDB.Rows[0]["tendoi"].ToString();
+                txtTenSan.Text = ctDB.Rows[0]["TenSan"].ToString();
+                txtHLV.Text = ctDB.Rows[0]["HLV"].ToString();
+                txtTinh.Text = ctDB.Rows[0]["TenTinh"].ToString();
+                txtDiem.Text = ctDB.Rows[0]["diem"].ToString();
+                txtSoBan.Text = ctDB.Rows[0]["sobanthang"].ToString() + " / " + ctDB.Rows[0]["sobanthua"].ToString();
+            }
+            ctDB.Dispose();
+        }
         private void ClubDetail_Load(object sender, EventArgs e)
         {
-            DataTable dataTable = conn.DocBang("select MaCT,MaDoi,TenCT,ViTri,NgaySinh,SoAo from CauThu where madoi = " + maDB);
+            getDB(maDB);
+            DemCT(maDB);
+            DataTable dataTable = conn.DocBang("select MaCT,TenCT,vitri.tenvitri,NgaySinh,SoAo from CauThu " +
+                "join ViTri on cauthu.mavitri = vitri.mavitri where madoi = " + maDB);
             DsCauThu.DataSource= dataTable;
             DsCauThu.Columns[0].HeaderText = "Mã CT";
-            DsCauThu.Columns[1].HeaderText = "Mã DB";
-            DsCauThu.Columns[2].HeaderText = "Họ tên";
-            DsCauThu.Columns[3].HeaderText = "Vị trí";
-            DsCauThu.Columns[4].HeaderText = "Ngày sinh";
-            DsCauThu.Columns[5].HeaderText = "Số áo";
+            DsCauThu.Columns[1].HeaderText = "Họ tên";
+            DsCauThu.Columns[2].HeaderText = "Vị trí";
+            DsCauThu.Columns[3].HeaderText = "Ngày sinh";
+            DsCauThu.Columns[4].HeaderText = "Số áo";
 
             DsCauThu.Columns[0].Width = 30;
-            DsCauThu.Columns[1].Width = 30;
-            DsCauThu.Columns[2].Width = 250;
-            DsCauThu.Columns[3].Width = 100;
-            DsCauThu.Columns[4].Width = 200;
-            DsCauThu.Columns[5].Width = 50;
+            DsCauThu.Columns[1].Width = 250;
+            DsCauThu.Columns[2].Width = 100;
+            DsCauThu.Columns[3].Width = 200;
+            DsCauThu.Columns[4].Width = 50;
 
             dataTable.Dispose();
         }
@@ -51,6 +76,17 @@ namespace QuanLyGiaiBong
                 ChiTietCauThu ctCauThu = new ChiTietCauThu(maCT);
                 ctCauThu.ShowDialog();
             }
+        }
+
+        private void btn_addCT_Click(object sender, EventArgs e)
+        {
+            AddCauThu new_add = new AddCauThu();
+            new_add.ShowDialog();
+        }
+
+        private void txt_demCT_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

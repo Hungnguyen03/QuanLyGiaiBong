@@ -221,6 +221,7 @@
             this.txbDB.TextPlaceholder = "Enter text";
             this.txbDB.UseSystemPasswordChar = false;
             this.txbDB.WordWrap = true;
+            this.txbDB.TextChanged += new System.EventHandler(this.txbDB_TextChanged);
             // 
             // txbTCT
             // 

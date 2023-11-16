@@ -31,15 +31,17 @@ namespace QuanLyGiaiBong
 
         private void getCauThu(int maCT, string Imagespath)
         {
-            DataTable ctCauThu = dtBase.DocBang("select * from CauThu " +
+            DataTable ctCauThu = dtBase.DocBang("select tenCT,vitri.tenvitri,QuocTich.TenQuocTinh,doibong.tendoi,ngaysinh,soao," +
+                "solanrasan, sothevang,sothedo,sobanthang,anh from CauThu " +
                 "join QuocTinh on QuocTinh.MaQuocTinh = CauThu.MaQuocTich " +
                 "join DoiBong on DoiBong.MaDoi = CauThu.MaDoi " +
+                " join Vitri on vitri.mavitri = cauthu.mavitri " +
                 "Where MaCT = " + maCT);
 
             if (ctCauThu != null && ctCauThu.Rows.Count > 0)
             {
                 lbTen.Text = ctCauThu.Rows[0]["TenCT"].ToString();
-                lbViTri.Text = ctCauThu.Rows[0]["ViTri"].ToString();
+                lbViTri.Text = ctCauThu.Rows[0]["TenViTri"].ToString();
                 lbQuocTich.Text = ctCauThu.Rows[0]["TenQuocTinh"].ToString();
                 lbDoi.Text = ctCauThu.Rows[0]["TenDoi"].ToString();
                 DateTime ngaySinh = (DateTime)ctCauThu.Rows[0]["NgaySinh"];

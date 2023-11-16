@@ -76,6 +76,9 @@ namespace QuanLyGiaiBong
                     string sql = "INSERT INTO TranDau_CauThu (MaTranDau, MaDoi, MaCauThu, ViTri) " +
                              "VALUES (N'"+ maTranDau +"', N'"+ maDoi +"', N'"+ maCauThu +"', N'"+ viTri +"')";
                     dtBase.CapNhatDuLieu(sql);
+                    // Update  Số lần ra sân
+                    string updatePlayerSql = "UPDATE CauThu SET SoLanRaSan = SoLanRaSan + 1 WHERE MaCT = '" + maCauThu + "'";
+                    dtBase.CapNhatDuLieu(updatePlayerSql);
                 }
 
                 MessageBox.Show("Thêm cầu thủ thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);

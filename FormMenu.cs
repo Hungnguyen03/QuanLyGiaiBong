@@ -106,11 +106,6 @@ namespace QuanLyGiaiBong
             btnCloseChildForm.Visible = false;
         }
 
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();

@@ -55,17 +55,9 @@ namespace QuanLyGiaiBong
 
         }
 
-        private void dgvDSCT_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void txbDB_TextChanged(object sender, EventArgs e)
         {
-            if (e.Button == MouseButtons.Left && e.RowIndex >= 0)
-            {
-                DataGridViewRow selectedCT = dgvDSCT.Rows[e.RowIndex];
-                int maCT = Convert.ToInt32(selectedCT.Cells["MaCT"].Value);
 
-
-                ChiTietCauThu ctCauThu = new ChiTietCauThu(maCT);
-                ctCauThu.ShowDialog();
-            }
         }
     }
 }
