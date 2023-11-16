@@ -20,38 +20,11 @@ namespace QuanLyGiaiBong
         }
         private void EmptyText()
         {
-            txtAddTenSan.Text = "";
+            txtAddMaSan.Text = "";
             txtAddTenDoi.Text = "";
             txtAddHLV.Text = "";
             txtAddTinh.Text = "";
             
-        }
-        private void check_MS()
-        {
-            DataTable get_ms = conn.DocBang("select masan from SanBong where tensan like concat('%',N'" + txtAddTenSan.Text + "')");
-            if(get_ms.Rows.Count == 0)
-            {
-                conn.CapNhatDuLieu("insert into sanbong(tensan) values(N'" + txtAddTenSan.Text + "')");
-            }
-            else
-            {
-
-            }
-            get_ms.Dispose();
-        }
-        private void check_MT()
-        {
-            DataTable get_mt = conn.DocBang("select matinh from tinh where tentinh like N'"+txtAddTinh.Text+"'");
-            int check_mt = int.Parse(get_mt.Rows[0]["matinh"].ToString());
-            if (get_mt.Rows.Count == 0)
-            {
-                conn.CapNhatDuLieu("insert into Tinh(tentinh) values(N'" + txtAddTinh.Text + "')");
-            }
-            else 
-            { 
-            
-            }
-            get_mt.Dispose();
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -70,33 +43,15 @@ namespace QuanLyGiaiBong
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            if (txtAddTenSan.Text.Trim() == "" || txtAddTenDoi.Text == "" ||
-                txtAddHLV.Text == "" || txtAddTinh.Text == "")
-            {
-                MessageBox.Show("Điền đầy đủ thông tin đội bóng!");
-                txtAddTenDoi.Focus();
-            }
-            else
-            {
-                check_MS();
-                check_MT();
-                DataTable get_ms = conn.DocBang("select masan from SanBong where tensan like concat('%',N'" + txtAddTenSan.Text + "')");
-                int MS = int.Parse(get_ms.Rows[0]["masan"].ToString());
-                DataTable get_mt = conn.DocBang("select matinh from tinh where tentinh like N'" + txtAddTinh.Text + "'");
-                int MT = int.Parse(get_mt.Rows[0]["matinh"].ToString());
+            DataTable dt = new DataTable();
+            conn.CapNhatDuLieu("insert into DoiBong(TenDoi,MaSan,HLV,MaTinh,Logo) " +
+                "values(N'" + txtAddTenDoi.Text + "'," +
+                "" + txtAddMaSan.Text + "," +
+                "N'" + txtAddHLV.Text + "'," +
+                "" + txtAddTinh.Text + "," +
+                "'" + txtLogoLink.Text + "')");
 
-                DataTable dt = new DataTable();
-                conn.CapNhatDuLieu("insert into DoiBong(TenDoi,MaSan,HLV,MaTinh,Logo) " +
-                    "values(N'" + txtAddTenDoi.Text + "'," +
-                    "" + MS + "," +
-                    "N'" + txtAddHLV.Text + "'," +
-                    "" + MT + "," +
-                    "'" + txtLogoLink.Text + "')");
-
-                MessageBox.Show("New club added!");
-                get_ms.Dispose();
-                get_mt.Dispose();
-            }
+            MessageBox.Show("New club added!");
         }
 
         private void btn_clear_Click(object sender, EventArgs e)
@@ -106,15 +61,24 @@ namespace QuanLyGiaiBong
 
         private void btn_choosePic_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            OpenFileDialog getPic = new OpenFileDialog();
+            getPic.Title = "Chọn hình ảnh";
+            getPic.InitialDirectory = "C:\\";
+            getPic.Filter = "Ảnh (*.jpg; *.png; *.gif)|*.jpg;*.png;*.gif";
+
+            if (getPic.ShowDialog() == DialogResult.OK)
             {
-                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    string imagePath = openFileDialog.FileName;
-                    txtLogoLink.Text = imagePath;
-                    logoPic.Image = Image.FromFile(imagePath);
-                }
+                string filePath = getPic.FileName;
+                txtLogoLink.Text = filePath;
+
+                Bitmap img = new Bitmap(filePath);
+
+                int width = logoPic.Width;
+                int height = logoPic.Height;
+                Size newSize = new Size(width, height);
+                img.SetResolution(newSize.Width, newSize.Height);
+
+                logoPic.Image = img;
             }
         }
     }

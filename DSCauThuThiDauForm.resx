@@ -120,14 +120,17 @@
   <metadata name="Select.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="Ảnh.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="LuuBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAKkAAAAzCAYAAADsKCgKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC1SURBVHhe7dIhAYAwAADBtVjw0Y4YGKaAAAR4ceLU2x97
-        zXMf84Gk78/xGyDEpOSZlDyTkmdS8kxKnknJMyl5JiXPpOSZlDyTkmdS8kxKnknJMyl5JiXPpOSZlDyT
-        kmdS8kxKnknJMyl5JiXPpOSZlDyTkmdS8kxKnknJMyl5JiXPpOSZlDyTkmdS8kxKnknJMyl5JiXPpOSZ
-        lDyTkmdS8kxKnknJMyl5JiVv3GtefwEK7jWvF7sAyqSHRAnQAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAJYAAAAnCAYAAADtl7EyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACfSURBVHhe7dKxDYJQAABRtrAzoXRaKNzOLaSSBvOZ4V/3
+        ipfcALe89u/nuV8XzDKeWkb83g+YZjxlLKYzFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFglj
+        kTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBYJY5EwFgljkTAWCWORMBaJe6x1O48R
+        MMu6nccfDE9RDzCn7t8AAAAASUVORK5CYII=
 </value>
   </data>
 </root>
