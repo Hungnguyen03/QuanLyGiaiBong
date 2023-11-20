@@ -28,7 +28,9 @@ namespace QuanLyGiaiBong
             dgvDSDB.Columns[1].HeaderText = "Tên đội bóng";
             dgvDSDB.Columns[2].HeaderText = "Huấn luyện viên";
             dgvDSDB.Columns[3].HeaderText = "Điểm";
-            dgvDSDB.Columns[3].Width = 50;
+            dgvDSDB.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSDB.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSDB.Columns[3].Width = 70;
             //dgvDSDB.Columns[1].Width = 250;
             //dgvDSDB.BackgroundColor = Color.LightBlue;
             dtDoiBong.Dispose();//Giải phóng bộ nhớ cho DataTable

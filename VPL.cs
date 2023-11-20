@@ -27,8 +27,10 @@ namespace QuanLyGiaiBong
             dgvVPL.Columns[1].HeaderText = "Tên cầu thủ";
             dgvVPL.Columns[2].HeaderText = "Vị trí";
             dgvVPL.Columns[3].HeaderText = "Số bàn thắng";
-            dgvVPL.Columns[3].Width = 150;
-
+            dgvVPL.Columns[3].Width = 125;
+            dgvVPL.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvVPL.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvVPL.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
 
             dtVua.Dispose();//Giải phóng bộ nhớ cho DataTable

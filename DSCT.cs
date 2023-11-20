@@ -31,7 +31,10 @@ namespace QuanLyGiaiBong
             dgvDSCT.Columns[2].HeaderText = "Vị trí";
             dgvDSCT.Columns[3].HeaderText = "Tên đội bóng";
             dgvDSCT.Columns[4].HeaderText = "Số bàn thắng";
-            dgvDSCT.Columns[4].Width = 100;
+            dgvDSCT.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSCT.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSCT.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSCT.Columns[4].Width = 120;
 
             //dgvDSCT.Size= new Size(600 ,600);
             //dgvDSCT.BackgroundColor = Color.LightBlue;
@@ -61,7 +64,10 @@ namespace QuanLyGiaiBong
             dgvDSCT.Columns[2].HeaderText = "Vị trí";
             dgvDSCT.Columns[3].HeaderText = "Tên đội bóng";
             dgvDSCT.Columns[4].HeaderText = "Số bàn thắng";
-            dgvDSCT.Columns[4].Width = 100;
+            dgvDSCT.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSCT.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSCT.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSCT.Columns[4].Width = 120;
         }
     }
 }
