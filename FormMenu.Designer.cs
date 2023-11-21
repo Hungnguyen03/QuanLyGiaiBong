@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
 			this.panelMenu = new System.Windows.Forms.Panel();
 			this.btnVPL = new System.Windows.Forms.Button();
 			this.btnDSTD = new System.Windows.Forms.Button();
