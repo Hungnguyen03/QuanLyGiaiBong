@@ -115,5 +115,12 @@ namespace QuanLyGiaiBong
             dgvDSTD.DataSource = dtCauThu;
             dtCauThu.Dispose();
         }
-    }
+
+		private void add_Click(object sender, EventArgs e)
+		{
+				AddTranDau TD = new AddTranDau();
+				TD.ShowDialog();
+
+		}
+	}
 }

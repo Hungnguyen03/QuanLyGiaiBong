@@ -117,45 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="add.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAFsAAAAgCAYAAAB90wSbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB5SURBVGhD7dCxEcIwAMDAbOHBzXaMkcapALODVX3xd6p1
-        PXO8n9f4cNjv87Vjcdz+bHbE7JDZIbNDZofMDpkdMjtkdsjskNkhs0Nmh8wOmR0yO2R2yOyQ2SGzQ2aH
-        zA6ZHTI7ZHbI7JDZIbNDZof+s9cc9w7OWnPcX8cd9QD8EtpCAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEcAAAAgCAYAAABAQWX9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABzSURBVGhD7dCxDcIwAADBbOHBzXaMkcapANMB4ie44qSv
-        /7jmuF+38eDL68uxY/FjfzHnD3OCOcGcYE4wJ5gTzAnmBHOCOcGcYE4wJ5gTzAnmBHOCOcGcYE4wJ5gT
-        zAnmBHOCOcGcYE54z1lznDv4tOY4nx9BX363Cq0iAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="txbSTD.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAHAAAAAgCAYAAADKbvy8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACCSURBVGhD7dGxCQMxAARB9V+VhMr4MlyAjUCJS9hnFi65
-        dIZe0N77mXN+rbNjdvnGOIdaHbPLB7AYwHgA4wGMBzAewHgA4wGMBzAewHgA4wGMBzAewHgA4wGMBzAe
-        wHgA4wGMBzAewHgA4wGMBzAewHgA4/0BrrU+57DOjtnlU7cxfl59k1N4TqBkAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="txbSBT.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAHAAAAAgCAYAAADKbvy8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACCSURBVGhD7dGxCQMxAARB9V+VhMr4MlyAjUCJS9hnFi65
-        dIZe0N77mXN+rbNjdvnGOIdaHbPLB7AYwHgA4wGMBzAewHgA4wGMBzAewHgA4wGMBzAewHgA4wGMBzAe
-        wHgA4wGMBzAewHgA4wGMBzAewHgA4/0BrrU+57DOjtnlU7cxfl59k1N4TqBkAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="txbDN.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAHAAAAAgCAYAAADKbvy8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACCSURBVGhD7dGxCQMxAARB9V+VhMr4MlyAjUCJS9hnFi65
-        dIZe0N77mXN+rbNjdvnGOIdaHbPLB7AYwHgA4wGMBzAewHgA4wGMBzAewHgA4wGMBzAewHgA4wGMBzAe
-        wHgA4wGMBzAewHgA4wGMBzAewHgA4/0BrrU+57DOjtnlU7cxfl59k1N4TqBkAAAAAElFTkSuQmCC
-</value>
-  </data>
 </root>

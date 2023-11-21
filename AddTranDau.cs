@@ -10,7 +10,10 @@ namespace QuanLyGiaiBong
     {
         ProcessDataBase dtBase = new ProcessDataBase();
         private DataTable dsDoi;
-
+        private DataTable madoikhach;
+		private DataTable madoinha;
+		string TenDoiNha, TenDoiKhach;
+        string MaDN, MaDK;
         public AddTranDau()
         {
             InitializeComponent();
@@ -27,11 +30,13 @@ namespace QuanLyGiaiBong
                 foreach (DataRow row in dsDoi.Rows)
                 {
                     string tenDoi = row["TenDoi"].ToString();
-                    cmbDoiNha.Items.Add(tenDoi);
+					cmbDoiNha.Items.Add(tenDoi);
                     cmbDoiKhach.Items.Add(tenDoi);
                 }
+                
             }
             setColor();
+
         }
 
         private void setColor()
@@ -45,7 +50,8 @@ namespace QuanLyGiaiBong
 
         private void cmbDoiNha_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbDoiNha.SelectedItem != null)
+			
+			if (cmbDoiNha.SelectedItem != null)
             {
                 string selectedTeam = cmbDoiNha.SelectedItem.ToString();
                 cmbDoiKhach.Items.Clear();
@@ -55,14 +61,23 @@ namespace QuanLyGiaiBong
                     {
                         cmbDoiKhach.Items.Add(item);
                     }
+                    
                 }
-            }
-        }
+				TenDoiNha = cmbDoiNha.SelectedItem.ToString();
+			}		
+			madoikhach = dtBase.DocBang("select MaDoi from DoiBong where TenDoi like  N'" + TenDoiNha + "'");
+			foreach (DataRow row in madoikhach.Rows)
+			{
+				MaDK = row["MaDoi"].ToString();
+			}
+
+		}
 
         private void cmbDoiKhach_SelectedIndexChanged(object sender, EventArgs e)
-        {   
-            if(cmbDoiKhach.SelectedItem != null)
-            {
+        {
+			
+			if (cmbDoiKhach.SelectedItem != null)
+            {  
                 string selectedTeam = cmbDoiKhach.SelectedItem.ToString();
                 cmbDoiNha.Items.Clear();
                 foreach (object item in cmbDoiKhach.Items)
@@ -72,18 +87,25 @@ namespace QuanLyGiaiBong
                         cmbDoiNha.Items.Add(item);
                     }
                 }
-            }
-        }
+				TenDoiKhach = cmbDoiKhach.SelectedItem.ToString();
+			}
+ 
+			
+			madoinha = dtBase.DocBang("select MaDoi from DoiBong where TenDoi like N'" + TenDoiKhach + "'");
+			foreach (DataRow row in madoinha.Rows)
+			{
+				MaDN = row["MaDoi"].ToString();
+			}
+		}
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             tbGhiChu.Text = "";
             tbLuot.Text = "";
             tbVong.Text = "";
-
             cmbDoiNha.SelectedItem = null;
-            cmbDoiKhach.SelectedItem = null;
-            cmbDoiNha.Items.Clear();
+			cmbDoiKhach.SelectedItem = null;
+			cmbDoiNha.Items.Clear();
             cmbDoiKhach.Items.Clear();
             if (dsDoi != null && dsDoi.Rows.Count > 0)
             {
@@ -91,7 +113,7 @@ namespace QuanLyGiaiBong
                 {
                     string tenDoi = row["TenDoi"].ToString();
                     cmbDoiNha.Items.Add(tenDoi);
-                    cmbDoiKhach.Items.Add(tenDoi);
+                   cmbDoiKhach.Items.Add(tenDoi);
                 }
             }
         }
@@ -110,6 +132,18 @@ namespace QuanLyGiaiBong
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pTitlebar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            string sql = "insert into TranDau(LuotDau,VongDau,MaDoiNha,MaDoiKhach,SoBanThangDoiNha,SoBanThuaDoiNha,SoTheVangDoiNha,SoTheDoDoiNha,SoTheVangDoiKhach,SoTheDoDoiKhach,GhiChu) values " + "('" + int.Parse(tbLuot.Text) + "','" + int.Parse(tbVong.Text) + "','" + int.Parse(MaDN) + "','" + int.Parse(MaDK) + "','0','0','0','0','0','0',N'" + tbGhiChu.Text + "')";
+            dtBase.CapNhatDuLieu(sql);
+            MessageBox.Show("Đã Thêm Trận Đấu");
         }
     }
 }

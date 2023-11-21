@@ -46,5 +46,10 @@ namespace QuanLyGiaiBong
                 San.Text = ctTranDau.Rows[0]["TenSan"].ToString();
             }
         }
-    }
+
+		private void ChiTietTranDau_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

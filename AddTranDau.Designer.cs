@@ -513,6 +513,7 @@
             this.btnThem.TextMarginLeft = 0;
             this.btnThem.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnThem.UseDefaultRadiusAndThickness = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 

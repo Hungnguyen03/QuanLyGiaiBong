@@ -59,10 +59,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.avt1)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel5.SuspendLayout();
-            this.SuspendLayout();
-            // 
+			this.SuspendLayout();
+			// 
             // bunifuPanel4
-            // 
+			// 
             this.bunifuPanel4.BackgroundColor = System.Drawing.Color.Transparent;
             this.bunifuPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel4.BackgroundImage")));
             this.bunifuPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -570,7 +570,7 @@
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
             this.bunifuPanel5.ResumeLayout(false);
-            this.ResumeLayout(false);
+			this.ResumeLayout(false);
 
         }
 
