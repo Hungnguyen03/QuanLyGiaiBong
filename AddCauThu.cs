@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -64,11 +65,53 @@ namespace QuanLyGiaiBong
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string imagePath = openFileDialog.FileName;
+                    imgName.Text = Path.GetFileName(imagePath);
                     pbAnh.Image = Image.FromFile(imagePath);
                 }
             }
         }
+        private bool check_QT()
+        {
+            bool k = true;
+            DataTable get_qt = dtBase.DocBang("select maquoctich from quoctich where tenquoctich like N'" + tbQuocTich.Text + "'");
+            if (get_qt.Rows.Count == 0)
+            {
+                k = false;
+            }
+            else
+            {
+                k = true;
+            }
+            get_qt.Dispose();
+            return k;
+        }
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (cmbDoi.SelectedIndex == -1 || tbTen.Text.Trim() == "" ||
+                cmbViTri.SelectedIndex == -1 || tbSoAo.Text.Trim() == "" ||
+                tbQuocTich.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin cầu thủ!");
+            }
+            else if (check_QT() == false)
+            {
+                MessageBox.Show("Điền lại quốc tịch!");
+            }
+            else
+            {
+                DataTable get_qt = dtBase.DocBang("select maquoctich from quoctich where tenquoctich like N'" + tbQuocTich.Text + "'");
+                int MQT = int.Parse(get_qt.Rows[0]["maquoctich"].ToString());
 
+                dtBase.CapNhatDuLieu("insert into Cauthu(MaDoi,TenCT,MaViTri,NgaySinh,SoAo,MaQuocTich,Anh) " +
+                "values(" + (cmbDoi.SelectedIndex + 1) + ",N'" + tbTen.Text + "'," +
+                "" + (cmbViTri.SelectedIndex + 1) + ",'" + dtpNgaySinh.Text + "'," +
+                "" + tbSoAo.Text + "," + MQT + ",'" + imgName.Text + "')");
+                MessageBox.Show("Đã thêm cầu thủ!");
+
+                dtBase.CapNhatDuLieu("update DoiBong set SoLuongCT = ISNULL(SoLuongCT,0) + 1 where DoiBong.MaDoi = '" + (cmbDoi.SelectedIndex + 1) + "'");
+
+            }
+        }
         private void cmbDoi_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -76,7 +119,7 @@ namespace QuanLyGiaiBong
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
