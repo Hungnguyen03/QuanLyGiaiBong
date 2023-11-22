@@ -32,12 +32,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvVPL = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.anhCT = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVPL)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvVPL
             // 
             this.dgvVPL.AllowCustomTheming = false;
+            this.dgvVPL.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvVPL.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -55,6 +57,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvVPL.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVPL.ColumnHeadersHeight = 40;
+            this.dgvVPL.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.anhCT});
             this.dgvVPL.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvVPL.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvVPL.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -88,7 +92,7 @@
             this.dgvVPL.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvVPL.HeaderForeColor = System.Drawing.Color.White;
             this.dgvVPL.Location = new System.Drawing.Point(0, 0);
-            this.dgvVPL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvVPL.Margin = new System.Windows.Forms.Padding(2);
             this.dgvVPL.Name = "dgvVPL";
             this.dgvVPL.ReadOnly = true;
             this.dgvVPL.RowHeadersVisible = false;
@@ -100,13 +104,20 @@
             this.dgvVPL.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvVPL.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvVPL_CellMouseDoubleClick);
             // 
+            // anhCT
+            // 
+            this.anhCT.HeaderText = "Anh";
+            this.anhCT.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.anhCT.Name = "anhCT";
+            this.anhCT.ReadOnly = true;
+            // 
             // VPL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 553);
             this.Controls.Add(this.dgvVPL);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(716, 414);
             this.Name = "VPL";
             this.Text = "Vua phá lưới";
@@ -118,5 +129,6 @@
 
         #endregion
         private Bunifu.UI.WinForms.BunifuDataGridView dgvVPL;
+        private System.Windows.Forms.DataGridViewImageColumn anhCT;
     }
 }

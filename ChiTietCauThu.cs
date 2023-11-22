@@ -57,6 +57,9 @@ namespace QuanLyGiaiBong
                 lbDo.Text = ctCauThu.Rows[0]["SoTheDo"].ToString();
                 lbBanThang.Text = ctCauThu.Rows[0]["SoBanThang"].ToString();
                 string cauthuPath = Path.Combine(Imagespath, "Images", "CauThu");
+                Image anhCT = Image.FromFile(cauthuPath + "\\" + ctCauThu.Rows[0]["Anh"].ToString());
+                pbAnhCT.Image = anhCT;
+                pbAnhCT.SizeMode = PictureBoxSizeMode.Zoom;
             }
 
             ctCauThu.Dispose();

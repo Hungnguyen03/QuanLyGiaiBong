@@ -54,6 +54,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDSCT = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.anhCT = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSCT)).BeginInit();
             this.SuspendLayout();
@@ -421,6 +422,7 @@
             // dgvDSCT
             // 
             this.dgvDSCT.AllowCustomTheming = false;
+            this.dgvDSCT.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvDSCT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -438,6 +440,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDSCT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDSCT.ColumnHeadersHeight = 40;
+            this.dgvDSCT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.anhCT});
             this.dgvDSCT.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvDSCT.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvDSCT.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -483,6 +487,13 @@
             this.dgvDSCT.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvDSCT.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDSCT_CellMouseDoubleClick);
             // 
+            // anhCT
+            // 
+            this.anhCT.HeaderText = "Ảnh";
+            this.anhCT.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.anhCT.Name = "anhCT";
+            this.anhCT.ReadOnly = true;
+            // 
             // DSCT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -512,5 +523,6 @@
         private Bunifu.UI.WinForms.BunifuTextBox txbDB;
         private Bunifu.UI.WinForms.BunifuTextBox txbTCT;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvDSCT;
+        private System.Windows.Forms.DataGridViewImageColumn anhCT;
     }
 }

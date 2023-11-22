@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 using QuanLyGiaiBong.Properties;
 
@@ -17,16 +15,22 @@ namespace QuanLyGiaiBong
         public DSCT()
         {
             InitializeComponent();
+            getData();
         }
 
         private void DSCT_Load(object sender, EventArgs e)
+        {
+            getData();
+        }
+
+        private void getData()
         {
             DataTable dtCauThu = dtBase.DocBang("select Anh, TenCT,TenViTri, TenDoi,CauThu.SoBanThang,MaCT from CauThu " +
                 "inner join DoiBong on CauThu.MaDoi = DoiBong.MaDoi " +
                 "inner join ViTri on CauThu.MaViTri=ViTri.MaViTri");
             dgvDSCT.DataSource = dtCauThu;
             //Định dạng dataGrid
-            dgvDSCT.Columns[0].HeaderText = "Ảnh";
+            dgvDSCT.Columns["anhCT"].HeaderText = "Ảnh";
             dgvDSCT.Columns[1].HeaderText = "Tên cầu thủ";
             dgvDSCT.Columns[2].HeaderText = "Vị trí";
             dgvDSCT.Columns[3].HeaderText = "Tên đội bóng";
@@ -36,8 +40,17 @@ namespace QuanLyGiaiBong
             dgvDSCT.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvDSCT.Columns[4].Width = 120;
 
-            //dgvDSCT.Size= new Size(600 ,600);
-            //dgvDSCT.BackgroundColor = Color.LightBlue;
+            dgvDSCT.Columns["Anh"].Visible = false;
+            string appPath = Application.StartupPath;
+            string projectRootPath = Path.GetFullPath(Path.Combine(appPath, @"..\.."));
+            string cauthuPath = Path.Combine(projectRootPath, "Images", "CauThu");
+            int slg = dtCauThu.Rows.Count;
+            for (var i = 0; i < slg; i++)
+            {
+                string ctPath = Path.Combine(cauthuPath, dtCauThu.Rows[i]["Anh"].ToString());
+                Image anhCT = Image.FromFile(ctPath);
+                dgvDSCT["anhCT", i].Value = anhCT;
+            }
             dtCauThu.Dispose();//Giải phóng bộ nhớ cho DataTable
             dgvDSCT.Columns["MaCT"].Visible = false;
             dtCauThu.Dispose();

@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 using static QuanLyGiaiBong.ProcessDataBase;
 
@@ -17,14 +15,20 @@ namespace QuanLyGiaiBong
         public VPL()
         {
             InitializeComponent();
+            getData();
         }
 
         private void VPL_Load(object sender, EventArgs e)
         {
+            getData();
+        }
+
+        private void getData()
+        {
             DataTable dtVua = dtBase.DocBang("SELECT TOP 3 Anh, TenCT,TenViTri, SoBanThang,MaCT FROM CauThu inner join ViTri on CauThu.MaViTri=ViTri.MaViTri ORDER BY SoBanThang DESC");
             dgvVPL.DataSource = dtVua;
             dgvVPL.Columns["MaCT"].Visible = false;
-            dgvVPL.Columns[0].HeaderText = "Ảnh";
+            dgvVPL.Columns["anhCT"].HeaderText = "Ảnh";
             dgvVPL.Columns[1].HeaderText = "Tên cầu thủ";
             dgvVPL.Columns[2].HeaderText = "Vị trí";
             dgvVPL.Columns[3].HeaderText = "Số bàn thắng";
@@ -33,7 +37,17 @@ namespace QuanLyGiaiBong
             dgvVPL.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvVPL.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-
+            dgvVPL.Columns["Anh"].Visible = false;
+            string appPath = Application.StartupPath;
+            string projectRootPath = Path.GetFullPath(Path.Combine(appPath, @"..\.."));
+            string cauthuPath = Path.Combine(projectRootPath, "Images", "CauThu");
+            int slg = dtVua.Rows.Count;
+            for (var i = 0; i < slg; i++)
+            {
+                string ctPath = Path.Combine(cauthuPath, dtVua.Rows[i]["Anh"].ToString());
+                Image anhCT = Image.FromFile(ctPath);
+                dgvVPL["anhCT", i].Value = anhCT;
+            }
             dtVua.Dispose();//Giải phóng bộ nhớ cho DataTable
         }
 
