@@ -13,10 +13,12 @@ namespace QuanLyGiaiBong
 {
     public partial class ClubDetail : Form
     {
-        connectDB conn = new connectDB();
-        public ClubDetail()
+        ProcessDataBase conn = new ProcessDataBase();
+        int maDB;
+        public ClubDetail(int maDB)
         {
             InitializeComponent();
+            this.maDB = maDB;
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -42,44 +44,9 @@ namespace QuanLyGiaiBong
 
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ClubDetail_Load(object sender, EventArgs e)
         {
-            DataTable dataTable = conn.DocBang("select MaCT,MaDoi,TenCT,ViTri,NgaySinh,SoAo from CauThu where madoi = 1");
+            DataTable dataTable = conn.DocBang("select MaCT,MaDoi,TenCT,ViTri,NgaySinh,SoAo from CauThu where madoi = " + maDB);
             DsCauThu.DataSource= dataTable;
             DsCauThu.Columns[0].HeaderText = "Mã CT";
             DsCauThu.Columns[1].HeaderText = "Mã DB";
@@ -96,6 +63,18 @@ namespace QuanLyGiaiBong
             DsCauThu.Columns[5].Width = 50;
 
             dataTable.Dispose();
+        }
+
+        private void DsCauThu_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left && e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedCT = DsCauThu.Rows[e.RowIndex];
+                int maCT = Convert.ToInt32(selectedCT.Cells["MaCT"].Value);
+
+                ChiTietCauThu ctCauThu = new ChiTietCauThu(maCT);
+                ctCauThu.ShowDialog();
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

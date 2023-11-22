@@ -69,6 +69,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1082, 100);
             this.panel1.TabIndex = 0;
@@ -126,7 +127,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txbSBT.OnIdleState = stateProperties4;
-            this.txbSBT.Padding = new System.Windows.Forms.Padding(3);
+            this.txbSBT.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbSBT.PasswordChar = '\0';
             this.txbSBT.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txbSBT.PlaceholderText = "Enter text";
@@ -136,7 +137,7 @@
             this.txbSBT.SelectionLength = 0;
             this.txbSBT.SelectionStart = 0;
             this.txbSBT.ShortcutsEnabled = true;
-            this.txbSBT.Size = new System.Drawing.Size(120, 40);
+            this.txbSBT.Size = new System.Drawing.Size(90, 32);
             this.txbSBT.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txbSBT.TabIndex = 7;
             this.txbSBT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -174,7 +175,8 @@
             this.txbDB.IconRight = null;
             this.txbDB.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txbDB.Lines = new string[0];
-            this.txbDB.Location = new System.Drawing.Point(448, 36);
+            this.txbDB.Location = new System.Drawing.Point(336, 29);
+            this.txbDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbDB.MaxLength = 32767;
             this.txbDB.MinimumSize = new System.Drawing.Size(1, 1);
             this.txbDB.Modified = false;
@@ -200,7 +202,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txbDB.OnIdleState = stateProperties8;
-            this.txbDB.Padding = new System.Windows.Forms.Padding(3);
+            this.txbDB.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbDB.PasswordChar = '\0';
             this.txbDB.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txbDB.PlaceholderText = "Enter text";
@@ -210,7 +212,7 @@
             this.txbDB.SelectionLength = 0;
             this.txbDB.SelectionStart = 0;
             this.txbDB.ShortcutsEnabled = true;
-            this.txbDB.Size = new System.Drawing.Size(120, 40);
+            this.txbDB.Size = new System.Drawing.Size(90, 32);
             this.txbDB.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txbDB.TabIndex = 6;
             this.txbDB.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -248,7 +250,8 @@
             this.txbTCT.IconRight = null;
             this.txbTCT.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txbTCT.Lines = new string[0];
-            this.txbTCT.Location = new System.Drawing.Point(161, 36);
+            this.txbTCT.Location = new System.Drawing.Point(121, 29);
+            this.txbTCT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbTCT.MaxLength = 32767;
             this.txbTCT.MinimumSize = new System.Drawing.Size(1, 1);
             this.txbTCT.Modified = false;
@@ -274,7 +277,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txbTCT.OnIdleState = stateProperties12;
-            this.txbTCT.Padding = new System.Windows.Forms.Padding(3);
+            this.txbTCT.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbTCT.PasswordChar = '\0';
             this.txbTCT.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txbTCT.PlaceholderText = "Enter text";
@@ -284,7 +287,7 @@
             this.txbTCT.SelectionLength = 0;
             this.txbTCT.SelectionStart = 0;
             this.txbTCT.ShortcutsEnabled = true;
-            this.txbTCT.Size = new System.Drawing.Size(120, 40);
+            this.txbTCT.Size = new System.Drawing.Size(90, 32);
             this.txbTCT.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txbTCT.TabIndex = 5;
             this.txbTCT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -376,7 +379,7 @@
             this.btnSearch.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnSearch.OnPressedState.IconLeftImage = null;
             this.btnSearch.OnPressedState.IconRightImage = null;
-            this.btnSearch.Size = new System.Drawing.Size(109, 39);
+            this.btnSearch.Size = new System.Drawing.Size(82, 32);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSearch.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -391,7 +394,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(592, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 25);
+            this.label3.Size = new System.Drawing.Size(109, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Số bàn thắng:";
             // 
@@ -399,9 +402,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(346, 44);
+            this.label2.Location = new System.Drawing.Point(260, 36);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 25);
+            this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Đội bóng:";
             // 
@@ -409,9 +413,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 44);
+            this.label1.Location = new System.Drawing.Point(25, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 25);
+            this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên cầu thủ:";
             // 
@@ -467,8 +472,10 @@
             this.dgvDSCT.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvDSCT.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDSCT.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvDSCT.Location = new System.Drawing.Point(0, 100);
+            this.dgvDSCT.Location = new System.Drawing.Point(0, 81);
+            this.dgvDSCT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDSCT.Name = "dgvDSCT";
+            this.dgvDSCT.ReadOnly = true;
             this.dgvDSCT.RowHeadersVisible = false;
             this.dgvDSCT.RowHeadersWidth = 51;
             this.dgvDSCT.RowTemplate.Height = 40;
@@ -476,10 +483,11 @@
             this.dgvDSCT.Size = new System.Drawing.Size(1082, 453);
             this.dgvDSCT.TabIndex = 1;
             this.dgvDSCT.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvDSCT.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDSCT_CellMouseDoubleClick);
             // 
             // DSCT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 553);
             this.Controls.Add(this.dgvDSCT);

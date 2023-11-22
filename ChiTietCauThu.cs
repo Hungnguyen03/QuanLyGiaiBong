@@ -1,5 +1,4 @@
-﻿using QuanLyGiaiBong.Class;
-using System;
+﻿using System;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -14,8 +13,8 @@ namespace QuanLyGiaiBong
         int maCT;
         public ChiTietCauThu(int maCT)
         {
-            InitializeComponent();
             this.maCT = maCT;
+            InitializeComponent();
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

@@ -143,8 +143,6 @@
     <Compile Include="ChiTietTranDau.Designer.cs">
       <DependentUpon>ChiTietTranDau.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database.cs" />
-    <Compile Include="ProcessDatabase.cs" />
     <Compile Include="DSCT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +167,7 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProcessDataBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLGiaiBongDaDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -229,7 +228,6 @@
     <Compile Include="ClubDetail.Designer.cs">
       <DependentUpon>ClubDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="connectDB.cs" />
     <Compile Include="AddTranDau.Designer.cs">
       <DependentUpon>AddTranDau.cs</DependentUpon>
     </Compile>
@@ -239,7 +237,6 @@
     <Compile Include="ChiTietCauThu.Designer.cs">
       <DependentUpon>ChiTietCauThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\ProcessDataBase.cs" />
     <Compile Include="AddCauThu.cs">
       <SubType>Form</SubType>
     </Compile>

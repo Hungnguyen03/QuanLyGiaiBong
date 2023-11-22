@@ -61,6 +61,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // txtMaTenDoi
+            // 
+            //this.txtMaTenDoi.AutoSize = true;
+            //this.txtMaTenDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.txtMaTenDoi.Location = new System.Drawing.Point(306, 18);
+            //this.txtMaTenDoi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            //this.txtMaTenDoi.Name = "txtMaTenDoi";
+            //this.txtMaTenDoi.Size = new System.Drawing.Size(187, 37);
+            //this.txtMaTenDoi.TabIndex = 1;
+            //this.txtMaTenDoi.Text = "mã - tên đội";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -70,7 +81,6 @@
             this.label2.Size = new System.Drawing.Size(100, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên sân";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -81,7 +91,6 @@
             this.label3.Size = new System.Drawing.Size(182, 29);
             this.label3.TabIndex = 1;
             this.label3.Text = "Huấn luyện viên";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -92,7 +101,6 @@
             this.label4.Size = new System.Drawing.Size(100, 29);
             this.label4.TabIndex = 1;
             this.label4.Text = "Tên tỉnh";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -103,7 +111,6 @@
             this.label5.Size = new System.Drawing.Size(70, 29);
             this.label5.TabIndex = 1;
             this.label5.Text = "Điểm";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -114,7 +121,6 @@
             this.label6.Size = new System.Drawing.Size(218, 29);
             this.label6.TabIndex = 1;
             this.label6.Text = "Số bàn thắng / thua";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtTenSan
             // 
@@ -135,7 +141,6 @@
             this.txtHLV.Size = new System.Drawing.Size(58, 29);
             this.txtHLV.TabIndex = 1;
             this.txtHLV.Text = "HVL";
-            this.txtHLV.Click += new System.EventHandler(this.label8_Click);
             // 
             // txtTinh
             // 
@@ -146,7 +151,6 @@
             this.txtTinh.Size = new System.Drawing.Size(100, 29);
             this.txtTinh.TabIndex = 1;
             this.txtTinh.Text = "Ten tinh";
-            this.txtTinh.Click += new System.EventHandler(this.label9_Click);
             // 
             // txtDiem
             // 
@@ -157,7 +161,6 @@
             this.txtDiem.Size = new System.Drawing.Size(102, 29);
             this.txtDiem.TabIndex = 1;
             this.txtDiem.Text = "Diem so";
-            this.txtDiem.Click += new System.EventHandler(this.label10_Click);
             // 
             // txtSoBan
             // 
@@ -168,7 +171,6 @@
             this.txtSoBan.Size = new System.Drawing.Size(58, 29);
             this.txtSoBan.TabIndex = 1;
             this.txtSoBan.Text = "0 / 0";
-            this.txtSoBan.Click += new System.EventHandler(this.label11_Click);
             // 
             // DsCauThu
             // 
@@ -223,6 +225,7 @@
             this.DsCauThu.Location = new System.Drawing.Point(12, 361);
             this.DsCauThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DsCauThu.Name = "DsCauThu";
+            this.DsCauThu.ReadOnly = true;
             this.DsCauThu.RowHeadersVisible = false;
             this.DsCauThu.RowHeadersWidth = 51;
             this.DsCauThu.RowTemplate.Height = 40;
@@ -230,6 +233,7 @@
             this.DsCauThu.Size = new System.Drawing.Size(909, 199);
             this.DsCauThu.TabIndex = 2;
             this.DsCauThu.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.DsCauThu.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DsCauThu_CellMouseDoubleClick);
             // 
             // pTitlebar
             // 
@@ -327,6 +331,7 @@
         private System.Windows.Forms.Label txtTinh;
         private System.Windows.Forms.Label txtDiem;
         private System.Windows.Forms.Label txtSoBan;
+        private System.Windows.Forms.Label txtMaTenDoi;
         private Bunifu.UI.WinForms.BunifuDataGridView DsCauThu;
         private Bunifu.UI.WinForms.BunifuPanel pTitlebar;
         private System.Windows.Forms.Button btnClose;

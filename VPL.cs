@@ -35,5 +35,18 @@ namespace QuanLyGiaiBong
 
             dtVua.Dispose();//Giải phóng bộ nhớ cho DataTable
         }
+
+        private void dgvVPL_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left && e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedCT = dgvVPL.Rows[e.RowIndex];
+                int maCT = Convert.ToInt32(selectedCT.Cells["MaCT"].Value);
+
+
+                ChiTietCauThu ctCauThu = new ChiTietCauThu(maCT);
+                ctCauThu.ShowDialog();
+            }
+        }
     }
 }

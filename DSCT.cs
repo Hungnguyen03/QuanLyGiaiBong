@@ -21,7 +21,7 @@ namespace QuanLyGiaiBong
 
         private void DSCT_Load(object sender, EventArgs e)
         {
-            DataTable dtCauThu = dtBase.DocBang("select Anh, TenCT,TenViTri, TenDoi,CauThu.SoBanThang from CauThu " +
+            DataTable dtCauThu = dtBase.DocBang("select Anh, TenCT,TenViTri, TenDoi,CauThu.SoBanThang,MaCT from CauThu " +
                 "inner join DoiBong on CauThu.MaDoi = DoiBong.MaDoi " +
                 "inner join ViTri on CauThu.MaViTri=ViTri.MaViTri");
             dgvDSCT.DataSource = dtCauThu;
@@ -39,11 +39,13 @@ namespace QuanLyGiaiBong
             //dgvDSCT.Size= new Size(600 ,600);
             //dgvDSCT.BackgroundColor = Color.LightBlue;
             dtCauThu.Dispose();//Giải phóng bộ nhớ cho DataTable
+            dgvDSCT.Columns["MaCT"].Visible = false;
+            dtCauThu.Dispose();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string sql = "select Anh,TenCT,TenViTri,TenDoi,CauThu.SoBanThang from CauThu " +
+            string sql = "select Anh,TenCT,TenViTri,TenDoi,CauThu.SoBanThang, MaCT from CauThu " +
                 "inner join DoiBong on CauThu.MaDoi = DoiBong.MaDoi " +
                 "inner join ViTri on CauThu.MaViTri=ViTri.MaViTri";
             //Khi chọn tiêu chí nào sẽ ghép với tiêu chí đó bằng từ and
@@ -68,6 +70,19 @@ namespace QuanLyGiaiBong
             dgvDSCT.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvDSCT.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvDSCT.Columns[4].Width = 120;
+        }
+
+        private void dgvDSCT_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left && e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedCT = dgvDSCT.Rows[e.RowIndex];
+                int maCT = Convert.ToInt32(selectedCT.Cells["MaCT"].Value);
+
+
+                ChiTietCauThu ctCauThu = new ChiTietCauThu(maCT);
+                ctCauThu.ShowDialog();
+            }
         }
     }
 }

@@ -249,8 +249,6 @@
             this.MinimumSize = new System.Drawing.Size(1300, 750);
             this.Name = "FormMenu";
             this.Text = "FormMenu";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.panelMenu.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
