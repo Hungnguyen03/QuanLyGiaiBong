@@ -31,6 +31,67 @@ namespace QuanLyGiaiBong
             txtAddTinh.Text = "";
             
         }
+        private void check_MS()
+        {
+            DataTable get_ms = conn.DocBang("select masan from SanBong where tensan like concat('%',N'" + txtAddMaSan.Text + "')");
+            if (get_ms.Rows.Count == 0)
+            {
+                conn.CapNhatDuLieu("insert into sanbong(tensan) values(N'" + txtAddMaSan.Text + "')");
+            }
+            else
+            {
+
+            }
+            get_ms.Dispose();
+        }
+        private void check_MT()
+        {
+            DataTable get_mt = conn.DocBang("select matinh from tinh where tentinh like N'" + txtAddTinh.Text + "'");
+            int check_mt = int.Parse(get_mt.Rows[0]["matinh"].ToString());
+            if (get_mt.Rows.Count == 0)
+            {
+                conn.CapNhatDuLieu("insert into Tinh(tentinh) values(N'" + txtAddTinh.Text + "')");
+            }
+            else
+            {
+
+            }
+            get_mt.Dispose();
+        }
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            if (txtAddMaSan.Text.Trim() == "" || txtAddTenDoi.Text == "" ||
+                txtAddHLV.Text == "" || txtAddTinh.Text == "")
+            {
+                MessageBox.Show("Điền đầy đủ thông tin đội bóng!");
+                txtAddTenDoi.Focus();
+            }
+            else
+            {
+                check_MS();
+                check_MT();
+                DataTable get_ms = conn.DocBang("select masan from SanBong where tensan like concat('%',N'" + txtAddMaSan.Text + "')");
+                int MS = int.Parse(get_ms.Rows[0]["masan"].ToString());
+                DataTable get_mt = conn.DocBang("select matinh from tinh where tentinh like N'" + txtAddTinh.Text + "'");
+                int MT = int.Parse(get_mt.Rows[0]["matinh"].ToString());
+
+                DataTable dt = new DataTable();
+                conn.CapNhatDuLieu("insert into DoiBong(TenDoi,MaSan,HLV,MaTinh,Logo) " +
+                    "values(N'" + txtAddTenDoi.Text + "'," +
+                    "" + MS + "," +
+                    "N'" + txtAddHLV.Text + "'," +
+                    "" + MT + "," +
+                    "'" + txtLogoLink.Text + "')");
+
+                MessageBox.Show("New club added!");
+                get_ms.Dispose();
+                get_mt.Dispose();
+            }
+        }
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            EmptyText();
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -46,24 +107,6 @@ namespace QuanLyGiaiBong
 
         }
 
-        private void btn_add_Click(object sender, EventArgs e)
-        {
-            DataTable dt = new DataTable();
-            conn.CapNhatDuLieu("insert into DoiBong(TenDoi,MaSan,HLV,MaTinh,Logo) " +
-                "values(N'" + txtAddTenDoi.Text + "'," +
-                "" + txtAddMaSan.Text + "," +
-                "N'" + txtAddHLV.Text + "'," +
-                "" + txtAddTinh.Text + "," +
-                "'" + txtLogoLink.Text + "')");
-
-            MessageBox.Show("New club added!");
-        }
-
-        private void btn_clear_Click(object sender, EventArgs e)
-        {
-            EmptyText();
-        }
-
         private void btn_choosePic_Click(object sender, EventArgs e)
         {
             OpenFileDialog getPic = new OpenFileDialog();
@@ -74,6 +117,7 @@ namespace QuanLyGiaiBong
             if (getPic.ShowDialog() == DialogResult.OK)
             {
                 string filePath = getPic.FileName;
+                txtLogoLink.Text = Path.GetFileName(filePath);
                 txtLogoLink.Text = filePath;
 
                 Bitmap img = new Bitmap(filePath);
@@ -104,7 +148,7 @@ namespace QuanLyGiaiBong
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+           this.Close();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)

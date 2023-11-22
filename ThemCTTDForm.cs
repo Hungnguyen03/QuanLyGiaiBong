@@ -150,6 +150,31 @@ namespace QuanLyGiaiBong
                 }
             }
         }
+        private void CapNhatKetQua(int maTD)
+        {
+            int ma_nha, ma_khach;
+            int diem_nha;
+            int diem_khach;
+            DataTable cttd = dtBase.DocBang("select madoinha,madoikhach, sobanthangdoinha, sobanthuadoinha from trandau where matrandau = " + maTD);
+            ma_nha = int.Parse(cttd.Rows[0]["madoinha"].ToString());
+            ma_khach = int.Parse(cttd.Rows[0]["madoikhach"].ToString());
+            diem_nha = int.Parse(cttd.Rows[0]["sobanthangdoinha"].ToString());
+            diem_khach = int.Parse(cttd.Rows[0]["sobanthuadoinha"].ToString());
+            if (diem_nha > diem_khach)
+            {
+                dtBase.CapNhatDuLieu("update DoiBong set Diem = ISNULL(Diem,0) + 3 where MaDoi = " + ma_nha);
+            }
+            else if (diem_nha == diem_khach)
+            {
+                dtBase.CapNhatDuLieu("update DoiBong set Diem = ISNULL(Diem,0) + 1 where MaDoi = " + ma_nha);
+                dtBase.CapNhatDuLieu("update DoiBong set Diem = ISNULL(Diem,0) + 1 where MaDoi = " + ma_khach);
+            }
+            else
+            {
+                dtBase.CapNhatDuLieu("update DoiBong set Diem = ISNULL(Diem,0) + 3 where MaDoi = " + ma_khach);
+            }
+            cttd.Dispose();
+        }
 
         private void DSDoiKhachBtn_Click(object sender, EventArgs e)
         {
