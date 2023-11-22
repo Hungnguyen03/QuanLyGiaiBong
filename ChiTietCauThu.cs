@@ -2,6 +2,7 @@
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace QuanLyGiaiBong
@@ -15,6 +16,11 @@ namespace QuanLyGiaiBong
             this.maCT = maCT;
             InitializeComponent();
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
         private void ChiTietCauThu_Load(object sender, EventArgs e)
         {
             string appPath = Application.StartupPath;
@@ -57,7 +63,18 @@ namespace QuanLyGiaiBong
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pTitlebar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

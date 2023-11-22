@@ -21,9 +21,19 @@ namespace QuanLyGiaiBong
 
         private void VPL_Load(object sender, EventArgs e)
         {
-            DataTable dtVua = dtBase.DocBang("SELECT TOP 3 MaCT, Anh, TenCT, ViTri, SoBanThang FROM CauThu ORDER BY SoBanThang DESC");
+            DataTable dtVua = dtBase.DocBang("SELECT TOP 3 Anh, TenCT,TenViTri, SoBanThang,MaCT FROM CauThu inner join ViTri on CauThu.MaViTri=ViTri.MaViTri ORDER BY SoBanThang DESC");
             dgvVPL.DataSource = dtVua;
-            
+            dgvVPL.Columns["MaCT"].Visible = false;
+            dgvVPL.Columns[0].HeaderText = "Ảnh";
+            dgvVPL.Columns[1].HeaderText = "Tên cầu thủ";
+            dgvVPL.Columns[2].HeaderText = "Vị trí";
+            dgvVPL.Columns[3].HeaderText = "Số bàn thắng";
+            dgvVPL.Columns[3].Width = 125;
+            dgvVPL.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvVPL.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvVPL.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+
             dtVua.Dispose();//Giải phóng bộ nhớ cho DataTable
         }
 

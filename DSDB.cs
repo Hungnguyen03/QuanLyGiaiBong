@@ -21,13 +21,17 @@ namespace QuanLyGiaiBong
 
         private void DSDB_Load(object sender, EventArgs e)
         {
-            DataTable dtDoiBong = dtBase.DocBang("select Madoi, LoGo, Tendoi,Diem from DoiBong");
+            DataTable dtDoiBong = dtBase.DocBang("select LoGo,Tendoi,HLV,Diem,Madoi from DoiBong");
             dgvDSDB.DataSource = dtDoiBong;
             dgvDSDB.Columns["Madoi"].Visible = false;
             //Định dạng dataGrid
-            // dgvDSDB.Columns[0].HeaderText = "Mã Doi Bong";
-            //dgvDSDB.Columns[1].HeaderText = "Tên Doi Bong";
-            //dgvDSDB.Columns[0].Height = 150;
+            dgvDSDB.Columns[0].HeaderText = "Logo";
+            dgvDSDB.Columns[1].HeaderText = "Tên đội bóng";
+            dgvDSDB.Columns[2].HeaderText = "Huấn luyện viên";
+            dgvDSDB.Columns[3].HeaderText = "Điểm";
+            dgvDSDB.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSDB.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSDB.Columns[3].Width = 70;
             //dgvDSDB.Columns[1].Width = 250;
             //dgvDSDB.BackgroundColor = Color.LightBlue;
             dtDoiBong.Dispose();
