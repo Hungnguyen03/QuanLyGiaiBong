@@ -56,7 +56,6 @@ namespace QuanLyGiaiBong
             DsCauThu.Columns[2].HeaderText = "Vị trí";
             DsCauThu.Columns[3].HeaderText = "Ngày sinh";
             DsCauThu.Columns[4].HeaderText = "Số áo";
-
             DsCauThu.Columns[0].Width = 30;
             DsCauThu.Columns[1].Width = 250;
             DsCauThu.Columns[2].Width = 100;
@@ -82,11 +81,6 @@ namespace QuanLyGiaiBong
         {
             AddCauThu new_add = new AddCauThu();
             new_add.ShowDialog();
-        }
-
-        private void txt_demCT_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

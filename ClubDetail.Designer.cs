@@ -233,7 +233,6 @@
             this.txt_demCT.Size = new System.Drawing.Size(117, 25);
             this.txt_demCT.TabIndex = 3;
             this.txt_demCT.Text = "Số cầu thủ: ";
-            this.txt_demCT.Click += new System.EventHandler(this.txt_demCT_Click);
             // 
             // btn_addCT
             // 
