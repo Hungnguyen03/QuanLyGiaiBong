@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClubDetail));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,23 +48,22 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.txtTenDoi = new System.Windows.Forms.Label();
-            this.Logo = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.txt_demCT = new System.Windows.Forms.Label();
             this.btn_addCT = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DsCauThu)).BeginInit();
             this.pTitlebar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // logo
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(71, 124);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 153);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.logo.Location = new System.Drawing.Point(71, 124);
+            this.logo.Margin = new System.Windows.Forms.Padding(2);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(138, 153);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo.TabIndex = 0;
+            this.logo.TabStop = false;
             // 
             // label2
             // 
@@ -179,21 +178,21 @@
             // DsCauThu
             // 
             this.DsCauThu.AllowCustomTheming = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.DsCauThu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.DsCauThu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DsCauThu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DsCauThu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DsCauThu.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DsCauThu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DsCauThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DsCauThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DsCauThu.ColumnHeadersHeight = 40;
             this.DsCauThu.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.DsCauThu.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -213,21 +212,21 @@
             this.DsCauThu.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.DsCauThu.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.DsCauThu.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DsCauThu.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DsCauThu.DefaultCellStyle = dataGridViewCellStyle3;
             this.DsCauThu.EnableHeadersVisualStyles = false;
             this.DsCauThu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.DsCauThu.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.DsCauThu.HeaderBgColor = System.Drawing.Color.Empty;
             this.DsCauThu.HeaderForeColor = System.Drawing.Color.White;
             this.DsCauThu.Location = new System.Drawing.Point(8, 318);
-            this.DsCauThu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DsCauThu.Margin = new System.Windows.Forms.Padding(2);
             this.DsCauThu.Name = "DsCauThu";
             this.DsCauThu.ReadOnly = true;
             this.DsCauThu.RowHeadersVisible = false;
@@ -266,7 +265,7 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnClose.Location = new System.Drawing.Point(674, 2);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(24, 37);
             this.btnClose.TabIndex = 8;
@@ -283,7 +282,7 @@
             this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnMinimize.Location = new System.Drawing.Point(645, 2);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(24, 37);
             this.btnMinimize.TabIndex = 7;
@@ -303,22 +302,6 @@
             this.txtTenDoi.Text = "Ten doi";
             this.txtTenDoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Logo
-            // 
-            this.Logo.AllowFocused = false;
-            this.Logo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Logo.AutoSizeHeight = true;
-            this.Logo.BorderRadius = 54;
-            this.Logo.IsCircle = true;
-            this.Logo.Location = new System.Drawing.Point(62, 125);
-            this.Logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(109, 109);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logo.TabIndex = 5;
-            this.Logo.TabStop = false;
-            this.Logo.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
             // txt_demCT
             // 
             this.txt_demCT.AutoSize = true;
@@ -333,7 +316,7 @@
             // btn_addCT
             // 
             this.btn_addCT.Location = new System.Drawing.Point(598, 283);
-            this.btn_addCT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_addCT.Margin = new System.Windows.Forms.Padding(2);
             this.btn_addCT.Name = "btn_addCT";
             this.btn_addCT.Size = new System.Drawing.Size(92, 30);
             this.btn_addCT.TabIndex = 4;
@@ -359,18 +342,16 @@
             this.Controls.Add(this.txtTenSan);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Logo);
+            this.Controls.Add(this.logo);
             this.Controls.Add(this.txt_demCT);
             this.Controls.Add(this.btn_addCT);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ClubDetail";
             this.Text = "ClubDetail";
             this.Load += new System.EventHandler(this.ClubDetail_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DsCauThu)).EndInit();
             this.pTitlebar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,7 +359,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -397,6 +378,5 @@
         private System.Windows.Forms.Label txtTenDoi;
         private System.Windows.Forms.Label txt_demCT;
         private System.Windows.Forms.Button btn_addCT;
-        private Bunifu.UI.WinForms.BunifuPictureBox Logo;
     }
 }

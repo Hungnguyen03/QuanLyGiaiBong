@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
+using System.Data;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,9 +51,11 @@ namespace QuanLyGiaiBong
         }
         public void getDB(int maDB)
         {
-            DataTable ctDB = conn.DocBang("select Madoi,TenDoi,SanBong.TenSan,HLV,Tinh.TenTinh,Diem,Sobanthang,Sobanthua from Doibong " +
+            DataTable ctDB = conn.DocBang("select Logo, Madoi,TenDoi,SanBong.TenSan,HLV,Tinh.TenTinh,Diem,Sobanthang,Sobanthua from Doibong " +
                 "join SanBong on Doibong.masan = Sanbong.masan " +
                 "join Tinh on Doibong.matinh = tinh.matinh where madoi = " + maDB);
+            string appPath = Application.StartupPath;
+            string projectRootPath = Path.GetFullPath(Path.Combine(appPath, @"..\.."));
             if (ctDB.Rows.Count == 0)
             {
                 MessageBox.Show("Đội bóng không có trong Database!");
@@ -68,6 +68,10 @@ namespace QuanLyGiaiBong
                 txtTinh.Text = ctDB.Rows[0]["TenTinh"].ToString();
                 txtDiem.Text = ctDB.Rows[0]["diem"].ToString();
                 txtSoBan.Text = ctDB.Rows[0]["sobanthang"].ToString() + " / " + ctDB.Rows[0]["sobanthua"].ToString();
+                string doibongPath = Path.Combine(projectRootPath, "Images", "DoiBong");
+                Image anhCT = Image.FromFile(doibongPath + "\\" + ctDB.Rows[0]["Logo"].ToString());
+                logo.Image = anhCT;
+                logo.SizeMode = PictureBoxSizeMode.Zoom;
             }
             ctDB.Dispose();
         }

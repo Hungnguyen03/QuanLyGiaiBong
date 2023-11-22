@@ -551,7 +551,7 @@
             this.ClientSize = new System.Drawing.Size(843, 642);
             this.Controls.Add(this.bunifuPanel4);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "ChiTietTranDau";
             this.Text = "Chi Tiết Trận Đấu";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.bunifuPanel4.ResumeLayout(false);
