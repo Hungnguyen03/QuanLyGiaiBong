@@ -44,7 +44,7 @@ namespace QuanLyGiaiBong
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void pTitlebar_MouseDown(object sender, MouseEventArgs e)

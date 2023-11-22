@@ -29,7 +29,7 @@ namespace QuanLyGiaiBong
             if (sqlConnect.State != ConnectionState.Closed)
             {
                 sqlConnect.Close();
-            }    
+            }
             sqlConnect.Dispose();
         }
         //Hàm thực thi câu lệnh dạng Select trả về một DataTable

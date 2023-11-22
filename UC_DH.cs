@@ -19,7 +19,7 @@ namespace QuanLyGiaiBong
             InitializeComponent();
             DataTable ctTranDau = dtBase.DocBang("select MaDoiNha, MaDoiKhach from TranDau where MaTranDau = " + maTD);
             maDoiNha = Convert.ToInt32(ctTranDau.Rows[0]["MaDoiNha"]);
-            maDoiKhach = Convert.ToInt32(ctTranDau.Rows[0]["MaDoiNha"]);
+            maDoiKhach = Convert.ToInt32(ctTranDau.Rows[0]["MaDoiKhach"]);
         }
 
         private void UC_DH_Load(object sender, EventArgs e)
