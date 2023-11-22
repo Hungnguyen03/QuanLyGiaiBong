@@ -48,6 +48,9 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.txtTenDoi = new System.Windows.Forms.Label();
+            this.Logo = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.txt_demCT = new System.Windows.Forms.Label();
+            this.btn_addCT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DsCauThu)).BeginInit();
             this.pTitlebar.SuspendLayout();
@@ -244,7 +247,13 @@
             this.pTitlebar.TabIndex = 35;
             this.pTitlebar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTitlebar_MouseDown);
             // 
-            // btnClose
+            this.txt_demCT.AutoSize = true;
+            this.txt_demCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_demCT.Location = new System.Drawing.Point(650, 334);
+            this.txt_demCT.Name = "txt_demCT";
+            this.txt_demCT.Size = new System.Drawing.Size(117, 25);
+            this.txt_demCT.TabIndex = 3;
+            this.txt_demCT.Text = "Số cầu thủ: ";
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(48)))), ((int)(((byte)(98)))));
@@ -260,6 +269,31 @@
             this.btnClose.Text = "O";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // btn_addCT
+            // 
+            this.btn_addCT.Location = new System.Drawing.Point(798, 322);
+            this.btn_addCT.Name = "btn_addCT";
+            this.btn_addCT.Size = new System.Drawing.Size(123, 37);
+            this.btn_addCT.TabIndex = 4;
+            this.btn_addCT.Text = "Thêm Cầu thủ";
+            this.btn_addCT.UseVisualStyleBackColor = true;
+            this.btn_addCT.Click += new System.EventHandler(this.btn_addCT_Click);
+            // 
+            // Logo
+            // 
+            this.Logo.AllowFocused = false;
+            this.Logo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Logo.AutoSizeHeight = true;
+            this.Logo.BorderRadius = 72;
+            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
+            this.Logo.IsCircle = true;
+            this.Logo.Location = new System.Drawing.Point(82, 138);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(145, 145);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logo.TabIndex = 5;
+            this.Logo.TabStop = false;
+            this.Logo.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // btnMinimize
             // 
@@ -308,6 +342,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Logo);
+            this.Controls.Add(this.txt_demCT);
+            this.Controls.Add(this.btn_addCT);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ClubDetail";
             this.Text = "ClubDetail";
@@ -339,5 +376,8 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Label txtTenDoi;
+        private System.Windows.Forms.Label txt_demCT;
+        private System.Windows.Forms.Button btn_addCT;
+        private Bunifu.UI.WinForms.BunifuPictureBox Logo;
     }
 }

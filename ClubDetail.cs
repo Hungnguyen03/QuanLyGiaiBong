@@ -46,6 +46,11 @@ namespace QuanLyGiaiBong
         {
 
         }
+        private void DemCT(int maDB)
+        {
+            DataTable dem = conn.DocBang("select count(cauthu.maCT) as Tong from cauthu where madoi = " + maDB);
+            txt_demCT.Text = "Số cầu thủ: " + dem.Rows[0]["Tong"].ToString();
+        }
         public void getDB(int maDB)
         {
             DataTable ctDB = conn.DocBang("select Madoi,TenDoi,SanBong.TenSan,HLV,Tinh.TenTinh,Diem,Sobanthang,Sobanthua from Doibong " +
@@ -69,6 +74,7 @@ namespace QuanLyGiaiBong
         private void ClubDetail_Load(object sender, EventArgs e)
         {
             getDB(maDB);
+            DemCT(maDB);
             DataTable dataTable = conn.DocBang("select MaCT,TenCT,vitri.tenvitri,NgaySinh,SoAo from CauThu " +
                 "join ViTri on cauthu.mavitri = vitri.mavitri where madoi = " + maDB);
             DsCauThu.DataSource = dataTable;
@@ -77,7 +83,6 @@ namespace QuanLyGiaiBong
             DsCauThu.Columns[2].HeaderText = "Vị trí";
             DsCauThu.Columns[3].HeaderText = "Ngày sinh";
             DsCauThu.Columns[4].HeaderText = "Số áo";
-
             DsCauThu.Columns[0].Width = 30;
             DsCauThu.Columns[1].Width = 250;
             DsCauThu.Columns[2].Width = 100;
@@ -98,7 +103,11 @@ namespace QuanLyGiaiBong
                 ctCauThu.ShowDialog();
             }
         }
-
+        private void btn_addCT_Click(object sender, EventArgs e)
+        {
+            AddCauThu new_add = new AddCauThu();
+            new_add.ShowDialog();
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
