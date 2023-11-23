@@ -55,7 +55,7 @@ namespace QuanLyGiaiBong
 
         private void ThemCTTDForm_Load(object sender, EventArgs e)
         {
-            string query = "SELECT MaTranDau, DB1.TenDoi AS TenDoiNha, DB2.TenDoi AS TenDoiKhach,DB1.MaDoi AS MaDoiKhach,DB2.MaDoi AS MaDoiNha ,DB1.Logo AS AnhDN,DB2.Logo AS AnhDK " +
+            string query = "SELECT MaTranDau, DB1.TenDoi AS TenDoiNha, DB2.TenDoi AS TenDoiKhach,DB1.MaDoi AS MaDoiNha,DB2.MaDoi AS MaDoiKhach ,DB1.Logo AS AnhDN,DB2.Logo AS AnhDK " +
                                  "FROM TranDau AS TD " +
                                  "JOIN DoiBong AS DB1 ON TD.MaDoiNha = DB1.MaDoi " +
                                  "JOIN DoiBong AS DB2 ON TD.MaDoiKhach = DB2.MaDoi "+
@@ -81,26 +81,27 @@ namespace QuanLyGiaiBong
                         tenDoiKhach,
                    });
 
-
+          
                 string appPath = Application.StartupPath;
                 string projectRootPath = Path.GetFullPath(Path.Combine(appPath, @"..\..")); 
-                string imagePath = Path.Combine(projectRootPath, "Images", "DoiBong");
-                string anhDNPath = Path.Combine(imagePath, result.Rows[0]["AnhDN"].ToString());
-                string anhDKPath = Path.Combine(imagePath, result.Rows[0]["AnhDK"].ToString());
+                string doibongPath = Path.Combine(projectRootPath, "Images", "DoiBong");
+                string anhDNPath = Path.Combine(doibongPath, result.Rows[0]["AnhDN"].ToString());
+                string anhDKPath = Path.Combine(doibongPath, result.Rows[0]["AnhDK"].ToString());
 
 
                 if (File.Exists(anhDNPath) && File.Exists(anhDKPath))
                 {
                     // Load và hiển thị ảnh
                     DoiNhaPicture.WaitOnLoad = true;
-                    FileStream streamDN = new FileStream(anhDNPath, FileMode.Open);
-                    FileStream streamDK = new FileStream(anhDKPath, FileMode.Open);
-                    Bitmap bitmapDN = new Bitmap(streamDN);
-                    Bitmap bitmapDK = new Bitmap(streamDK);
+                    Image home = Image.FromFile(anhDNPath);
+                    DoiNhaPicture.Image = home;
                     DoiNhaPicture.SizeMode = PictureBoxSizeMode.Zoom;
-                    DoiNhaPicture.Image = (Image)bitmapDN;
+
+                    DoiKhachPicture.WaitOnLoad = true;
+                    Image away = Image.FromFile(anhDKPath);
+                    DoiKhachPicture.Image = away;
                     DoiKhachPicture.SizeMode = PictureBoxSizeMode.Zoom;
-                    DoiKhachPicture.Image = (Image)bitmapDK;
+
 
                 }
             }
@@ -152,7 +153,7 @@ namespace QuanLyGiaiBong
                 }
             }
         }
-        private void CapNhatKetQua(int maTD)
+        private void CapNhatKetQua(string maTD)
         {
             int ma_nha, ma_khach;
             int diem_nha;
@@ -191,6 +192,22 @@ namespace QuanLyGiaiBong
         }
         private void LuuBtn_Click(object sender, EventArgs e)
         {
+            if (TenDoiDropDown.SelectedIndex == -1)
+            {
+                MessageBox.Show("Hãy chọn 1 đội bóng.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; 
+            }
+
+            if (DoDropDown.SelectedIndex == -1 && VangDropDown.SelectedIndex == -1 && TenCTDropDown.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select at least one player or event.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; 
+            }
+            if (TgianTheDo.Value == 0 && TgianTheVang.Value == 0 && TgianGhiBan.Value == 0)
+            {
+                MessageBox.Show("Hãy nhập thời gian khác 0.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; 
+            }
             if (DoDropDown.SelectedIndex != -1)
             {
                 string tenCauThu = DoDropDown.SelectedItem.ToString();
@@ -214,11 +231,19 @@ namespace QuanLyGiaiBong
             if (TenCTDropDown.SelectedIndex != -1)
             {
                 string tenCauThu = TenCTDropDown.SelectedItem.ToString();
-                int thoiGian = (int)TgianGhiBan.Value;
-
-                string insertGoalQuery = $"INSERT INTO TranDau_BanThang (MaTranDau, MaCauThu, ThoiGian) " +
-                                         $"VALUES ({matrandau}, (SELECT MaCT FROM CauThu WHERE TenCT = N'{tenCauThu}'),  {thoiGian})";
-                dtBase.CapNhatDuLieu(insertGoalQuery);
+                int thoiGian;
+                if (int.TryParse(TgianGhiBan.Value.ToString(), out thoiGian))
+                {
+                    // The conversion was successful, proceed with the rest of your code
+                    string insertGoalQuery = $"INSERT INTO TranDau_BanThang (MaTranDau, MaCauThu, ThoiGian) " +
+                                             $"VALUES ({matrandau}, (SELECT MaCT FROM CauThu WHERE TenCT = N'{tenCauThu}'),  {thoiGian})";
+                    dtBase.CapNhatDuLieu(insertGoalQuery);
+                }
+                else
+                {
+                    // Handle the case where the conversion fails (e.g., show an error message)
+                    MessageBox.Show("Please enter a valid numeric value for ThoiGian.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             ClearFormValues();

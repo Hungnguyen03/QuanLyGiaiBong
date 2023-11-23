@@ -52,8 +52,6 @@
             this.LuuBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.TenDoiNhaLabel = new System.Windows.Forms.Label();
             this.TenDoiKhachLabel = new System.Windows.Forms.Label();
-            this.TiSoDoiNhatxt = new System.Windows.Forms.Label();
-            this.TiSoDoiKhachtxt = new System.Windows.Forms.Label();
             this.DSDoiNhaBtn = new Bunifu.UI.WinForms.BunifuImageButton();
             this.DSDoiKhachBtn = new Bunifu.UI.WinForms.BunifuImageButton();
             this.label9 = new System.Windows.Forms.Label();
@@ -120,10 +118,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(310, 79);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(413, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 55);
+            this.label1.Size = new System.Drawing.Size(50, 69);
             this.label1.TabIndex = 0;
             this.label1.Text = "-";
             this.bunifuToolTip1.SetToolTip(this.label1, "");
@@ -134,10 +131,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 365);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(24, 449);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 17);
+            this.label2.Size = new System.Drawing.Size(110, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên đội bóng:";
             this.bunifuToolTip1.SetToolTip(this.label2, "");
@@ -149,13 +145,13 @@
             this.DoiNhaPicture.AllowFocused = false;
             this.DoiNhaPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DoiNhaPicture.AutoSizeHeight = true;
-            this.DoiNhaPicture.BorderRadius = 37;
+            this.DoiNhaPicture.BorderRadius = 50;
             this.DoiNhaPicture.Image = ((System.Drawing.Image)(resources.GetObject("DoiNhaPicture.Image")));
             this.DoiNhaPicture.IsCircle = true;
-            this.DoiNhaPicture.Location = new System.Drawing.Point(117, 66);
-            this.DoiNhaPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DoiNhaPicture.Location = new System.Drawing.Point(156, 81);
+            this.DoiNhaPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DoiNhaPicture.Name = "DoiNhaPicture";
-            this.DoiNhaPicture.Size = new System.Drawing.Size(75, 75);
+            this.DoiNhaPicture.Size = new System.Drawing.Size(100, 100);
             this.DoiNhaPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.DoiNhaPicture.TabIndex = 2;
             this.DoiNhaPicture.TabStop = false;
@@ -169,13 +165,13 @@
             this.DoiKhachPicture.AllowFocused = false;
             this.DoiKhachPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DoiKhachPicture.AutoSizeHeight = true;
-            this.DoiKhachPicture.BorderRadius = 37;
+            this.DoiKhachPicture.BorderRadius = 50;
             this.DoiKhachPicture.Image = ((System.Drawing.Image)(resources.GetObject("DoiKhachPicture.Image")));
             this.DoiKhachPicture.IsCircle = true;
-            this.DoiKhachPicture.Location = new System.Drawing.Point(475, 66);
-            this.DoiKhachPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DoiKhachPicture.Location = new System.Drawing.Point(633, 81);
+            this.DoiKhachPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DoiKhachPicture.Name = "DoiKhachPicture";
-            this.DoiKhachPicture.Size = new System.Drawing.Size(75, 75);
+            this.DoiKhachPicture.Size = new System.Drawing.Size(100, 100);
             this.DoiKhachPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.DoiKhachPicture.TabIndex = 3;
             this.DoiKhachPicture.TabStop = false;
@@ -188,10 +184,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 477);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(32, 587);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 17);
+            this.label3.Size = new System.Drawing.Size(102, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Tên cầu thủ:";
             this.bunifuToolTip1.SetToolTip(this.label3, "");
@@ -202,10 +197,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 523);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(32, 644);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 17);
+            this.label4.Size = new System.Drawing.Size(141, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Thời gian ghi bàn:";
             this.bunifuToolTip1.SetToolTip(this.label4, "");
@@ -216,10 +210,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(332, 365);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(443, 449);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 17);
+            this.label5.Size = new System.Drawing.Size(65, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "Thẻ đỏ:";
             this.bunifuToolTip1.SetToolTip(this.label5, "");
@@ -230,10 +223,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(332, 477);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(443, 587);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 17);
+            this.label6.Size = new System.Drawing.Size(82, 20);
             this.label6.TabIndex = 9;
             this.label6.Text = "Thẻ vàng:";
             this.bunifuToolTip1.SetToolTip(this.label6, "");
@@ -244,10 +236,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(332, 410);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(443, 505);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 17);
+            this.label7.Size = new System.Drawing.Size(133, 20);
             this.label7.TabIndex = 10;
             this.label7.Text = "Thời gian thẻ đỏ:";
             this.bunifuToolTip1.SetToolTip(this.label7, "");
@@ -258,10 +249,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(332, 523);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(443, 644);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 17);
+            this.label8.Size = new System.Drawing.Size(150, 20);
             this.label8.TabIndex = 11;
             this.label8.Text = "Thời gian thẻ vàng:";
             this.bunifuToolTip1.SetToolTip(this.label8, "");
@@ -302,10 +292,10 @@
             this.TenDoiDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.TenDoiDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
             this.TenDoiDropDown.ItemTopMargin = 3;
-            this.TenDoiDropDown.Location = new System.Drawing.Point(142, 362);
-            this.TenDoiDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TenDoiDropDown.Location = new System.Drawing.Point(189, 446);
+            this.TenDoiDropDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TenDoiDropDown.Name = "TenDoiDropDown";
-            this.TenDoiDropDown.Size = new System.Drawing.Size(162, 32);
+            this.TenDoiDropDown.Size = new System.Drawing.Size(215, 32);
             this.TenDoiDropDown.TabIndex = 12;
             this.TenDoiDropDown.Text = null;
             this.TenDoiDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -349,10 +339,10 @@
             this.TenCTDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.TenCTDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
             this.TenCTDropDown.ItemTopMargin = 3;
-            this.TenCTDropDown.Location = new System.Drawing.Point(148, 474);
-            this.TenCTDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TenCTDropDown.Location = new System.Drawing.Point(197, 583);
+            this.TenCTDropDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TenCTDropDown.Name = "TenCTDropDown";
-            this.TenCTDropDown.Size = new System.Drawing.Size(162, 32);
+            this.TenCTDropDown.Size = new System.Drawing.Size(215, 32);
             this.TenCTDropDown.TabIndex = 13;
             this.TenCTDropDown.Text = null;
             this.TenCTDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -395,10 +385,10 @@
             this.VangDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.VangDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
             this.VangDropDown.ItemTopMargin = 3;
-            this.VangDropDown.Location = new System.Drawing.Point(461, 475);
-            this.VangDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VangDropDown.Location = new System.Drawing.Point(615, 585);
+            this.VangDropDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VangDropDown.Name = "VangDropDown";
-            this.VangDropDown.Size = new System.Drawing.Size(162, 32);
+            this.VangDropDown.Size = new System.Drawing.Size(215, 32);
             this.VangDropDown.TabIndex = 14;
             this.VangDropDown.Text = null;
             this.VangDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -441,10 +431,10 @@
             this.DoDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.DoDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
             this.DoDropDown.ItemTopMargin = 3;
-            this.DoDropDown.Location = new System.Drawing.Point(461, 365);
-            this.DoDropDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DoDropDown.Location = new System.Drawing.Point(615, 449);
+            this.DoDropDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DoDropDown.Name = "DoDropDown";
-            this.DoDropDown.Size = new System.Drawing.Size(162, 32);
+            this.DoDropDown.Size = new System.Drawing.Size(215, 32);
             this.DoDropDown.TabIndex = 15;
             this.DoDropDown.Text = null;
             this.DoDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -455,15 +445,15 @@
             // 
             // TgianGhiBan
             // 
-            this.TgianGhiBan.Location = new System.Drawing.Point(148, 522);
-            this.TgianGhiBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TgianGhiBan.Location = new System.Drawing.Point(197, 642);
+            this.TgianGhiBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TgianGhiBan.Maximum = new decimal(new int[] {
             90,
             0,
             0,
             0});
             this.TgianGhiBan.Name = "TgianGhiBan";
-            this.TgianGhiBan.Size = new System.Drawing.Size(90, 20);
+            this.TgianGhiBan.Size = new System.Drawing.Size(120, 22);
             this.TgianGhiBan.TabIndex = 16;
             this.bunifuToolTip1.SetToolTip(this.TgianGhiBan, "");
             this.bunifuToolTip1.SetToolTipIcon(this.TgianGhiBan, null);
@@ -471,15 +461,15 @@
             // 
             // TgianTheVang
             // 
-            this.TgianTheVang.Location = new System.Drawing.Point(461, 524);
-            this.TgianTheVang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TgianTheVang.Location = new System.Drawing.Point(615, 645);
+            this.TgianTheVang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TgianTheVang.Maximum = new decimal(new int[] {
             90,
             0,
             0,
             0});
             this.TgianTheVang.Name = "TgianTheVang";
-            this.TgianTheVang.Size = new System.Drawing.Size(90, 20);
+            this.TgianTheVang.Size = new System.Drawing.Size(120, 22);
             this.TgianTheVang.TabIndex = 17;
             this.bunifuToolTip1.SetToolTip(this.TgianTheVang, "");
             this.bunifuToolTip1.SetToolTipIcon(this.TgianTheVang, null);
@@ -487,15 +477,15 @@
             // 
             // TgianTheDo
             // 
-            this.TgianTheDo.Location = new System.Drawing.Point(461, 412);
-            this.TgianTheDo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TgianTheDo.Location = new System.Drawing.Point(615, 507);
+            this.TgianTheDo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TgianTheDo.Maximum = new decimal(new int[] {
             90,
             0,
             0,
             0});
             this.TgianTheDo.Name = "TgianTheDo";
-            this.TgianTheDo.Size = new System.Drawing.Size(90, 20);
+            this.TgianTheDo.Size = new System.Drawing.Size(120, 22);
             this.TgianTheDo.TabIndex = 18;
             this.bunifuToolTip1.SetToolTip(this.TgianTheDo, "");
             this.bunifuToolTip1.SetToolTipIcon(this.TgianTheDo, null);
@@ -548,8 +538,8 @@
             this.LuuBtn.IdleIconLeftImage = null;
             this.LuuBtn.IdleIconRightImage = null;
             this.LuuBtn.IndicateFocus = false;
-            this.LuuBtn.Location = new System.Drawing.Point(511, 578);
-            this.LuuBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LuuBtn.Location = new System.Drawing.Point(681, 711);
+            this.LuuBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LuuBtn.Name = "LuuBtn";
             this.LuuBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LuuBtn.OnDisabledState.BorderRadius = 1;
@@ -583,7 +573,7 @@
             this.LuuBtn.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.LuuBtn.OnPressedState.IconLeftImage = null;
             this.LuuBtn.OnPressedState.IconRightImage = null;
-            this.LuuBtn.Size = new System.Drawing.Size(112, 32);
+            this.LuuBtn.Size = new System.Drawing.Size(149, 39);
             this.LuuBtn.TabIndex = 20;
             this.LuuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LuuBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -600,10 +590,9 @@
             this.TenDoiNhaLabel.AutoSize = true;
             this.TenDoiNhaLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TenDoiNhaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenDoiNhaLabel.Location = new System.Drawing.Point(2, 0);
-            this.TenDoiNhaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TenDoiNhaLabel.Location = new System.Drawing.Point(3, 0);
             this.TenDoiNhaLabel.Name = "TenDoiNhaLabel";
-            this.TenDoiNhaLabel.Size = new System.Drawing.Size(168, 46);
+            this.TenDoiNhaLabel.Size = new System.Drawing.Size(223, 57);
             this.TenDoiNhaLabel.TabIndex = 21;
             this.TenDoiNhaLabel.Text = "Tên đội bóng 1";
             this.TenDoiNhaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -616,44 +605,15 @@
             this.TenDoiKhachLabel.AutoSize = true;
             this.TenDoiKhachLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TenDoiKhachLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenDoiKhachLabel.Location = new System.Drawing.Point(2, 0);
-            this.TenDoiKhachLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TenDoiKhachLabel.Location = new System.Drawing.Point(3, 0);
             this.TenDoiKhachLabel.Name = "TenDoiKhachLabel";
-            this.TenDoiKhachLabel.Size = new System.Drawing.Size(172, 50);
+            this.TenDoiKhachLabel.Size = new System.Drawing.Size(229, 62);
             this.TenDoiKhachLabel.TabIndex = 22;
             this.TenDoiKhachLabel.Text = "Tên đội bóng 2";
             this.TenDoiKhachLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuToolTip1.SetToolTip(this.TenDoiKhachLabel, "");
             this.bunifuToolTip1.SetToolTipIcon(this.TenDoiKhachLabel, null);
             this.bunifuToolTip1.SetToolTipTitle(this.TenDoiKhachLabel, "");
-            // 
-            // TiSoDoiNhatxt
-            // 
-            this.TiSoDoiNhatxt.AutoSize = true;
-            this.TiSoDoiNhatxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TiSoDoiNhatxt.Location = new System.Drawing.Point(232, 79);
-            this.TiSoDoiNhatxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.TiSoDoiNhatxt.Name = "TiSoDoiNhatxt";
-            this.TiSoDoiNhatxt.Size = new System.Drawing.Size(51, 55);
-            this.TiSoDoiNhatxt.TabIndex = 23;
-            this.TiSoDoiNhatxt.Text = "1";
-            this.bunifuToolTip1.SetToolTip(this.TiSoDoiNhatxt, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.TiSoDoiNhatxt, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.TiSoDoiNhatxt, "");
-            // 
-            // TiSoDoiKhachtxt
-            // 
-            this.TiSoDoiKhachtxt.AutoSize = true;
-            this.TiSoDoiKhachtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TiSoDoiKhachtxt.Location = new System.Drawing.Point(374, 79);
-            this.TiSoDoiKhachtxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.TiSoDoiKhachtxt.Name = "TiSoDoiKhachtxt";
-            this.TiSoDoiKhachtxt.Size = new System.Drawing.Size(51, 55);
-            this.TiSoDoiKhachtxt.TabIndex = 24;
-            this.TiSoDoiKhachtxt.Text = "2";
-            this.bunifuToolTip1.SetToolTip(this.TiSoDoiKhachtxt, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.TiSoDoiKhachtxt, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.TiSoDoiKhachtxt, "");
             // 
             // DSDoiNhaBtn
             // 
@@ -672,18 +632,18 @@
             this.DSDoiNhaBtn.ImageActive = null;
             this.DSDoiNhaBtn.ImageLocation = null;
             this.DSDoiNhaBtn.ImageMargin = 15;
-            this.DSDoiNhaBtn.ImageSize = new System.Drawing.Size(25, 35);
-            this.DSDoiNhaBtn.ImageZoomSize = new System.Drawing.Size(40, 50);
+            this.DSDoiNhaBtn.ImageSize = new System.Drawing.Size(38, 47);
+            this.DSDoiNhaBtn.ImageZoomSize = new System.Drawing.Size(53, 62);
             this.DSDoiNhaBtn.InitialImage = ((System.Drawing.Image)(resources.GetObject("DSDoiNhaBtn.InitialImage")));
-            this.DSDoiNhaBtn.Location = new System.Drawing.Point(21, 249);
-            this.DSDoiNhaBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DSDoiNhaBtn.Location = new System.Drawing.Point(28, 306);
+            this.DSDoiNhaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DSDoiNhaBtn.Name = "DSDoiNhaBtn";
             this.DSDoiNhaBtn.Rotation = 0;
             this.DSDoiNhaBtn.ShowActiveImage = true;
             this.DSDoiNhaBtn.ShowCursorChanges = true;
             this.DSDoiNhaBtn.ShowImageBorders = true;
             this.DSDoiNhaBtn.ShowSizeMarkers = false;
-            this.DSDoiNhaBtn.Size = new System.Drawing.Size(40, 50);
+            this.DSDoiNhaBtn.Size = new System.Drawing.Size(53, 62);
             this.DSDoiNhaBtn.TabIndex = 26;
             this.bunifuToolTip1.SetToolTip(this.DSDoiNhaBtn, "");
             this.bunifuToolTip1.SetToolTipIcon(this.DSDoiNhaBtn, null);
@@ -711,18 +671,18 @@
             this.DSDoiKhachBtn.ImageActive = null;
             this.DSDoiKhachBtn.ImageLocation = null;
             this.DSDoiKhachBtn.ImageMargin = 15;
-            this.DSDoiKhachBtn.ImageSize = new System.Drawing.Size(25, 35);
-            this.DSDoiKhachBtn.ImageZoomSize = new System.Drawing.Size(40, 50);
+            this.DSDoiKhachBtn.ImageSize = new System.Drawing.Size(38, 47);
+            this.DSDoiKhachBtn.ImageZoomSize = new System.Drawing.Size(53, 62);
             this.DSDoiKhachBtn.InitialImage = ((System.Drawing.Image)(resources.GetObject("DSDoiKhachBtn.InitialImage")));
-            this.DSDoiKhachBtn.Location = new System.Drawing.Point(335, 249);
-            this.DSDoiKhachBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DSDoiKhachBtn.Location = new System.Drawing.Point(447, 306);
+            this.DSDoiKhachBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DSDoiKhachBtn.Name = "DSDoiKhachBtn";
             this.DSDoiKhachBtn.Rotation = 0;
             this.DSDoiKhachBtn.ShowActiveImage = true;
             this.DSDoiKhachBtn.ShowCursorChanges = true;
             this.DSDoiKhachBtn.ShowImageBorders = true;
             this.DSDoiKhachBtn.ShowSizeMarkers = false;
-            this.DSDoiKhachBtn.Size = new System.Drawing.Size(40, 50);
+            this.DSDoiKhachBtn.Size = new System.Drawing.Size(53, 62);
             this.DSDoiKhachBtn.TabIndex = 27;
             this.bunifuToolTip1.SetToolTip(this.DSDoiKhachBtn, "");
             this.bunifuToolTip1.SetToolTipIcon(this.DSDoiKhachBtn, null);
@@ -737,10 +697,9 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(83, 273);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(111, 336);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(131, 17);
+            this.label9.Size = new System.Drawing.Size(155, 20);
             this.label9.TabIndex = 28;
             this.label9.Text = "DS Cầu thủ đội nhà";
             this.bunifuToolTip1.SetToolTip(this.label9, "");
@@ -751,10 +710,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(396, 273);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(528, 336);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(145, 17);
+            this.label10.Size = new System.Drawing.Size(172, 20);
             this.label10.TabIndex = 29;
             this.label10.Text = "DS Cầu thủ đội khách";
             this.bunifuToolTip1.SetToolTip(this.label10, "");
@@ -773,9 +731,10 @@
             this.pTitlebar.Controls.Add(this.btnMinimize);
             this.pTitlebar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pTitlebar.Location = new System.Drawing.Point(0, 0);
+            this.pTitlebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pTitlebar.Name = "pTitlebar";
             this.pTitlebar.ShowBorders = true;
-            this.pTitlebar.Size = new System.Drawing.Size(657, 49);
+            this.pTitlebar.Size = new System.Drawing.Size(876, 60);
             this.pTitlebar.TabIndex = 37;
             this.bunifuToolTip1.SetToolTip(this.pTitlebar, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pTitlebar, null);
@@ -790,10 +749,10 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnClose.Location = new System.Drawing.Point(631, 2);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Location = new System.Drawing.Point(841, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(24, 37);
+            this.btnClose.Size = new System.Drawing.Size(32, 46);
             this.btnClose.TabIndex = 8;
             this.btnClose.Text = "O";
             this.bunifuToolTip1.SetToolTip(this.btnClose, "");
@@ -810,10 +769,10 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMinimize.Location = new System.Drawing.Point(602, 2);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMinimize.Location = new System.Drawing.Point(803, 2);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(24, 37);
+            this.btnMinimize.Size = new System.Drawing.Size(32, 46);
             this.btnMinimize.TabIndex = 7;
             this.btnMinimize.Text = "O";
             this.bunifuToolTip1.SetToolTip(this.btnMinimize, "");
@@ -828,13 +787,13 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.TenDoiKhachLabel, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(427, 151);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(569, 186);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(176, 50);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(235, 62);
             this.tableLayoutPanel3.TabIndex = 38;
             this.bunifuToolTip1.SetToolTip(this.tableLayoutPanel3, "");
             this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel3, null);
@@ -846,13 +805,13 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.TenDoiNhaLabel, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(71, 151);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(95, 186);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(172, 46);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(229, 57);
             this.tableLayoutPanel4.TabIndex = 39;
             this.bunifuToolTip1.SetToolTip(this.tableLayoutPanel4, "");
             this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel4, null);
@@ -874,10 +833,10 @@
             // 
             // ThemCTTDForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(657, 626);
+            this.ClientSize = new System.Drawing.Size(876, 770);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.pTitlebar);
@@ -885,8 +844,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.DSDoiKhachBtn);
             this.Controls.Add(this.DSDoiNhaBtn);
-            this.Controls.Add(this.TiSoDoiKhachtxt);
-            this.Controls.Add(this.TiSoDoiNhatxt);
             this.Controls.Add(this.LuuBtn);
             this.Controls.Add(this.TgianTheDo);
             this.Controls.Add(this.TgianTheVang);
@@ -906,7 +863,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ThemCTTDForm";
             this.Text = "ThemCTTDForm";
             this.Load += new System.EventHandler(this.ThemCTTDForm_Load);
@@ -949,8 +906,6 @@
         private System.Windows.Forms.NumericUpDown TgianTheVang;
         private System.Windows.Forms.NumericUpDown TgianTheDo;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton LuuBtn;
-        private System.Windows.Forms.Label TiSoDoiNhatxt;
-        private System.Windows.Forms.Label TiSoDoiKhachtxt;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private Bunifu.UI.WinForms.BunifuImageButton DSDoiNhaBtn;
