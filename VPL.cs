@@ -29,13 +29,13 @@ namespace QuanLyGiaiBong
             dgvVPL.DataSource = dtVua;
             dgvVPL.Columns["MaCT"].Visible = false;
             dgvVPL.Columns["anhCT"].HeaderText = "Ảnh";
-            dgvVPL.Columns[1].HeaderText = "Tên cầu thủ";
-            dgvVPL.Columns[2].HeaderText = "Vị trí";
-            dgvVPL.Columns[3].HeaderText = "Số bàn thắng";
-            dgvVPL.Columns[3].Width = 125;
+            dgvVPL.Columns["TenCT"].HeaderText = "Tên cầu thủ";
+            dgvVPL.Columns["TenViTri"].HeaderText = "Vị trí";
+            dgvVPL.Columns["SoBanThang"].HeaderText = "Số bàn thắng";
+            dgvVPL.Columns["SoBanThang"].Width = 125;
             dgvVPL.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvVPL.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvVPL.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvVPL.Columns["SoBanThang"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvVPL.Columns["TenViTri"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgvVPL.Columns["Anh"].Visible = false;
             string appPath = Application.StartupPath;

@@ -31,14 +31,15 @@ namespace QuanLyGiaiBong
             dgvDSCT.DataSource = dtCauThu;
             //Định dạng dataGrid
             dgvDSCT.Columns["anhCT"].HeaderText = "Ảnh";
-            dgvDSCT.Columns[1].HeaderText = "Tên cầu thủ";
-            dgvDSCT.Columns[2].HeaderText = "Vị trí";
-            dgvDSCT.Columns[3].HeaderText = "Tên đội bóng";
-            dgvDSCT.Columns[4].HeaderText = "Số bàn thắng";
+            dgvDSCT.Columns["TenCT"].HeaderText = "Tên cầu thủ";
+            dgvDSCT.Columns["TenViTri"].HeaderText = "Vị trí";
+            dgvDSCT.Columns["TenDoi"].HeaderText = "Tên đội bóng";
+            dgvDSCT.Columns["SoBanThang"].HeaderText = "Số bàn thắng";
             dgvDSCT.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSCT.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSCT.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSCT.Columns[4].Width = 120;
+            dgvDSCT.Columns["TenDoi"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSCT.Columns["SoBanThang"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSCT.Columns["TenViTri"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSCT.Columns["SoBanThang"].Width = 120;
 
             dgvDSCT.Columns["Anh"].Visible = false;
             string appPath = Application.StartupPath;
@@ -74,16 +75,31 @@ namespace QuanLyGiaiBong
             dgvDSCT.DataSource = null;
             dgvDSCT.DataSource = dtCauThu;
             //Định dạng dataGrid
-            dgvDSCT.Columns[0].HeaderText = "Ảnh";
-            dgvDSCT.Columns[1].HeaderText = "Tên cầu thủ";
-            dgvDSCT.Columns[2].HeaderText = "Vị trí";
-            dgvDSCT.Columns[3].HeaderText = "Tên đội bóng";
-            dgvDSCT.Columns[4].HeaderText = "Số bàn thắng";
+            dgvDSCT.Columns["anhCT"].HeaderText = "Ảnh";
+            dgvDSCT.Columns["TenCT"].HeaderText = "Tên cầu thủ";
+            dgvDSCT.Columns["TenViTri"].HeaderText = "Vị trí";
+            dgvDSCT.Columns["TenDoi"].HeaderText = "Tên đội bóng";
+            dgvDSCT.Columns["SoBanThang"].HeaderText = "Số bàn thắng";
             dgvDSCT.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSCT.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSCT.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSCT.Columns[4].Width = 120;
+            dgvDSCT.Columns["TenDoi"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSCT.Columns["SoBanThang"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSCT.Columns["TenViTri"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSCT.Columns["SoBanThang"].Width = 120;
+
+            dgvDSCT.Columns["Anh"].Visible = false;
+            string appPath = Application.StartupPath;
+            string projectRootPath = Path.GetFullPath(Path.Combine(appPath, @"..\.."));
+            string cauthuPath = Path.Combine(projectRootPath, "Images", "CauThu");
+            int slg = dtCauThu.Rows.Count;
+            for (var i = 0; i < slg; i++)
+            {
+                string ctPath = Path.Combine(cauthuPath, dtCauThu.Rows[i]["Anh"].ToString());
+                Image anhCT = Image.FromFile(ctPath);
+                dgvDSCT["anhCT", i].Value = anhCT;
+            }
+            dtCauThu.Dispose();//Giải phóng bộ nhớ cho DataTable
             dgvDSCT.Columns["MaCT"].Visible = false;
+            dtCauThu.Dispose();
         }
 
         private void dgvDSCT_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

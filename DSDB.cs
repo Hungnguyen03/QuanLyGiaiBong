@@ -28,12 +28,13 @@ namespace QuanLyGiaiBong
             dgvDSDB.Columns["Madoi"].Visible = false;
             //Định dạng dataGrid
             dgvDSDB.Columns["anhDB"].HeaderText = "Logo";
-            dgvDSDB.Columns[1].HeaderText = "Tên đội bóng";
-            dgvDSDB.Columns[2].HeaderText = "Huấn luyện viên";
-            dgvDSDB.Columns[3].HeaderText = "Điểm";
+            dgvDSDB.Columns["Tendoi"].HeaderText = "Tên đội bóng";
+            dgvDSDB.Columns["HLV"].HeaderText = "Huấn luyện viên";
+            dgvDSDB.Columns["Diem"].HeaderText = "Điểm";
             dgvDSDB.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSDB.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDSDB.Columns[3].Width = 70;
+            dgvDSDB.Columns["HLV"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSDB.Columns["Diem"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvDSDB.Columns["Diem"].Width = 70;
 
             dgvDSDB.Columns["LoGo"].Visible = false;
             string appPath = Application.StartupPath;

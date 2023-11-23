@@ -92,14 +92,14 @@
             this.dgvDSDB.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDSDB.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDSDB.Location = new System.Drawing.Point(0, 0);
-            this.dgvDSDB.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDSDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDSDB.Name = "dgvDSDB";
             this.dgvDSDB.ReadOnly = true;
             this.dgvDSDB.RowHeadersVisible = false;
             this.dgvDSDB.RowHeadersWidth = 51;
             this.dgvDSDB.RowTemplate.Height = 40;
             this.dgvDSDB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSDB.Size = new System.Drawing.Size(1082, 553);
+            this.dgvDSDB.Size = new System.Drawing.Size(722, 458);
             this.dgvDSDB.TabIndex = 1;
             this.dgvDSDB.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvDSDB.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDSDB_CellMouseDoubleClick);
@@ -108,6 +108,7 @@
             // 
             this.anhDB.HeaderText = "Logo";
             this.anhDB.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.anhDB.MinimumWidth = 10;
             this.anhDB.Name = "anhDB";
             this.anhDB.ReadOnly = true;
             // 
@@ -115,10 +116,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 553);
+            this.ClientSize = new System.Drawing.Size(722, 458);
             this.Controls.Add(this.dgvDSDB);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(716, 414);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(711, 399);
             this.Name = "DSDB";
             this.Text = "Danh sách đội bóng";
             this.Load += new System.EventHandler(this.DSDB_Load);
