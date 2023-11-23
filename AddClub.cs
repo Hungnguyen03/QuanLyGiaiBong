@@ -25,7 +25,7 @@ namespace QuanLyGiaiBong
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void EmptyText()
         {
-            txtAddMaSan.Text = "";
+            txtAddTenSan.Text = "";
             txtAddTenDoi.Text = "";
             txtAddHLV.Text = "";
             txtAddTinh.Text = "";
@@ -33,10 +33,10 @@ namespace QuanLyGiaiBong
         }
         private void check_MS()
         {
-            DataTable get_ms = conn.DocBang("select masan from SanBong where tensan like concat('%',N'" + txtAddMaSan.Text + "')");
+            DataTable get_ms = conn.DocBang("select masan from SanBong where tensan like concat('%',N'" + txtAddTenSan.Text + "')");
             if (get_ms.Rows.Count == 0)
             {
-                conn.CapNhatDuLieu("insert into sanbong(tensan) values(N'" + txtAddMaSan.Text + "')");
+                conn.CapNhatDuLieu("insert into sanbong(tensan) values(N'" + txtAddTenSan.Text + "')");
             }
             else
             {
@@ -47,7 +47,6 @@ namespace QuanLyGiaiBong
         private void check_MT()
         {
             DataTable get_mt = conn.DocBang("select matinh from tinh where tentinh like N'" + txtAddTinh.Text + "'");
-            int check_mt = int.Parse(get_mt.Rows[0]["matinh"].ToString());
             if (get_mt.Rows.Count == 0)
             {
                 conn.CapNhatDuLieu("insert into Tinh(tentinh) values(N'" + txtAddTinh.Text + "')");
@@ -60,7 +59,7 @@ namespace QuanLyGiaiBong
         }
         private void btn_add_Click(object sender, EventArgs e)
         {
-            if (txtAddMaSan.Text.Trim() == "" || txtAddTenDoi.Text == "" ||
+            if (txtAddTenSan.Text.Trim() == "" || txtAddTenDoi.Text == "" ||
                 txtAddHLV.Text == "" || txtAddTinh.Text == "")
             {
                 MessageBox.Show("Điền đầy đủ thông tin đội bóng!");
@@ -70,7 +69,7 @@ namespace QuanLyGiaiBong
             {
                 check_MS();
                 check_MT();
-                DataTable get_ms = conn.DocBang("select masan from SanBong where tensan like concat('%',N'" + txtAddMaSan.Text + "')");
+                DataTable get_ms = conn.DocBang("select masan from SanBong where tensan like concat('%',N'" + txtAddTenSan.Text + "')");
                 int MS = int.Parse(get_ms.Rows[0]["masan"].ToString());
                 DataTable get_mt = conn.DocBang("select matinh from tinh where tentinh like N'" + txtAddTinh.Text + "'");
                 int MT = int.Parse(get_mt.Rows[0]["matinh"].ToString());
@@ -118,7 +117,6 @@ namespace QuanLyGiaiBong
             {
                 string filePath = getPic.FileName;
                 txtLogoLink.Text = Path.GetFileName(filePath);
-                txtLogoLink.Text = filePath;
 
                 Bitmap img = new Bitmap(filePath);
 

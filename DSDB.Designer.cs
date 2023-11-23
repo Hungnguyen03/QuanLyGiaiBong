@@ -31,9 +31,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DSDB));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.dgvDSDB = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.anhDB = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.count_DB = new System.Windows.Forms.Label();
+            this.btn_addDB = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSDB)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvDSDB
@@ -92,14 +98,14 @@
             this.dgvDSDB.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDSDB.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDSDB.Location = new System.Drawing.Point(0, 0);
-            this.dgvDSDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDSDB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDSDB.Name = "dgvDSDB";
             this.dgvDSDB.ReadOnly = true;
             this.dgvDSDB.RowHeadersVisible = false;
             this.dgvDSDB.RowHeadersWidth = 51;
             this.dgvDSDB.RowTemplate.Height = 40;
             this.dgvDSDB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSDB.Size = new System.Drawing.Size(722, 458);
+            this.dgvDSDB.Size = new System.Drawing.Size(1443, 681);
             this.dgvDSDB.TabIndex = 1;
             this.dgvDSDB.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvDSDB.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDSDB_CellMouseDoubleClick);
@@ -112,18 +118,133 @@
             this.anhDB.Name = "anhDB";
             this.anhDB.ReadOnly = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.count_DB);
+            this.panel1.Controls.Add(this.btn_addDB);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 595);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1443, 86);
+            this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // count_DB
+            // 
+            this.count_DB.AutoSize = true;
+            this.count_DB.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.count_DB.Location = new System.Drawing.Point(80, 17);
+            this.count_DB.Name = "count_DB";
+            this.count_DB.Size = new System.Drawing.Size(257, 46);
+            this.count_DB.TabIndex = 6;
+            this.count_DB.Text = "Số đội bóng: ";
+            // 
+            // btn_addDB
+            // 
+            this.btn_addDB.AllowAnimations = true;
+            this.btn_addDB.AllowMouseEffects = true;
+            this.btn_addDB.AllowToggling = false;
+            this.btn_addDB.AnimationSpeed = 200;
+            this.btn_addDB.AutoGenerateColors = false;
+            this.btn_addDB.AutoRoundBorders = false;
+            this.btn_addDB.AutoSizeLeftIcon = true;
+            this.btn_addDB.AutoSizeRightIcon = true;
+            this.btn_addDB.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addDB.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_addDB.BackgroundImage")));
+            this.btn_addDB.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_addDB.ButtonText = "Thêm đội bóng";
+            this.btn_addDB.ButtonTextMarginLeft = 0;
+            this.btn_addDB.ColorContrastOnClick = 45;
+            this.btn_addDB.ColorContrastOnHover = 45;
+            this.btn_addDB.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btn_addDB.CustomizableEdges = borderEdges1;
+            this.btn_addDB.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_addDB.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btn_addDB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_addDB.ForeColor = System.Drawing.Color.White;
+            this.btn_addDB.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_addDB.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_addDB.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btn_addDB.IconMarginLeft = 11;
+            this.btn_addDB.IconPadding = 10;
+            this.btn_addDB.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_addDB.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_addDB.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btn_addDB.IconSize = 25;
+            this.btn_addDB.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.IdleBorderRadius = 1;
+            this.btn_addDB.IdleBorderThickness = 1;
+            this.btn_addDB.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.IdleIconLeftImage = null;
+            this.btn_addDB.IdleIconRightImage = null;
+            this.btn_addDB.IndicateFocus = false;
+            this.btn_addDB.Location = new System.Drawing.Point(1131, 9);
+            this.btn_addDB.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_addDB.Name = "btn_addDB";
+            this.btn_addDB.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.OnDisabledState.BorderRadius = 1;
+            this.btn_addDB.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_addDB.OnDisabledState.BorderThickness = 1;
+            this.btn_addDB.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.OnDisabledState.IconLeftImage = null;
+            this.btn_addDB.OnDisabledState.IconRightImage = null;
+            this.btn_addDB.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.onHoverState.BorderRadius = 1;
+            this.btn_addDB.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_addDB.onHoverState.BorderThickness = 1;
+            this.btn_addDB.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btn_addDB.onHoverState.IconLeftImage = null;
+            this.btn_addDB.onHoverState.IconRightImage = null;
+            this.btn_addDB.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.OnIdleState.BorderRadius = 1;
+            this.btn_addDB.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_addDB.OnIdleState.BorderThickness = 1;
+            this.btn_addDB.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btn_addDB.OnIdleState.IconLeftImage = null;
+            this.btn_addDB.OnIdleState.IconRightImage = null;
+            this.btn_addDB.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.OnPressedState.BorderRadius = 1;
+            this.btn_addDB.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_addDB.OnPressedState.BorderThickness = 1;
+            this.btn_addDB.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btn_addDB.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btn_addDB.OnPressedState.IconLeftImage = null;
+            this.btn_addDB.OnPressedState.IconRightImage = null;
+            this.btn_addDB.Size = new System.Drawing.Size(273, 64);
+            this.btn_addDB.TabIndex = 5;
+            this.btn_addDB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_addDB.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_addDB.TextMarginLeft = 0;
+            this.btn_addDB.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btn_addDB.UseDefaultRadiusAndThickness = true;
+            this.btn_addDB.Click += new System.EventHandler(this.btn_addDB_Click);
+            // 
             // DSDB
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 458);
+            this.ClientSize = new System.Drawing.Size(1443, 681);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvDSDB);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MinimumSize = new System.Drawing.Size(711, 399);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(1261, 605);
             this.Name = "DSDB";
             this.Text = "Danh sách đội bóng";
             this.Load += new System.EventHandler(this.DSDB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSDB)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -131,5 +252,8 @@
         #endregion
         private Bunifu.UI.WinForms.BunifuDataGridView dgvDSDB;
         private System.Windows.Forms.DataGridViewImageColumn anhDB;
+        private System.Windows.Forms.Panel panel1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_addDB;
+        private System.Windows.Forms.Label count_DB;
     }
 }

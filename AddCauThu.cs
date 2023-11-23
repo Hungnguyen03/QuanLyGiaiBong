@@ -70,20 +70,18 @@ namespace QuanLyGiaiBong
                 }
             }
         }
-        private bool check_QT()
+        private void check_QT()
         {
-            bool k = true;
             DataTable get_qt = dtBase.DocBang("select maquoctich from quoctich where tenquoctich like N'" + tbQuocTich.Text + "'");
             if (get_qt.Rows.Count == 0)
             {
-                k = false;
+                dtBase.CapNhatDuLieu("insert into QuocTich(TenquocTich) values(N'" + tbQuocTich.Text + "')");
             }
             else
             {
-                k = true;
+
             }
             get_qt.Dispose();
-            return k;
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -93,17 +91,17 @@ namespace QuanLyGiaiBong
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin cầu thủ!");
             }
-            else if (check_QT() == false)
-            {
-                MessageBox.Show("Điền lại quốc tịch!");
-            }
             else
             {
+                check_QT();
+                string Get_MD = cmbDoi.SelectedItem.ToString();
+                DataTable get_md = dtBase.DocBang("select MaDoi from DoiBong where TenDoi like CONCAT('%',N'"+Get_MD + "')");
+                int maDoi = int.Parse(get_md.Rows[0]["MaDoi"].ToString());
                 DataTable get_qt = dtBase.DocBang("select maquoctich from quoctich where tenquoctich like N'" + tbQuocTich.Text + "'");
                 int MQT = int.Parse(get_qt.Rows[0]["maquoctich"].ToString());
 
                 dtBase.CapNhatDuLieu("insert into Cauthu(MaDoi,TenCT,MaViTri,NgaySinh,SoAo,MaQuocTich,Anh) " +
-                "values(" + (cmbDoi.SelectedIndex + 1) + ",N'" + tbTen.Text + "'," +
+                "values(" + maDoi + ",N'" + tbTen.Text + "'," +
                 "" + (cmbViTri.SelectedIndex + 1) + ",'" + dtpNgaySinh.Text + "'," +
                 "" + tbSoAo.Text + "," + MQT + ",'" + imgName.Text + "')");
                 MessageBox.Show("Đã thêm cầu thủ!");

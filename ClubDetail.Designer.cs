@@ -49,7 +49,6 @@
             this.btnMinimize = new System.Windows.Forms.Button();
             this.txtTenDoi = new System.Windows.Forms.Label();
             this.txt_demCT = new System.Windows.Forms.Label();
-            this.btn_addCT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DsCauThu)).BeginInit();
             this.pTitlebar.SuspendLayout();
@@ -57,10 +56,10 @@
             // 
             // logo
             // 
-            this.logo.Location = new System.Drawing.Point(71, 124);
-            this.logo.Margin = new System.Windows.Forms.Padding(2);
+            this.logo.Location = new System.Drawing.Point(95, 153);
+            this.logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(138, 153);
+            this.logo.Size = new System.Drawing.Size(184, 188);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logo.TabIndex = 0;
             this.logo.TabStop = false;
@@ -69,10 +68,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(278, 124);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(371, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 24);
+            this.label2.Size = new System.Drawing.Size(100, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên sân";
             // 
@@ -80,10 +78,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(278, 156);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(371, 192);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 24);
+            this.label3.Size = new System.Drawing.Size(182, 29);
             this.label3.TabIndex = 1;
             this.label3.Text = "Huấn luyện viên";
             // 
@@ -91,10 +88,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(278, 189);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(371, 233);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 24);
+            this.label4.Size = new System.Drawing.Size(100, 29);
             this.label4.TabIndex = 1;
             this.label4.Text = "Tên tỉnh";
             // 
@@ -102,10 +98,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(278, 223);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(371, 274);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 24);
+            this.label5.Size = new System.Drawing.Size(70, 29);
             this.label5.TabIndex = 1;
             this.label5.Text = "Điểm";
             // 
@@ -113,10 +108,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(278, 254);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(371, 313);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 24);
+            this.label6.Size = new System.Drawing.Size(218, 29);
             this.label6.TabIndex = 1;
             this.label6.Text = "Số bàn thắng / thua";
             // 
@@ -124,10 +118,9 @@
             // 
             this.txtTenSan.AutoSize = true;
             this.txtTenSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenSan.Location = new System.Drawing.Point(454, 124);
-            this.txtTenSan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtTenSan.Location = new System.Drawing.Point(605, 153);
             this.txtTenSan.Name = "txtTenSan";
-            this.txtTenSan.Size = new System.Drawing.Size(79, 24);
+            this.txtTenSan.Size = new System.Drawing.Size(100, 29);
             this.txtTenSan.TabIndex = 1;
             this.txtTenSan.Text = "Ten san";
             // 
@@ -135,10 +128,9 @@
             // 
             this.txtHLV.AutoSize = true;
             this.txtHLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHLV.Location = new System.Drawing.Point(454, 156);
-            this.txtHLV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtHLV.Location = new System.Drawing.Point(605, 192);
             this.txtHLV.Name = "txtHLV";
-            this.txtHLV.Size = new System.Drawing.Size(47, 24);
+            this.txtHLV.Size = new System.Drawing.Size(58, 29);
             this.txtHLV.TabIndex = 1;
             this.txtHLV.Text = "HVL";
             // 
@@ -146,10 +138,9 @@
             // 
             this.txtTinh.AutoSize = true;
             this.txtTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTinh.Location = new System.Drawing.Point(454, 189);
-            this.txtTinh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtTinh.Location = new System.Drawing.Point(605, 233);
             this.txtTinh.Name = "txtTinh";
-            this.txtTinh.Size = new System.Drawing.Size(79, 24);
+            this.txtTinh.Size = new System.Drawing.Size(100, 29);
             this.txtTinh.TabIndex = 1;
             this.txtTinh.Text = "Ten tinh";
             // 
@@ -157,10 +148,9 @@
             // 
             this.txtDiem.AutoSize = true;
             this.txtDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiem.Location = new System.Drawing.Point(454, 223);
-            this.txtDiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtDiem.Location = new System.Drawing.Point(605, 274);
             this.txtDiem.Name = "txtDiem";
-            this.txtDiem.Size = new System.Drawing.Size(79, 24);
+            this.txtDiem.Size = new System.Drawing.Size(102, 29);
             this.txtDiem.TabIndex = 1;
             this.txtDiem.Text = "Diem so";
             // 
@@ -168,10 +158,9 @@
             // 
             this.txtSoBan.AutoSize = true;
             this.txtSoBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoBan.Location = new System.Drawing.Point(454, 254);
-            this.txtSoBan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtSoBan.Location = new System.Drawing.Point(605, 313);
             this.txtSoBan.Name = "txtSoBan";
-            this.txtSoBan.Size = new System.Drawing.Size(45, 24);
+            this.txtSoBan.Size = new System.Drawing.Size(58, 29);
             this.txtSoBan.TabIndex = 1;
             this.txtSoBan.Text = "0 / 0";
             // 
@@ -225,15 +214,15 @@
             this.DsCauThu.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.DsCauThu.HeaderBgColor = System.Drawing.Color.Empty;
             this.DsCauThu.HeaderForeColor = System.Drawing.Color.White;
-            this.DsCauThu.Location = new System.Drawing.Point(8, 318);
-            this.DsCauThu.Margin = new System.Windows.Forms.Padding(2);
+            this.DsCauThu.Location = new System.Drawing.Point(11, 391);
+            this.DsCauThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DsCauThu.Name = "DsCauThu";
             this.DsCauThu.ReadOnly = true;
             this.DsCauThu.RowHeadersVisible = false;
             this.DsCauThu.RowHeadersWidth = 51;
             this.DsCauThu.RowTemplate.Height = 40;
             this.DsCauThu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DsCauThu.Size = new System.Drawing.Size(682, 162);
+            this.DsCauThu.Size = new System.Drawing.Size(909, 199);
             this.DsCauThu.TabIndex = 2;
             this.DsCauThu.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.DsCauThu.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DsCauThu_CellMouseDoubleClick);
@@ -250,9 +239,10 @@
             this.pTitlebar.Controls.Add(this.btnMinimize);
             this.pTitlebar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pTitlebar.Location = new System.Drawing.Point(0, 0);
+            this.pTitlebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pTitlebar.Name = "pTitlebar";
             this.pTitlebar.ShowBorders = true;
-            this.pTitlebar.Size = new System.Drawing.Size(700, 49);
+            this.pTitlebar.Size = new System.Drawing.Size(933, 60);
             this.pTitlebar.TabIndex = 35;
             this.pTitlebar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTitlebar_MouseDown);
             // 
@@ -264,10 +254,10 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnClose.Location = new System.Drawing.Point(674, 2);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(899, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(24, 37);
+            this.btnClose.Size = new System.Drawing.Size(32, 46);
             this.btnClose.TabIndex = 8;
             this.btnClose.Text = "O";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -281,10 +271,10 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMinimize.Location = new System.Drawing.Point(645, 2);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimize.Location = new System.Drawing.Point(860, 2);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(24, 37);
+            this.btnMinimize.Size = new System.Drawing.Size(32, 46);
             this.btnMinimize.TabIndex = 7;
             this.btnMinimize.Text = "O";
             this.btnMinimize.UseVisualStyleBackColor = false;
@@ -294,10 +284,9 @@
             // 
             this.txtTenDoi.AutoSize = true;
             this.txtTenDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDoi.Location = new System.Drawing.Point(276, 72);
-            this.txtTenDoi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtTenDoi.Location = new System.Drawing.Point(368, 89);
             this.txtTenDoi.Name = "txtTenDoi";
-            this.txtTenDoi.Size = new System.Drawing.Size(124, 37);
+            this.txtTenDoi.Size = new System.Drawing.Size(153, 46);
             this.txtTenDoi.TabIndex = 36;
             this.txtTenDoi.Text = "Ten doi";
             this.txtTenDoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -306,29 +295,17 @@
             // 
             this.txt_demCT.AutoSize = true;
             this.txt_demCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_demCT.Location = new System.Drawing.Point(478, 287);
-            this.txt_demCT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txt_demCT.Location = new System.Drawing.Point(784, 364);
             this.txt_demCT.Name = "txt_demCT";
-            this.txt_demCT.Size = new System.Drawing.Size(94, 20);
+            this.txt_demCT.Size = new System.Drawing.Size(117, 25);
             this.txt_demCT.TabIndex = 3;
             this.txt_demCT.Text = "Số cầu thủ: ";
             // 
-            // btn_addCT
-            // 
-            this.btn_addCT.Location = new System.Drawing.Point(598, 283);
-            this.btn_addCT.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_addCT.Name = "btn_addCT";
-            this.btn_addCT.Size = new System.Drawing.Size(92, 30);
-            this.btn_addCT.TabIndex = 4;
-            this.btn_addCT.Text = "Thêm Cầu thủ";
-            this.btn_addCT.UseVisualStyleBackColor = true;
-            this.btn_addCT.Click += new System.EventHandler(this.btn_addCT_Click);
-            // 
             // ClubDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 491);
+            this.ClientSize = new System.Drawing.Size(933, 604);
             this.Controls.Add(this.txtTenDoi);
             this.Controls.Add(this.pTitlebar);
             this.Controls.Add(this.DsCauThu);
@@ -344,8 +321,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.txt_demCT);
-            this.Controls.Add(this.btn_addCT);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ClubDetail";
             this.Text = "ClubDetail";
             this.Load += new System.EventHandler(this.ClubDetail_Load);
@@ -377,6 +353,5 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Label txtTenDoi;
         private System.Windows.Forms.Label txt_demCT;
-        private System.Windows.Forms.Button btn_addCT;
     }
 }

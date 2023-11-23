@@ -15,10 +15,16 @@ namespace QuanLyGiaiBong
             InitializeComponent();
             getData();
         }
-
+        private void CountDB()
+        {
+            DataTable dt = dtBase.DocBang("select count(DoiBong.Madoi) as Dem from DoiBong");
+            count_DB.Text = "Số đội bóng: " + dt.Rows[0]["Dem"].ToString();
+        }
         private void DSDB_Load(object sender, EventArgs e)
         {
             getData();
+            CountDB();
+
         }
 
         private void getData()
@@ -61,6 +67,17 @@ namespace QuanLyGiaiBong
                 ClubDetail ctDB = new ClubDetail(maDB);
                 ctDB.ShowDialog();
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_addDB_Click(object sender, EventArgs e)
+        {
+            AddClub addClub = new AddClub();
+            addClub.ShowDialog();
         }
     }
 }

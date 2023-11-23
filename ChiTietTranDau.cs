@@ -67,5 +67,11 @@ namespace QuanLyGiaiBong
             avt2.Image = away;
             avt2.SizeMode = PictureBoxSizeMode.Zoom;
         }
-	}
+
+        private void btn_addTD_Click(object sender, EventArgs e)
+        {
+            AddTranDau addTranDau = new AddTranDau();
+            addTranDau.ShowDialog();
+        }
+    }
 }

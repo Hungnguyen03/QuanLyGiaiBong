@@ -114,5 +114,11 @@ namespace QuanLyGiaiBong
                 ctCauThu.ShowDialog();
             }
         }
+
+        private void btn_addCT_Click(object sender, EventArgs e)
+        {
+            AddCauThu addCauThu = new AddCauThu();
+            addCauThu.ShowDialog();
+        }
     }
 }
