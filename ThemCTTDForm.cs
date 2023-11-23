@@ -107,6 +107,8 @@ namespace QuanLyGiaiBong
             result.Dispose();
             DSCT();
         }
+
+
         private void DSCT()
         {
             TenCTDropDown.Items.Clear();
@@ -187,8 +189,53 @@ namespace QuanLyGiaiBong
             DSCauThuThiDauForm dsCauThuForm = new DSCauThuThiDauForm(madoinha,matrandau);
             dsCauThuForm.Show();
         }
+        private void LuuBtn_Click(object sender, EventArgs e)
+        {
+            if (DoDropDown.SelectedIndex != -1)
+            {
+                string tenCauThu = DoDropDown.SelectedItem.ToString();
+                int thoiGian = (int)TgianTheDo.Value;
+         
+                string insertRedCardQuery = $"INSERT INTO TranDau_The (MaTranDau, MaCauThu, ThoiGian, LoaiThe) " +
+                                             $"VALUES ({matrandau}, (SELECT MaCT FROM CauThu WHERE TenCT = N'{tenCauThu}'), {thoiGian}, N'Thẻ Đỏ')";
+                dtBase.CapNhatDuLieu(insertRedCardQuery);
+            }
 
+            if (VangDropDown.SelectedIndex != -1)
+            {
+                string tenCauThu = VangDropDown.SelectedItem.ToString();
+                int thoiGian = (int)TgianTheVang.Value;
+              
+                string insertYellowCardQuery = $"INSERT INTO TranDau_The (MaTranDau, MaCauThu, ThoiGian, LoaiThe) " +
+                                               $"VALUES ({matrandau}, (SELECT MaCT FROM CauThu WHERE TenCT = N'{tenCauThu}'), {thoiGian}, N'Thẻ Vàng')";
+                dtBase.CapNhatDuLieu(insertYellowCardQuery);
+            }
+
+            if (TenCTDropDown.SelectedIndex != -1)
+            {
+                string tenCauThu = TenCTDropDown.SelectedItem.ToString();
+                int thoiGian = (int)TgianGhiBan.Value;
+
+                string insertGoalQuery = $"INSERT INTO TranDau_BanThang (MaTranDau, MaCauThu, ThoiGian) " +
+                                         $"VALUES ({matrandau}, (SELECT MaCT FROM CauThu WHERE TenCT = N'{tenCauThu}'),  {thoiGian})";
+                dtBase.CapNhatDuLieu(insertGoalQuery);
+            }
+
+            ClearFormValues();
+            MessageBox.Show("Data saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void ClearFormValues()
+        {
+            DoDropDown.SelectedIndex = -1;
+            VangDropDown.SelectedIndex = -1;
+            TenCTDropDown.SelectedIndex = -1;
+
+            TgianTheDo.Value = 0;
+            TgianTheVang.Value = 0;
+            TgianGhiBan.Value = 0;
+        }
+    
     }
-    }
+}
     
 
