@@ -15,15 +15,10 @@ namespace QuanLyGiaiBong
             InitializeComponent();
             getData();
         }
-        private void CountDB()
-        {
-            DataTable dt = dtBase.DocBang("select count(DoiBong.Madoi) as Dem from DoiBong");
-            count_DB.Text = "Số đội bóng: " + dt.Rows[0]["Dem"].ToString();
-        }
+       
         private void DSDB_Load(object sender, EventArgs e)
         {
             getData();
-            CountDB();
 
         }
 

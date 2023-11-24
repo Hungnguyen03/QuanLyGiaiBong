@@ -36,7 +36,6 @@
             this.dgvDSDB = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.anhDB = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.count_DB = new System.Windows.Forms.Label();
             this.btn_addDB = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSDB)).BeginInit();
             this.panel1.SuspendLayout();
@@ -120,7 +119,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.count_DB);
             this.panel1.Controls.Add(this.btn_addDB);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 595);
@@ -128,16 +126,6 @@
             this.panel1.Size = new System.Drawing.Size(1443, 86);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // count_DB
-            // 
-            this.count_DB.AutoSize = true;
-            this.count_DB.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.count_DB.Location = new System.Drawing.Point(80, 17);
-            this.count_DB.Name = "count_DB";
-            this.count_DB.Size = new System.Drawing.Size(257, 46);
-            this.count_DB.TabIndex = 6;
-            this.count_DB.Text = "Số đội bóng: ";
             // 
             // btn_addDB
             // 
@@ -244,7 +232,6 @@
             this.Load += new System.EventHandler(this.DSDB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSDB)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -254,6 +241,5 @@
         private System.Windows.Forms.DataGridViewImageColumn anhDB;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_addDB;
-        private System.Windows.Forms.Label count_DB;
     }
 }
