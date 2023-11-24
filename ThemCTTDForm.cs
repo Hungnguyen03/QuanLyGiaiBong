@@ -179,6 +179,11 @@ namespace QuanLyGiaiBong
             cttd.Dispose();
         }
 
+        private void Update_Data_Click(object sender, EventArgs e)
+        {
+            CapNhatKetQua(matrandau);
+        }
+
         private void DSDoiKhachBtn_Click(object sender, EventArgs e)
         {
             DSCauThuThiDauForm dsCauThuForm = new DSCauThuThiDauForm(madoikhach,matrandau);
@@ -245,7 +250,6 @@ namespace QuanLyGiaiBong
                     MessageBox.Show("Please enter a valid numeric value for ThoiGian.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
             ClearFormValues();
             MessageBox.Show("Data saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
