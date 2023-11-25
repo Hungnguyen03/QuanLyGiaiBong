@@ -130,8 +130,7 @@
             // 
             // ChiTietTranDau
             // 
-            this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(764, 426);
             this.Name = "ChiTietTranDau";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

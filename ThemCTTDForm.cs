@@ -182,6 +182,7 @@ namespace QuanLyGiaiBong
         private void Update_Data_Click(object sender, EventArgs e)
         {
             CapNhatKetQua(matrandau);
+            MessageBox.Show("Đã cập nhật điểm số!");
         }
 
         private void DSDoiKhachBtn_Click(object sender, EventArgs e)

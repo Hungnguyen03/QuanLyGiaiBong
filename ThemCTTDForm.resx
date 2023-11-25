@@ -1244,6 +1244,15 @@
         x1aktQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="Update_Data.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAKcAAAAnCAYAAABqplg0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACWSURBVHhe7dKhAYAwAMCwfbHDx3ecgQEFHICnIiKqtuNa
+        c7+2eUPK++X4DBBgTrLMSZY5yTInWeYky5xkmZMsc5JlTrLMSZY5yTInWeYky5xkmZMsc5JlTrLMSZY5
+        yTInWeYky5xkmZMsc5JlTrLMSZY5yTInWeYky5xkmZMsc5JlTrLMSZY5yTInWeNc8/gK8KdzzeMB4W0Y
+        e01rzXMAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>177, 17</value>
   </metadata>
@@ -1259,13 +1268,4 @@
   <metadata name="cauThuTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>938, 17</value>
   </metadata>
-  <data name="Update_Data.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJUAAAAnCAYAAAAGoAoxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACTSURBVHhe7dKhAYQwAMDAbtHBy3aMgQEFDID6jzxxKjbj
-        WnO/tnlD4v1pfAb4g6nImYqcqciZipypyJmKnKnImYqcqciZipypyJmKnKnImYqcqciZipypyJmKnKnI
-        mYqcqciZipypyJmKnKnImYqcqciZipypyJmKnKnImYqcqciZipypyJmK3DjXPL4C/OJc83gAP+bdCZcO
-        ajgAAAAASUVORK5CYII=
-</value>
-  </data>
 </root>

@@ -68,7 +68,7 @@ namespace QuanLyGiaiBong
 			madoikhach = dtBase.DocBang("select MaDoi from DoiBong where TenDoi like  N'" + TenDoiNha + "'");
 			foreach (DataRow row in madoikhach.Rows)
 			{
-				MaDK = row["MaDoi"].ToString();
+				MaDN = row["MaDoi"].ToString();
 			}
 
 		}
@@ -94,7 +94,7 @@ namespace QuanLyGiaiBong
 			madoinha = dtBase.DocBang("select MaDoi from DoiBong where TenDoi like N'" + TenDoiKhach + "'");
 			foreach (DataRow row in madoinha.Rows)
 			{
-				MaDN = row["MaDoi"].ToString();
+				MaDK = row["MaDoi"].ToString();
 			}
 		}
 
@@ -141,7 +141,9 @@ namespace QuanLyGiaiBong
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string sql = "insert into TranDau(LuotDau,VongDau,MaDoiNha,MaDoiKhach,SoBanThangDoiNha,SoBanThuaDoiNha,SoTheVangDoiNha,SoTheDoDoiNha,SoTheVangDoiKhach,SoTheDoDoiKhach,GhiChu) values " + "('" + int.Parse(tbLuot.Text) + "','" + int.Parse(tbVong.Text) + "','" + int.Parse(MaDN) + "','" + int.Parse(MaDK) + "','0','0','0','0','0','0',N'" + tbGhiChu.Text + "')";
+            string sql = "insert into TranDau(LuotDau,VongDau,MaDoiNha,MaDoiKhach,SoBanThangDoiNha,SoBanThuaDoiNha," +
+                "SoTheVangDoiNha,SoTheDoDoiNha,SoTheVangDoiKhach,SoTheDoDoiKhach,GhiChu) values " +
+                "" + "('" + int.Parse(tbLuot.Text) + "','" + int.Parse(tbVong.Text) + "','" + int.Parse(MaDN) + "','" + int.Parse(MaDK) + "','0','0','0','0','0','0',N'" + tbGhiChu.Text + "')";
             dtBase.CapNhatDuLieu(sql);
             MessageBox.Show("Đã Thêm Trận Đấu");
         }

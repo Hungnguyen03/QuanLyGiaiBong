@@ -62,12 +62,12 @@
             this.btnMinimize = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.Update_Data = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.qLGiaiBongDaDataSet = new QuanLyGiaiBong.QLGiaiBongDaDataSet();
             this.cauThuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cauThuTableAdapter = new QuanLyGiaiBong.QLGiaiBongDaDataSetTableAdapters.CauThuTableAdapter();
-            this.Update_Data = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.DoiNhaPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DoiKhachPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TgianGhiBan)).BeginInit();
@@ -819,20 +819,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel4, null);
             this.bunifuToolTip1.SetToolTipTitle(this.tableLayoutPanel4, "");
             // 
-            // qLGiaiBongDaDataSet
-            // 
-            this.qLGiaiBongDaDataSet.DataSetName = "QLGiaiBongDaDataSet";
-            this.qLGiaiBongDaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cauThuBindingSource
-            // 
-            this.cauThuBindingSource.DataMember = "CauThu";
-            this.cauThuBindingSource.DataSource = this.qLGiaiBongDaDataSet;
-            // 
-            // cauThuTableAdapter
-            // 
-            this.cauThuTableAdapter.ClearBeforeFill = true;
-            // 
             // Update_Data
             // 
             this.Update_Data.AllowAnimations = true;
@@ -847,7 +833,7 @@
             this.Update_Data.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
             this.Update_Data.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Update_Data.BackgroundImage")));
             this.Update_Data.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.Update_Data.ButtonText = "Cập nhât";
+            this.Update_Data.ButtonText = "Kết thúc trận đấu";
             this.Update_Data.ButtonTextMarginLeft = 0;
             this.Update_Data.ColorContrastOnClick = 45;
             this.Update_Data.ColorContrastOnHover = 45;
@@ -880,7 +866,7 @@
             this.Update_Data.IdleIconLeftImage = null;
             this.Update_Data.IdleIconRightImage = null;
             this.Update_Data.IndicateFocus = false;
-            this.Update_Data.Location = new System.Drawing.Point(494, 711);
+            this.Update_Data.Location = new System.Drawing.Point(36, 711);
             this.Update_Data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Update_Data.Name = "Update_Data";
             this.Update_Data.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -915,7 +901,7 @@
             this.Update_Data.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.Update_Data.OnPressedState.IconLeftImage = null;
             this.Update_Data.OnPressedState.IconRightImage = null;
-            this.Update_Data.Size = new System.Drawing.Size(149, 39);
+            this.Update_Data.Size = new System.Drawing.Size(167, 39);
             this.Update_Data.TabIndex = 40;
             this.Update_Data.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Update_Data.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -926,6 +912,20 @@
             this.bunifuToolTip1.SetToolTipTitle(this.Update_Data, "");
             this.Update_Data.UseDefaultRadiusAndThickness = true;
             this.Update_Data.Click += new System.EventHandler(this.Update_Data_Click);
+            // 
+            // qLGiaiBongDaDataSet
+            // 
+            this.qLGiaiBongDaDataSet.DataSetName = "QLGiaiBongDaDataSet";
+            this.qLGiaiBongDaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cauThuBindingSource
+            // 
+            this.cauThuBindingSource.DataMember = "CauThu";
+            this.cauThuBindingSource.DataSource = this.qLGiaiBongDaDataSet;
+            // 
+            // cauThuTableAdapter
+            // 
+            this.cauThuTableAdapter.ClearBeforeFill = true;
             // 
             // ThemCTTDForm
             // 
