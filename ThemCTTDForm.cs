@@ -161,8 +161,27 @@ namespace QuanLyGiaiBong
             DataTable cttd = dtBase.DocBang("select madoinha,madoikhach, sobanthangdoinha, sobanthuadoinha from trandau where matrandau = " + maTD);
             ma_nha = int.Parse(cttd.Rows[0]["madoinha"].ToString());
             ma_khach = int.Parse(cttd.Rows[0]["madoikhach"].ToString());
-            diem_nha = int.Parse(cttd.Rows[0]["sobanthangdoinha"].ToString());
-            diem_khach = int.Parse(cttd.Rows[0]["sobanthuadoinha"].ToString());
+            //diem_nha = int.Parse(cttd.Rows[0]["sobanthangdoinha"].ToString());
+            //diem_khach = int.Parse(cttd.Rows[0]["sobanthuadoinha"].ToString());
+            if (int.TryParse(cttd.Rows[0]["sobanthangdoinha"].ToString(), out diem_nha) == false)
+            {
+                diem_nha = 0;
+            }
+            if (int.TryParse(cttd.Rows[0]["sobanthuadoinha"].ToString(), out diem_khach) == false)
+            {
+                diem_khach = 0;
+            }
+            if (cttd.Rows[0]["sobanthangdoinha"] == DBNull.Value)
+            {
+                dtBase.CapNhatDuLieu($"update trandau set sobanthangdoinha = 0 where matrandau = {maTD}");
+                diem_nha = 0; 
+            }
+
+            if (cttd.Rows[0]["sobanthuadoinha"] == DBNull.Value)
+            {
+                dtBase.CapNhatDuLieu($"update trandau set sobanthuadoinha = 0 where matrandau = {maTD}");
+                diem_khach = 0;  
+            }
             if (diem_nha > diem_khach)
             {
                 dtBase.CapNhatDuLieu("update DoiBong set Diem = ISNULL(Diem,0) + 3 where MaDoi = " + ma_nha);
