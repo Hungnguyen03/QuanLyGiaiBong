@@ -40,7 +40,7 @@ namespace QuanLyGiaiBong
             dgvDSCT.Columns["SoBanThang"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvDSCT.Columns["TenViTri"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvDSCT.Columns["SoBanThang"].Width = 120;
-
+            dgvDSCT.RowTemplate.Height = 100;
             dgvDSCT.Columns["Anh"].Visible = false;
             string appPath = Application.StartupPath;
             string projectRootPath = Path.GetFullPath(Path.Combine(appPath, @"..\.."));
@@ -69,7 +69,7 @@ namespace QuanLyGiaiBong
             if (txbDB.Text != "")
                 sql = sql + " and TenDoi like N'%" + txbDB.Text.Trim() + "%'";
             if (txbSBT.Text != "")
-            sql = sql + " and CauThu.SoBanThang = '" + txbSBT.Text.Trim() + "'";
+                sql = sql + " and CauThu.SoBanThang = '" + txbSBT.Text.Trim() + "'";
             //Trình bày gridView
             DataTable dtCauThu = dtBase.DocBang(sql);
             dgvDSCT.DataSource = null;
@@ -85,7 +85,7 @@ namespace QuanLyGiaiBong
             dgvDSCT.Columns["SoBanThang"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvDSCT.Columns["TenViTri"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvDSCT.Columns["SoBanThang"].Width = 120;
-
+            dgvDSCT.RowTemplate.Height = 100;
             dgvDSCT.Columns["Anh"].Visible = false;
             string appPath = Application.StartupPath;
             string projectRootPath = Path.GetFullPath(Path.Combine(appPath, @"..\.."));
@@ -119,6 +119,21 @@ namespace QuanLyGiaiBong
         {
             AddCauThu addCauThu = new AddCauThu();
             addCauThu.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbSBT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

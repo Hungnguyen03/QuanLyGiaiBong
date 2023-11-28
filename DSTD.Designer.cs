@@ -127,7 +127,7 @@
             this.btnChiTiet.IdleIconLeftImage = null;
             this.btnChiTiet.IdleIconRightImage = null;
             this.btnChiTiet.IndicateFocus = false;
-            this.btnChiTiet.Location = new System.Drawing.Point(1108, 38);
+            this.btnChiTiet.Location = new System.Drawing.Point(1099, 38);
             this.btnChiTiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
@@ -679,7 +679,7 @@
             this.Controls.Add(this.dgvDSTD);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(949, 499);
+            this.MinimumSize = new System.Drawing.Size(1250, 700);
             this.Name = "DSTD";
             this.Text = "Danh sách trận đấu";
             this.Load += new System.EventHandler(this.DSTD_Load);
