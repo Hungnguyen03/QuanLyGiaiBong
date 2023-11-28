@@ -104,7 +104,7 @@
             this.dgvDSDB.RowHeadersWidth = 51;
             this.dgvDSDB.RowTemplate.Height = 40;
             this.dgvDSDB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSDB.Size = new System.Drawing.Size(1443, 681);
+            this.dgvDSDB.Size = new System.Drawing.Size(1082, 653);
             this.dgvDSDB.TabIndex = 1;
             this.dgvDSDB.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvDSDB.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDSDB_CellMouseDoubleClick);
@@ -121,9 +121,9 @@
             // 
             this.panel1.Controls.Add(this.btn_addDB);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 595);
+            this.panel1.Location = new System.Drawing.Point(0, 603);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1443, 86);
+            this.panel1.Size = new System.Drawing.Size(1082, 50);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -157,7 +157,7 @@
             this.btn_addDB.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
             this.btn_addDB.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btn_addDB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_addDB.ForeColor = System.Drawing.Color.White;
+            this.btn_addDB.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_addDB.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_addDB.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btn_addDB.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -174,7 +174,7 @@
             this.btn_addDB.IdleIconLeftImage = null;
             this.btn_addDB.IdleIconRightImage = null;
             this.btn_addDB.IndicateFocus = false;
-            this.btn_addDB.Location = new System.Drawing.Point(1131, 9);
+            this.btn_addDB.Location = new System.Drawing.Point(937, 0);
             this.btn_addDB.Margin = new System.Windows.Forms.Padding(4);
             this.btn_addDB.Name = "btn_addDB";
             this.btn_addDB.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
@@ -198,7 +198,7 @@
             this.btn_addDB.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_addDB.OnIdleState.BorderThickness = 1;
             this.btn_addDB.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
-            this.btn_addDB.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btn_addDB.OnIdleState.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_addDB.OnIdleState.IconLeftImage = null;
             this.btn_addDB.OnIdleState.IconRightImage = null;
             this.btn_addDB.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
@@ -209,7 +209,7 @@
             this.btn_addDB.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_addDB.OnPressedState.IconLeftImage = null;
             this.btn_addDB.OnPressedState.IconRightImage = null;
-            this.btn_addDB.Size = new System.Drawing.Size(273, 64);
+            this.btn_addDB.Size = new System.Drawing.Size(145, 50);
             this.btn_addDB.TabIndex = 5;
             this.btn_addDB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_addDB.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -222,11 +222,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 681);
+            this.ClientSize = new System.Drawing.Size(1082, 653);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvDSDB);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1261, 605);
+            this.MinimumSize = new System.Drawing.Size(1100, 600);
             this.Name = "DSDB";
             this.Text = "Danh sách đội bóng";
             this.Load += new System.EventHandler(this.DSDB_Load);

@@ -122,16 +122,15 @@ namespace QuanLyGiaiBong
         {
             this.Close();
         }
-
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void pTitlebar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pTitlebar_Click_1(object sender, EventArgs e)
+        {
+
         }
 
         private void pTitlebar_Click(object sender, EventArgs e)
@@ -141,11 +140,21 @@ namespace QuanLyGiaiBong
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string sql = "insert into TranDau(LuotDau,VongDau,MaDoiNha,MaDoiKhach,SoBanThangDoiNha,SoBanThuaDoiNha," +
+            if (tbLuot.Text.Trim() == "" || tbVong.Text == "" ||
+                cmbDoiKhach.SelectedIndex == 0 || cmbDoiNha.SelectedIndex ==0 )
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin trận đấu!");
+            }
+            else
+            {
+                string sql = "insert into TranDau(LuotDau,VongDau,MaDoiNha,MaDoiKhach,SoBanThangDoiNha,SoBanThuaDoiNha," +
                 "SoTheVangDoiNha,SoTheDoDoiNha,SoTheVangDoiKhach,SoTheDoDoiKhach,GhiChu) values " +
                 "" + "('" + int.Parse(tbLuot.Text) + "','" + int.Parse(tbVong.Text) + "','" + int.Parse(MaDN) + "','" + int.Parse(MaDK) + "','0','0','0','0','0','0',N'" + tbGhiChu.Text + "')";
-            dtBase.CapNhatDuLieu(sql);
-            MessageBox.Show("Đã Thêm Trận Đấu");
+                dtBase.CapNhatDuLieu(sql);
+                MessageBox.Show("Đã Thêm Trận Đấu");
+
+            }
+
         }
     }
 }

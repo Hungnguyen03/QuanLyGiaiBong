@@ -22,6 +22,16 @@ namespace QuanLyGiaiBong
             maDoiKhach = Convert.ToInt32(ctTranDau.Rows[0]["MaDoiKhach"]);
         }
 
+        private void dgvDH2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bunifuPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void UC_DH_Load(object sender, EventArgs e)
         {
             DataTable dtCauThu1 = dtBase.DocBang("select TenCT from CauThu where MaDoi = " + maDoiNha);

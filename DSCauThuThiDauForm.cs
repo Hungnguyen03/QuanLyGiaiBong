@@ -29,14 +29,13 @@ namespace QuanLyGiaiBong
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void DSCauThuThiDauForm_Load(object sender, EventArgs e)
         {
-            string query = "Select Anh, TenCT, TenViTri , SoAo,MaCT from CauThu join ViTri ON ViTri.MaViTri = CauThu.MaViTri where MaDoi = '" + MaDoi + "'";
+            string query = "Select TenCT, TenViTri , SoAo,MaCT from CauThu join ViTri ON ViTri.MaViTri = CauThu.MaViTri where MaDoi = '" + MaDoi + "'";
             DataTable dsCauthu = dtBase.DocBang(query); 
             dgvDSCauThu.DataSource = dsCauthu;
             //Định dạng dataGrid
-            dgvDSCauThu.Columns[1].HeaderText = "Ảnh";
-            dgvDSCauThu.Columns[2].HeaderText = "Tên cầu thủ";
-            dgvDSCauThu.Columns[3].HeaderText = "Vị trí";
-            dgvDSCauThu.Columns[4].HeaderText = "Số áo";
+            dgvDSCauThu.Columns[1].HeaderText = "Tên cầu thủ";
+            dgvDSCauThu.Columns[2].HeaderText = "Vị trí";
+            dgvDSCauThu.Columns[3].HeaderText = "Số áo";
             dsCauthu.Dispose();
 
         }
@@ -66,16 +65,15 @@ namespace QuanLyGiaiBong
         {
             this.Close();
         }
-
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void pTitlebar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pTitlebar_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void LuuBtn_Click(object sender, EventArgs e)

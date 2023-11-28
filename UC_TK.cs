@@ -23,6 +23,21 @@ namespace QuanLyGiaiBong
             maDoiKhach = Convert.ToInt32(ctTranDau.Rows[0]["MaDoiKhach"]);
         }
 
+        private void bunifuPanel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuPanel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvGoal2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void UC_TK_Load(object sender, EventArgs e)
         {
             DataTable dtGoal1 = dtBase.DocBang("select TenCT, ThoiGian from CauThu inner join TranDau_BanThang on CauThu.MaCT = TranDau_BanThang.MaCauThu where MaDoi = " + maDoiNha);

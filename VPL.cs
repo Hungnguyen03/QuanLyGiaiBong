@@ -33,8 +33,10 @@ namespace QuanLyGiaiBong
             dgvVPL.Columns["TenViTri"].HeaderText = "Vị trí";
             dgvVPL.Columns["SoBanThang"].HeaderText = "Số bàn thắng";
             dgvVPL.Columns["SoBanThang"].Width = 125;
+            dgvVPL.RowTemplate.Height = 125;
             dgvVPL.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvVPL.Columns["SoBanThang"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvVPL.Columns["TenCT"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvVPL.Columns["TenViTri"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgvVPL.Columns["Anh"].Visible = false;

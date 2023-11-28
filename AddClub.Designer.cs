@@ -57,7 +57,6 @@
             this.txtAddTenDoi = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pTitlebar = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnMinimize = new System.Windows.Forms.Button();
             this.pbAnh = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -161,7 +160,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(495, 153);
+            this.label5.Location = new System.Drawing.Point(496, 163);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 29);
             this.label5.TabIndex = 1;
@@ -392,6 +391,7 @@
             this.txtAddTenDoi.TextPlaceholder = "Enter text";
             this.txtAddTenDoi.UseSystemPasswordChar = false;
             this.txtAddTenDoi.WordWrap = true;
+            this.txtAddTenDoi.TextChanged += new System.EventHandler(this.txtAddTenDoi_TextChanged_1);
             // 
             // pTitlebar
             // 
@@ -402,7 +402,6 @@
             this.pTitlebar.BorderRadius = 3;
             this.pTitlebar.BorderThickness = 1;
             this.pTitlebar.Controls.Add(this.btnClose);
-            this.pTitlebar.Controls.Add(this.btnMinimize);
             this.pTitlebar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pTitlebar.Location = new System.Drawing.Point(0, 0);
             this.pTitlebar.Margin = new System.Windows.Forms.Padding(4);
@@ -430,26 +429,9 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(48)))), ((int)(((byte)(98)))));
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMinimize.Location = new System.Drawing.Point(968, 2);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(32, 46);
-            this.btnMinimize.TabIndex = 7;
-            this.btnMinimize.Text = "O";
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
             // pbAnh
             // 
-            this.pbAnh.Location = new System.Drawing.Point(591, 146);
+            this.pbAnh.Location = new System.Drawing.Point(591, 161);
             this.pbAnh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbAnh.Name = "pbAnh";
             this.pbAnh.Size = new System.Drawing.Size(203, 187);
@@ -509,7 +491,7 @@
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(140, 39);
             this.btn_add.TabIndex = 2;
-            this.btn_add.Text = "Thêm DB";
+            this.btn_add.Text = "Thêm ";
             this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
@@ -662,7 +644,6 @@
         private Bunifu.UI.WinForms.BunifuTextBox txtAddTenDoi;
         private Bunifu.UI.WinForms.BunifuPanel pTitlebar;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnMinimize;
         private Bunifu.UI.WinForms.BunifuTextBox txtLogoLink;
     }
 }

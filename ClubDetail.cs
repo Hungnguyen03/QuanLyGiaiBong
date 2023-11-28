@@ -116,12 +116,6 @@ namespace QuanLyGiaiBong
         {
             this.Close();
         }
-
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void pTitlebar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();

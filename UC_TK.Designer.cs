@@ -87,9 +87,10 @@ namespace QuanLyGiaiBong
             this.bunifuPanel1.BorderThickness = 1;
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(95, 338);
+            this.bunifuPanel1.Size = new System.Drawing.Size(127, 416);
             this.bunifuPanel1.TabIndex = 0;
             // 
             // bunifuPanel3
@@ -105,23 +106,26 @@ namespace QuanLyGiaiBong
             this.bunifuPanel3.Controls.Add(this.dgvGoal2);
             this.bunifuPanel3.Controls.Add(this.dgvGoal1);
             this.bunifuPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuPanel3.Location = new System.Drawing.Point(95, 0);
+            this.bunifuPanel3.Location = new System.Drawing.Point(127, 0);
+            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(656, 116);
+            this.bunifuPanel3.Size = new System.Drawing.Size(874, 142);
             this.bunifuPanel3.TabIndex = 2;
+            this.bunifuPanel3.Click += new System.EventHandler(this.bunifuPanel3_Click);
             // 
             // bunifuPictureBox1
             // 
             this.bunifuPictureBox1.AllowFocused = false;
             this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox1.AutoSizeHeight = true;
-            this.bunifuPictureBox1.BorderRadius = 22;
+            this.bunifuPictureBox1.BorderRadius = 29;
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(305, 34);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(407, 42);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(44, 44);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(59, 59);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox1.TabIndex = 2;
             this.bunifuPictureBox1.TabStop = false;
@@ -180,15 +184,18 @@ namespace QuanLyGiaiBong
             this.dgvGoal2.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvGoal2.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvGoal2.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvGoal2.Location = new System.Drawing.Point(414, 0);
+            this.dgvGoal2.Location = new System.Drawing.Point(552, 0);
+            this.dgvGoal2.Margin = new System.Windows.Forms.Padding(4);
             this.dgvGoal2.Name = "dgvGoal2";
             this.dgvGoal2.ReadOnly = true;
             this.dgvGoal2.RowHeadersVisible = false;
+            this.dgvGoal2.RowHeadersWidth = 51;
             this.dgvGoal2.RowTemplate.Height = 40;
             this.dgvGoal2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGoal2.Size = new System.Drawing.Size(240, 114);
+            this.dgvGoal2.Size = new System.Drawing.Size(320, 140);
             this.dgvGoal2.TabIndex = 1;
             this.dgvGoal2.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvGoal2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGoal2_CellContentClick);
             // 
             // dgvGoal1
             // 
@@ -244,12 +251,14 @@ namespace QuanLyGiaiBong
             this.dgvGoal1.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvGoal1.HeaderForeColor = System.Drawing.Color.White;
             this.dgvGoal1.Location = new System.Drawing.Point(0, 0);
+            this.dgvGoal1.Margin = new System.Windows.Forms.Padding(4);
             this.dgvGoal1.Name = "dgvGoal1";
             this.dgvGoal1.ReadOnly = true;
             this.dgvGoal1.RowHeadersVisible = false;
+            this.dgvGoal1.RowHeadersWidth = 51;
             this.dgvGoal1.RowTemplate.Height = 40;
             this.dgvGoal1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGoal1.Size = new System.Drawing.Size(240, 114);
+            this.dgvGoal1.Size = new System.Drawing.Size(320, 140);
             this.dgvGoal1.TabIndex = 0;
             this.dgvGoal1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -266,10 +275,11 @@ namespace QuanLyGiaiBong
             this.bunifuPanel4.Controls.Add(this.dgvYellow2);
             this.bunifuPanel4.Controls.Add(this.dgvYellow1);
             this.bunifuPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuPanel4.Location = new System.Drawing.Point(95, 116);
+            this.bunifuPanel4.Location = new System.Drawing.Point(127, 142);
+            this.bunifuPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.ShowBorders = true;
-            this.bunifuPanel4.Size = new System.Drawing.Size(656, 90);
+            this.bunifuPanel4.Size = new System.Drawing.Size(874, 110);
             this.bunifuPanel4.TabIndex = 3;
             // 
             // bunifuPictureBox2
@@ -277,12 +287,13 @@ namespace QuanLyGiaiBong
             this.bunifuPictureBox2.AllowFocused = false;
             this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox2.AutoSizeHeight = true;
-            this.bunifuPictureBox2.BorderRadius = 22;
+            this.bunifuPictureBox2.BorderRadius = 29;
             this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
             this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(305, 23);
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(407, 28);
+            this.bunifuPictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(44, 44);
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(59, 59);
             this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox2.TabIndex = 2;
             this.bunifuPictureBox2.TabStop = false;
@@ -341,13 +352,15 @@ namespace QuanLyGiaiBong
             this.dgvYellow2.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvYellow2.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvYellow2.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvYellow2.Location = new System.Drawing.Point(414, 0);
+            this.dgvYellow2.Location = new System.Drawing.Point(552, 0);
+            this.dgvYellow2.Margin = new System.Windows.Forms.Padding(4);
             this.dgvYellow2.Name = "dgvYellow2";
             this.dgvYellow2.ReadOnly = true;
             this.dgvYellow2.RowHeadersVisible = false;
+            this.dgvYellow2.RowHeadersWidth = 51;
             this.dgvYellow2.RowTemplate.Height = 40;
             this.dgvYellow2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvYellow2.Size = new System.Drawing.Size(240, 88);
+            this.dgvYellow2.Size = new System.Drawing.Size(320, 108);
             this.dgvYellow2.TabIndex = 1;
             this.dgvYellow2.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -405,12 +418,14 @@ namespace QuanLyGiaiBong
             this.dgvYellow1.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvYellow1.HeaderForeColor = System.Drawing.Color.White;
             this.dgvYellow1.Location = new System.Drawing.Point(0, 0);
+            this.dgvYellow1.Margin = new System.Windows.Forms.Padding(4);
             this.dgvYellow1.Name = "dgvYellow1";
             this.dgvYellow1.ReadOnly = true;
             this.dgvYellow1.RowHeadersVisible = false;
+            this.dgvYellow1.RowHeadersWidth = 51;
             this.dgvYellow1.RowTemplate.Height = 40;
             this.dgvYellow1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvYellow1.Size = new System.Drawing.Size(240, 88);
+            this.dgvYellow1.Size = new System.Drawing.Size(320, 108);
             this.dgvYellow1.TabIndex = 0;
             this.dgvYellow1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -423,11 +438,13 @@ namespace QuanLyGiaiBong
             this.bunifuPanel2.BorderRadius = 3;
             this.bunifuPanel2.BorderThickness = 1;
             this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuPanel2.Location = new System.Drawing.Point(751, 0);
+            this.bunifuPanel2.Location = new System.Drawing.Point(1001, 0);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(95, 338);
+            this.bunifuPanel2.Size = new System.Drawing.Size(127, 416);
             this.bunifuPanel2.TabIndex = 1;
+            this.bunifuPanel2.Click += new System.EventHandler(this.bunifuPanel2_Click);
             // 
             // dgvRed1
             // 
@@ -483,12 +500,14 @@ namespace QuanLyGiaiBong
             this.dgvRed1.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvRed1.HeaderForeColor = System.Drawing.Color.White;
             this.dgvRed1.Location = new System.Drawing.Point(0, 0);
+            this.dgvRed1.Margin = new System.Windows.Forms.Padding(4);
             this.dgvRed1.Name = "dgvRed1";
             this.dgvRed1.ReadOnly = true;
             this.dgvRed1.RowHeadersVisible = false;
+            this.dgvRed1.RowHeadersWidth = 51;
             this.dgvRed1.RowTemplate.Height = 40;
             this.dgvRed1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRed1.Size = new System.Drawing.Size(240, 130);
+            this.dgvRed1.Size = new System.Drawing.Size(320, 162);
             this.dgvRed1.TabIndex = 0;
             this.dgvRed1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -545,13 +564,15 @@ namespace QuanLyGiaiBong
             this.dgvRed2.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvRed2.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvRed2.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvRed2.Location = new System.Drawing.Point(414, 0);
+            this.dgvRed2.Location = new System.Drawing.Point(552, 0);
+            this.dgvRed2.Margin = new System.Windows.Forms.Padding(4);
             this.dgvRed2.Name = "dgvRed2";
             this.dgvRed2.ReadOnly = true;
             this.dgvRed2.RowHeadersVisible = false;
+            this.dgvRed2.RowHeadersWidth = 51;
             this.dgvRed2.RowTemplate.Height = 40;
             this.dgvRed2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRed2.Size = new System.Drawing.Size(240, 130);
+            this.dgvRed2.Size = new System.Drawing.Size(320, 162);
             this.dgvRed2.TabIndex = 1;
             this.dgvRed2.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -560,12 +581,13 @@ namespace QuanLyGiaiBong
             this.bunifuPictureBox3.AllowFocused = false;
             this.bunifuPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox3.AutoSizeHeight = true;
-            this.bunifuPictureBox3.BorderRadius = 22;
+            this.bunifuPictureBox3.BorderRadius = 29;
             this.bunifuPictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox3.Image")));
             this.bunifuPictureBox3.IsCircle = true;
-            this.bunifuPictureBox3.Location = new System.Drawing.Point(305, 43);
+            this.bunifuPictureBox3.Location = new System.Drawing.Point(407, 54);
+            this.bunifuPictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPictureBox3.Name = "bunifuPictureBox3";
-            this.bunifuPictureBox3.Size = new System.Drawing.Size(44, 44);
+            this.bunifuPictureBox3.Size = new System.Drawing.Size(59, 59);
             this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox3.TabIndex = 2;
             this.bunifuPictureBox3.TabStop = false;
@@ -584,15 +606,16 @@ namespace QuanLyGiaiBong
             this.bunifuPanel5.Controls.Add(this.dgvRed2);
             this.bunifuPanel5.Controls.Add(this.dgvRed1);
             this.bunifuPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuPanel5.Location = new System.Drawing.Point(95, 206);
+            this.bunifuPanel5.Location = new System.Drawing.Point(127, 252);
+            this.bunifuPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuPanel5.Name = "bunifuPanel5";
             this.bunifuPanel5.ShowBorders = true;
-            this.bunifuPanel5.Size = new System.Drawing.Size(656, 132);
+            this.bunifuPanel5.Size = new System.Drawing.Size(874, 164);
             this.bunifuPanel5.TabIndex = 4;
             // 
             // UC_TK
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.bunifuPanel5);
@@ -600,8 +623,9 @@ namespace QuanLyGiaiBong
             this.Controls.Add(this.bunifuPanel3);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_TK";
-            this.Size = new System.Drawing.Size(846, 338);
+            this.Size = new System.Drawing.Size(1128, 416);
             this.Load += new System.EventHandler(this.UC_TK_Load);
             this.bunifuPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();

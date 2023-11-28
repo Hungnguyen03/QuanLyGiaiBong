@@ -116,5 +116,10 @@ namespace QuanLyGiaiBong
                 cttd.ShowDialog();
             }
         }
+
+        private void txbSTD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

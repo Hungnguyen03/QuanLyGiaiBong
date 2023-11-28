@@ -37,11 +37,6 @@ namespace QuanLyGiaiBong
             DSCT();
         }
 
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -202,6 +197,11 @@ namespace QuanLyGiaiBong
         {
             CapNhatKetQua(matrandau);
             MessageBox.Show("Đã cập nhật điểm số!");
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void DSDoiKhachBtn_Click(object sender, EventArgs e)

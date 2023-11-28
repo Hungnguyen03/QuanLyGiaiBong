@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemCTTDForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,7 +59,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.pTitlebar = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnMinimize = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.Update_Data = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -512,11 +511,11 @@
             this.LuuBtn.ColorContrastOnClick = 45;
             this.LuuBtn.ColorContrastOnHover = 45;
             this.LuuBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.LuuBtn.CustomizableEdges = borderEdges1;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.LuuBtn.CustomizableEdges = borderEdges7;
             this.LuuBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.LuuBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LuuBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -637,7 +636,7 @@
             this.DSDoiNhaBtn.ImageSize = new System.Drawing.Size(38, 47);
             this.DSDoiNhaBtn.ImageZoomSize = new System.Drawing.Size(53, 62);
             this.DSDoiNhaBtn.InitialImage = ((System.Drawing.Image)(resources.GetObject("DSDoiNhaBtn.InitialImage")));
-            this.DSDoiNhaBtn.Location = new System.Drawing.Point(28, 306);
+            this.DSDoiNhaBtn.Location = new System.Drawing.Point(95, 306);
             this.DSDoiNhaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DSDoiNhaBtn.Name = "DSDoiNhaBtn";
             this.DSDoiNhaBtn.Rotation = 0;
@@ -676,7 +675,7 @@
             this.DSDoiKhachBtn.ImageSize = new System.Drawing.Size(38, 47);
             this.DSDoiKhachBtn.ImageZoomSize = new System.Drawing.Size(53, 62);
             this.DSDoiKhachBtn.InitialImage = ((System.Drawing.Image)(resources.GetObject("DSDoiKhachBtn.InitialImage")));
-            this.DSDoiKhachBtn.Location = new System.Drawing.Point(447, 306);
+            this.DSDoiKhachBtn.Location = new System.Drawing.Point(569, 306);
             this.DSDoiKhachBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DSDoiKhachBtn.Name = "DSDoiKhachBtn";
             this.DSDoiKhachBtn.Rotation = 0;
@@ -699,11 +698,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(111, 336);
+            this.label9.Location = new System.Drawing.Point(198, 336);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(155, 20);
+            this.label9.Size = new System.Drawing.Size(126, 20);
             this.label9.TabIndex = 28;
-            this.label9.Text = "DS Cầu thủ đội nhà";
+            this.label9.Text = "Cầu thủ đội nhà";
             this.bunifuToolTip1.SetToolTip(this.label9, "");
             this.bunifuToolTip1.SetToolTipIcon(this.label9, null);
             this.bunifuToolTip1.SetToolTipTitle(this.label9, "");
@@ -712,14 +711,15 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(528, 336);
+            this.label10.Location = new System.Drawing.Point(661, 336);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(172, 20);
+            this.label10.Size = new System.Drawing.Size(143, 20);
             this.label10.TabIndex = 29;
-            this.label10.Text = "DS Cầu thủ đội khách";
+            this.label10.Text = "Cầu thủ đội khách";
             this.bunifuToolTip1.SetToolTip(this.label10, "");
             this.bunifuToolTip1.SetToolTipIcon(this.label10, null);
             this.bunifuToolTip1.SetToolTipTitle(this.label10, "");
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pTitlebar
             // 
@@ -730,7 +730,6 @@
             this.pTitlebar.BorderRadius = 3;
             this.pTitlebar.BorderThickness = 1;
             this.pTitlebar.Controls.Add(this.btnClose);
-            this.pTitlebar.Controls.Add(this.btnMinimize);
             this.pTitlebar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pTitlebar.Location = new System.Drawing.Point(0, 0);
             this.pTitlebar.Margin = new System.Windows.Forms.Padding(4);
@@ -762,26 +761,6 @@
             this.bunifuToolTip1.SetToolTipTitle(this.btnClose, "");
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(48)))), ((int)(((byte)(98)))));
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMinimize.Location = new System.Drawing.Point(803, 2);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(32, 46);
-            this.btnMinimize.TabIndex = 7;
-            this.btnMinimize.Text = "O";
-            this.bunifuToolTip1.SetToolTip(this.btnMinimize, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnMinimize, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnMinimize, "");
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -838,11 +817,11 @@
             this.Update_Data.ColorContrastOnClick = 45;
             this.Update_Data.ColorContrastOnHover = 45;
             this.Update_Data.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.Update_Data.CustomizableEdges = borderEdges2;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.Update_Data.CustomizableEdges = borderEdges8;
             this.Update_Data.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Update_Data.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.Update_Data.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1018,7 +997,6 @@
 		private System.Windows.Forms.Label TenDoiKhachLabel;
         private Bunifu.UI.WinForms.BunifuPanel pTitlebar;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Update_Data;

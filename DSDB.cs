@@ -36,7 +36,7 @@ namespace QuanLyGiaiBong
             dgvDSDB.Columns["HLV"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvDSDB.Columns["Diem"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvDSDB.Columns["Diem"].Width = 70;
-
+            dgvDSDB.RowTemplate.Height = 100;
             dgvDSDB.Columns["LoGo"].Visible = false;
             string appPath = Application.StartupPath;
             string projectRootPath = Path.GetFullPath(Path.Combine(appPath, @"..\.."));

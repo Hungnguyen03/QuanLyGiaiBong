@@ -59,10 +59,12 @@
             this.bunifuPanel1.BorderThickness = 1;
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(95, 296);
+            this.bunifuPanel1.Size = new System.Drawing.Size(127, 364);
             this.bunifuPanel1.TabIndex = 0;
+            this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
             // 
             // bunifuPanel2
             // 
@@ -73,10 +75,11 @@
             this.bunifuPanel2.BorderRadius = 3;
             this.bunifuPanel2.BorderThickness = 1;
             this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuPanel2.Location = new System.Drawing.Point(738, 0);
+            this.bunifuPanel2.Location = new System.Drawing.Point(984, 0);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(95, 296);
+            this.bunifuPanel2.Size = new System.Drawing.Size(127, 364);
             this.bunifuPanel2.TabIndex = 1;
             // 
             // dgvDH1
@@ -132,13 +135,15 @@
             this.dgvDH1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvDH1.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDH1.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvDH1.Location = new System.Drawing.Point(95, 0);
+            this.dgvDH1.Location = new System.Drawing.Point(127, 0);
+            this.dgvDH1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDH1.Name = "dgvDH1";
             this.dgvDH1.ReadOnly = true;
             this.dgvDH1.RowHeadersVisible = false;
+            this.dgvDH1.RowHeadersWidth = 51;
             this.dgvDH1.RowTemplate.Height = 40;
             this.dgvDH1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDH1.Size = new System.Drawing.Size(240, 296);
+            this.dgvDH1.Size = new System.Drawing.Size(320, 364);
             this.dgvDH1.TabIndex = 2;
             this.dgvDH1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -195,15 +200,18 @@
             this.dgvDH2.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvDH2.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDH2.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvDH2.Location = new System.Drawing.Point(498, 0);
+            this.dgvDH2.Location = new System.Drawing.Point(664, 0);
+            this.dgvDH2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDH2.Name = "dgvDH2";
             this.dgvDH2.ReadOnly = true;
             this.dgvDH2.RowHeadersVisible = false;
+            this.dgvDH2.RowHeadersWidth = 51;
             this.dgvDH2.RowTemplate.Height = 40;
             this.dgvDH2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDH2.Size = new System.Drawing.Size(240, 296);
+            this.dgvDH2.Size = new System.Drawing.Size(320, 364);
             this.dgvDH2.TabIndex = 3;
             this.dgvDH2.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvDH2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDH2_CellContentClick);
             // 
             // qLGiaiBongDaDataSet
             // 
@@ -221,7 +229,7 @@
             // 
             // UC_DH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -229,8 +237,9 @@
             this.Controls.Add(this.dgvDH1);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UC_DH";
-            this.Size = new System.Drawing.Size(833, 296);
+            this.Size = new System.Drawing.Size(1111, 364);
             this.Load += new System.EventHandler(this.UC_DH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDH1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDH2)).EndInit();

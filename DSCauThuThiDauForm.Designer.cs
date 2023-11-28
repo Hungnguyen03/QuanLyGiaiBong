@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DSCauThuThiDauForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDSCauThu = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.LuuBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pTitlebar = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnMinimize = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSCauThu)).BeginInit();
             this.pTitlebar.SuspendLayout();
             this.SuspendLayout();
@@ -48,10 +47,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(268, 60);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(357, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(234, 20);
+            this.label2.Size = new System.Drawing.Size(288, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Chọn danh sách cầu thủ thi đấu";
             // 
@@ -59,21 +57,21 @@
             // 
             this.dgvDSCauThu.AllowCustomTheming = false;
             this.dgvDSCauThu.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvDSCauThu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.dgvDSCauThu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDSCauThu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSCauThu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDSCauThu.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDSCauThu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSCauThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSCauThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvDSCauThu.ColumnHeadersHeight = 40;
             this.dgvDSCauThu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Select});
@@ -95,27 +93,27 @@
             this.dgvDSCauThu.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvDSCauThu.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgvDSCauThu.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDSCauThu.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDSCauThu.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvDSCauThu.EnableHeadersVisualStyles = false;
             this.dgvDSCauThu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvDSCauThu.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvDSCauThu.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDSCauThu.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvDSCauThu.Location = new System.Drawing.Point(0, 83);
-            this.dgvDSCauThu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDSCauThu.Location = new System.Drawing.Point(0, 102);
+            this.dgvDSCauThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDSCauThu.Name = "dgvDSCauThu";
             this.dgvDSCauThu.RowHeadersVisible = false;
             this.dgvDSCauThu.RowHeadersWidth = 51;
             this.dgvDSCauThu.RowTemplate.Height = 40;
             this.dgvDSCauThu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSCauThu.Size = new System.Drawing.Size(734, 280);
+            this.dgvDSCauThu.Size = new System.Drawing.Size(979, 345);
             this.dgvDSCauThu.TabIndex = 3;
             this.dgvDSCauThu.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -144,11 +142,11 @@
             this.LuuBtn.ColorContrastOnClick = 45;
             this.LuuBtn.ColorContrastOnHover = 45;
             this.LuuBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.LuuBtn.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.LuuBtn.CustomizableEdges = borderEdges3;
             this.LuuBtn.DialogResult = System.Windows.Forms.DialogResult.None;
             this.LuuBtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LuuBtn.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -172,8 +170,8 @@
             this.LuuBtn.IdleIconLeftImage = null;
             this.LuuBtn.IdleIconRightImage = null;
             this.LuuBtn.IndicateFocus = false;
-            this.LuuBtn.Location = new System.Drawing.Point(602, 367);
-            this.LuuBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LuuBtn.Location = new System.Drawing.Point(803, 452);
+            this.LuuBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LuuBtn.Name = "LuuBtn";
             this.LuuBtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LuuBtn.OnDisabledState.BorderRadius = 1;
@@ -207,7 +205,7 @@
             this.LuuBtn.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.LuuBtn.OnPressedState.IconLeftImage = null;
             this.LuuBtn.OnPressedState.IconRightImage = null;
-            this.LuuBtn.Size = new System.Drawing.Size(112, 32);
+            this.LuuBtn.Size = new System.Drawing.Size(149, 39);
             this.LuuBtn.TabIndex = 4;
             this.LuuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LuuBtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -225,13 +223,14 @@
             this.pTitlebar.BorderRadius = 3;
             this.pTitlebar.BorderThickness = 1;
             this.pTitlebar.Controls.Add(this.btnClose);
-            this.pTitlebar.Controls.Add(this.btnMinimize);
             this.pTitlebar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pTitlebar.Location = new System.Drawing.Point(0, 0);
+            this.pTitlebar.Margin = new System.Windows.Forms.Padding(4);
             this.pTitlebar.Name = "pTitlebar";
             this.pTitlebar.ShowBorders = true;
-            this.pTitlebar.Size = new System.Drawing.Size(736, 49);
+            this.pTitlebar.Size = new System.Drawing.Size(982, 60);
             this.pTitlebar.TabIndex = 36;
+            this.pTitlebar.Click += new System.EventHandler(this.pTitlebar_Click);
             this.pTitlebar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTitlebar_MouseDown);
             // 
             // btnClose
@@ -242,43 +241,26 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnClose.Location = new System.Drawing.Point(710, 2);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Location = new System.Drawing.Point(948, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(24, 37);
+            this.btnClose.Size = new System.Drawing.Size(32, 46);
             this.btnClose.TabIndex = 8;
             this.btnClose.Text = "O";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(48)))), ((int)(((byte)(98)))));
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimize.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMinimize.Location = new System.Drawing.Point(682, 2);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(24, 37);
-            this.btnMinimize.TabIndex = 7;
-            this.btnMinimize.Text = "O";
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
             // DSCauThuThiDauForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 409);
+            this.ClientSize = new System.Drawing.Size(982, 503);
             this.Controls.Add(this.pTitlebar);
             this.Controls.Add(this.LuuBtn);
             this.Controls.Add(this.dgvDSCauThu);
             this.Controls.Add(this.label2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DSCauThuThiDauForm";
             this.Text = "DSCauThuThiDauForm";
             this.Load += new System.EventHandler(this.DSCauThuThiDauForm_Load);
@@ -297,6 +279,5 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private Bunifu.UI.WinForms.BunifuPanel pTitlebar;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnMinimize;
     }
 }
