@@ -31,6 +31,17 @@ namespace QuanLyGiaiBong
             txtAddTinh.Text = "";
             
         }
+        private bool checkDB()
+        {
+            bool DB = true;
+            DataTable get_DB = conn.DocBang("select MaDoi from DoiBong where Tendoi like N'" + txtAddTenDoi.Text + "'");
+            if (get_DB.Rows.Count != 0)
+            {
+                DB = false;
+            }
+            return DB;
+        }
+
         private void check_MS()
         {
             DataTable get_ms = conn.DocBang("select masan from SanBong where tensan like concat('%',N'" + txtAddTenSan.Text + "')");
@@ -64,6 +75,10 @@ namespace QuanLyGiaiBong
             {
                 MessageBox.Show("Điền đầy đủ thông tin đội bóng!");
                 txtAddTenDoi.Focus();
+            }
+            else if (checkDB() == false)
+            {
+                MessageBox.Show("Tên đội bóng đã tồn tại!");
             }
             else
             {
