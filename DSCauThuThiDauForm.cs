@@ -90,7 +90,7 @@ namespace QuanLyGiaiBong
                              "VALUES (N'"+ maTranDau +"', N'"+ maDoi +"', N'"+ maCauThu +"', N'"+ viTri +"')";
                     dtBase.CapNhatDuLieu(sql);
                     // Update  Số lần ra sân
-                    string updatePlayerSql = "UPDATE CauThu SET SoLanRaSan = SoLanRaSan + 1 WHERE MaCT = '" + maCauThu + "'";
+                    string updatePlayerSql = "update CauThu set SoLanRaSan = (select COUNT(*) from TranDau_CauThu where MaCT = MaCauThu)";
                     dtBase.CapNhatDuLieu(updatePlayerSql);
                 }
 
