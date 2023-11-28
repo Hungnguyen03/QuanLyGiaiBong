@@ -889,7 +889,6 @@
             this.bunifuToolTip1.SetToolTipIcon(this.Update_Data, null);
             this.bunifuToolTip1.SetToolTipTitle(this.Update_Data, "");
             this.Update_Data.UseDefaultRadiusAndThickness = true;
-            this.Update_Data.Click += new System.EventHandler(this.Update_Data_Click);
             // 
             // qLGiaiBongDaDataSet
             // 

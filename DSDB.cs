@@ -49,8 +49,16 @@ namespace QuanLyGiaiBong
                 dgvDSDB["anhDB", i].Value = anhDB;
             }
             dtDoiBong.Dispose();
+            updateDiem();
         }
-
+        private void updateDiem()
+        {
+            dtBase.CapNhatDuLieu("WITH Score AS (SELECT dbo.DoiBong.MaDoi, SUM(CASE WHEN dbo.TranDau.MaDoiNha = dbo.DoiBong.MaDoi AND dbo.TranDau.SoBanThangDoiNha > dbo.TranDau.SoBanThuaDoiNha THEN 3 " +
+                    "WHEN dbo.TranDau.MaDoiKhach = dbo.DoiBong.MaDoi AND dbo.TranDau.SoBanThangDoiNha < dbo.TranDau.SoBanThuaDoiNha THEN 3 " +
+                    "WHEN dbo.TranDau.SoBanThangDoiNha = dbo.TranDau.SoBanThuaDoiNha THEN 1 ELSE 0 END) AS Diem " +
+                    "FROM dbo.DoiBong LEFT JOIN dbo.TranDau ON dbo.DoiBong.MaDoi = dbo.TranDau.MaDoiNha OR dbo.DoiBong.MaDoi = dbo.TranDau.MaDoiKhach GROUP BY dbo.DoiBong.MaDoi) " +
+                "UPDATE dbo.DoiBong SET Diem = Score.Diem FROM dbo.DoiBong INNER JOIN Score ON dbo.DoiBong.MaDoi = Score.MaDoi;");
+        }
         private void dgvDSDB_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left && e.RowIndex >= 0)

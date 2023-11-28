@@ -27,12 +27,13 @@ namespace QuanLyGiaiBong
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void DemCT(int maDB)
         {
-            DataTable dem = conn.DocBang("select count(cauthu.maCT) as Tong from cauthu where madoi = " + maDB);
-            txt_demCT.Text = "Số cầu thủ: " + dem.Rows[0]["Tong"].ToString();
+            conn.CapNhatDuLieu("UPDATE Doibong SET SoLuongCT = (SELECT COUNT(cauthu.maCT) FROM cauthu WHERE madoi = " + maDB + ") WHERE madoi = " + maDB);
+            DataTable dem = conn.DocBang("SELECT SoLuongCT FROM Doibong WHERE madoi = " + maDB);
+            txt_demCT.Text = "Số cầu thủ: " + dem.Rows[0]["SoLuongCT"].ToString();
         }
         public void getDB(int maDB)
         {
-            DataTable ctDB = conn.DocBang("select Logo, Madoi,TenDoi,SanBong.TenSan,HLV,Tinh.TenTinh,Diem,Sobanthang,Sobanthua from Doibong " +
+            DataTable ctDB = conn.DocBang("select Logo, Madoi,TenDoi,SanBong.TenSan,HLV,Tinh.TenTinh,Diem,SoBanThang,SoBanThua from Doibong " +
                 "join SanBong on Doibong.masan = Sanbong.masan " +
                 "join Tinh on Doibong.matinh = tinh.matinh where madoi = " + maDB);
             string appPath = Application.StartupPath;
@@ -48,7 +49,7 @@ namespace QuanLyGiaiBong
                 txtHLV.Text = ctDB.Rows[0]["HLV"].ToString();
                 txtTinh.Text = ctDB.Rows[0]["TenTinh"].ToString();
                 txtDiem.Text = ctDB.Rows[0]["diem"].ToString();
-                txtSoBan.Text = ctDB.Rows[0]["sobanthang"].ToString() + " / " + ctDB.Rows[0]["sobanthua"].ToString();
+                txtSoBan.Text = ctDB.Rows[0]["SoBanThang"].ToString() + " / " + ctDB.Rows[0]["SoBanThua"].ToString();
                 string doibongPath = Path.Combine(projectRootPath, "Images", "DoiBong");
                 Image anhCT = Image.FromFile(doibongPath + "\\" + ctDB.Rows[0]["Logo"].ToString());
                 logo.Image = anhCT;
@@ -56,8 +57,20 @@ namespace QuanLyGiaiBong
             }
             ctDB.Dispose();
         }
+        private void CapNhatTTDoiBong()
+        {
+            //Cap nhat tong ban thang doi bong
+            conn.CapNhatDuLieu("UPDATE DoiBong SET SoBanThang = " +
+            "ISNULL((SELECT SUM(SoBanThangDoiNha) FROM TranDau WHERE MaDoiNha = MaDoi),0) + " +
+            "ISNULL((SELECT SUM(SoBanThuaDoiNha) FROM TranDau WHERE MaDoiKhach = MaDoi),0)");
+            //Cap nhat tong ban thua doi bong
+            conn.CapNhatDuLieu("UPDATE DoiBong SET SoBanThua = " +
+            "ISNULL((SELECT SUM( ISNULL(SoBanThuaDoiNha,0) ) FROM TranDau WHERE MaDoiNha = MaDoi),0) + " +
+            "ISNULL((SELECT SUM( ISNULL(SoBanThangDoiNha,0) ) FROM TranDau WHERE MaDoiKhach = MaDoi),0)");
+        }
         private void ClubDetail_Load(object sender, EventArgs e)
         {
+            CapNhatTTDoiBong();
             getDB(maDB);
             DemCT(maDB);
             DataTable dataTable = conn.DocBang("select MaCT,TenCT,vitri.tenvitri,NgaySinh,SoAo from CauThu " +
