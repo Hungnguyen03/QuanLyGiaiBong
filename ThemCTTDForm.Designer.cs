@@ -719,7 +719,6 @@
             this.bunifuToolTip1.SetToolTip(this.label10, "");
             this.bunifuToolTip1.SetToolTipIcon(this.label10, null);
             this.bunifuToolTip1.SetToolTipTitle(this.label10, "");
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pTitlebar
             // 

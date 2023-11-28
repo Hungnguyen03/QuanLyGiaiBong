@@ -231,7 +231,6 @@
             this.lbDo.Size = new System.Drawing.Size(20, 24);
             this.lbDo.TabIndex = 30;
             this.lbDo.Text = "3";
-            this.lbDo.Click += new System.EventHandler(this.lbDo_Click);
             // 
             // lbBanThang
             // 

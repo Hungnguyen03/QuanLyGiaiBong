@@ -46,14 +46,6 @@ namespace QuanLyGiaiBong
             dtTranDau.Dispose();//Giải phóng bộ nhớ cho DataTable
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dgvDSTD_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
         private void dgvDSTD_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left && e.RowIndex >= 0)
@@ -115,11 +107,6 @@ namespace QuanLyGiaiBong
                 ThemCTTDForm cttd = new ThemCTTDForm(maTD);
                 cttd.ShowDialog();
             }
-        }
-
-        private void txbSTD_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

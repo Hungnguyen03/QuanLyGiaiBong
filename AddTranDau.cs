@@ -128,16 +128,6 @@ namespace QuanLyGiaiBong
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void pTitlebar_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pTitlebar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (tbLuot.Text.Trim() == "" || tbVong.Text == "" ||

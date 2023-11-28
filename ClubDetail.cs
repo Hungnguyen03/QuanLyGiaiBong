@@ -25,25 +25,6 @@ namespace QuanLyGiaiBong
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
         private void DemCT(int maDB)
         {
             DataTable dem = conn.DocBang("select count(cauthu.maCT) as Tong from cauthu where madoi = " + maDB);

@@ -78,7 +78,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1232, 91);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnChiTiet
             // 
@@ -423,7 +422,6 @@
             this.txbSTD.TextPlaceholder = "Enter text";
             this.txbSTD.UseSystemPasswordChar = false;
             this.txbSTD.WordWrap = true;
-            this.txbSTD.TextChanged += new System.EventHandler(this.txbSTD_TextChanged);
             // 
             // txbSBT
             // 
@@ -668,7 +666,6 @@
             this.dgvDSTD.Size = new System.Drawing.Size(1232, 562);
             this.dgvDSTD.TabIndex = 1;
             this.dgvDSTD.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            this.dgvDSTD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTD_CellContentClick);
             this.dgvDSTD.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDSTD_CellMouseDoubleClick);
             // 
             // DSTD

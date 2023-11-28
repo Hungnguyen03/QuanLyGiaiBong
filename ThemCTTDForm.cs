@@ -199,11 +199,6 @@ namespace QuanLyGiaiBong
             MessageBox.Show("Đã cập nhật điểm số!");
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void DSDoiKhachBtn_Click(object sender, EventArgs e)
         {
             DSCauThuThiDauForm dsCauThuForm = new DSCauThuThiDauForm(madoikhach,matrandau);

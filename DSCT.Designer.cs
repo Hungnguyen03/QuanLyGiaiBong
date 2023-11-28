@@ -243,7 +243,6 @@
             this.txbSBT.TextPlaceholder = "Enter text";
             this.txbSBT.UseSystemPasswordChar = false;
             this.txbSBT.WordWrap = true;
-            this.txbSBT.TextChanged += new System.EventHandler(this.txbSBT_TextChanged);
             // 
             // txbDB
             // 
@@ -496,7 +495,6 @@
             this.label3.Size = new System.Drawing.Size(135, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Số bàn thắng:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -508,7 +506,6 @@
             this.label2.Size = new System.Drawing.Size(96, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Đội bóng:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 

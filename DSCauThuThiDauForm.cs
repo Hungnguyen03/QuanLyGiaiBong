@@ -71,11 +71,6 @@ namespace QuanLyGiaiBong
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void pTitlebar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void LuuBtn_Click(object sender, EventArgs e)
         {
             GetSelectedPlayers();

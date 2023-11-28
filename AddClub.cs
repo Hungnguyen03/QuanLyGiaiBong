@@ -106,20 +106,6 @@ namespace QuanLyGiaiBong
         {
             EmptyText();
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_choosePic_Click(object sender, EventArgs e)
         {
@@ -143,22 +129,6 @@ namespace QuanLyGiaiBong
                 pbAnh.Image = img;
             }
         }
-
-        private void txtAddTenDoi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLogoLink_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
            this.Close();
@@ -167,16 +137,6 @@ namespace QuanLyGiaiBong
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void pTitlebar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAddTenDoi_TextChanged_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

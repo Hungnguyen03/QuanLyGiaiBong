@@ -64,11 +64,6 @@ namespace QuanLyGiaiBong
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btn_addDB_Click(object sender, EventArgs e)
         {
             AddClub addClub = new AddClub();

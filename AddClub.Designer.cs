@@ -154,7 +154,6 @@
             this.label1.Size = new System.Drawing.Size(351, 46);
             this.label1.TabIndex = 1;
             this.label1.Text = "Thông tin đội bóng";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label5
             // 
@@ -165,7 +164,6 @@
             this.label5.Size = new System.Drawing.Size(68, 29);
             this.label5.TabIndex = 1;
             this.label5.Text = "Logo";
-            this.label5.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtAddHLV
             // 
@@ -391,7 +389,6 @@
             this.txtAddTenDoi.TextPlaceholder = "Enter text";
             this.txtAddTenDoi.UseSystemPasswordChar = false;
             this.txtAddTenDoi.WordWrap = true;
-            this.txtAddTenDoi.TextChanged += new System.EventHandler(this.txtAddTenDoi_TextChanged_1);
             // 
             // pTitlebar
             // 
@@ -409,7 +406,6 @@
             this.pTitlebar.ShowBorders = true;
             this.pTitlebar.Size = new System.Drawing.Size(1039, 60);
             this.pTitlebar.TabIndex = 36;
-            this.pTitlebar.Click += new System.EventHandler(this.pTitlebar_Click);
             this.pTitlebar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTitlebar_MouseDown);
             // 
             // btnClose
@@ -437,7 +433,6 @@
             this.pbAnh.Size = new System.Drawing.Size(203, 187);
             this.pbAnh.TabIndex = 3;
             this.pbAnh.TabStop = false;
-            this.pbAnh.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
@@ -517,7 +512,6 @@
             this.label6.Size = new System.Drawing.Size(157, 29);
             this.label6.TabIndex = 1;
             this.label6.Text = "Tên đội bóng";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtLogoLink
             // 

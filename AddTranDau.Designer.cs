@@ -621,7 +621,6 @@
             this.pTitlebar.ShowBorders = true;
             this.pTitlebar.Size = new System.Drawing.Size(900, 60);
             this.pTitlebar.TabIndex = 35;
-            this.pTitlebar.Click += new System.EventHandler(this.pTitlebar_Click_1);
             this.pTitlebar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTitlebar_MouseDown);
             // 
             // btnClose

@@ -106,11 +106,6 @@ namespace QuanLyGiaiBong
             btnCloseChildForm.Visible = false;
         }
 
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -133,11 +128,6 @@ namespace QuanLyGiaiBong
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

@@ -609,7 +609,6 @@
             this.cmbDoi.Text = null;
             this.cmbDoi.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbDoi.TextLeftMargin = 5;
-            this.cmbDoi.SelectedIndexChanged += new System.EventHandler(this.cmbDoi_SelectedIndexChanged);
             // 
             // cmbViTri
             // 
@@ -764,7 +763,6 @@
             this.pTitlebar.ShowBorders = true;
             this.pTitlebar.Size = new System.Drawing.Size(900, 60);
             this.pTitlebar.TabIndex = 35;
-            this.pTitlebar.Click += new System.EventHandler(this.pTitlebar_Click);
             this.pTitlebar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTitlebar_MouseDown);
             // 
             // btnClose
