@@ -17,7 +17,10 @@ namespace QuanLyGiaiBong
             InitializeComponent();
             getData();
         }
-
+        public void ReloadData()
+        {
+            getData();
+        }
         private void DSCT_Load(object sender, EventArgs e)
         {
             getData();
@@ -118,8 +121,12 @@ namespace QuanLyGiaiBong
         private void btn_addCT_Click(object sender, EventArgs e)
         {
             AddCauThu addCauThu = new AddCauThu();
+            addCauThu.FormClosed += AddCauThu_FormClosed;
             addCauThu.ShowDialog();
         }
-
+        private void AddCauThu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ReloadData();
+        }
     }
 }

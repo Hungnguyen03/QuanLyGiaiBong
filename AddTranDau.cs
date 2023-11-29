@@ -142,7 +142,7 @@ namespace QuanLyGiaiBong
                 "" + "('" + int.Parse(tbLuot.Text) + "','" + int.Parse(tbVong.Text) + "','" + int.Parse(MaDN) + "','" + int.Parse(MaDK) + "','0','0','0','0','0','0',N'" + tbGhiChu.Text + "')";
                 dtBase.CapNhatDuLieu(sql);
                 MessageBox.Show("Đã Thêm Trận Đấu");
-
+                this.Close();   
             }
 
         }

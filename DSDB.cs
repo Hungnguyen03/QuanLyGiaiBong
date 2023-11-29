@@ -15,7 +15,10 @@ namespace QuanLyGiaiBong
             InitializeComponent();
             getData();
         }
-       
+        public void ReloadData()
+        {
+            getData();
+        }
         private void DSDB_Load(object sender, EventArgs e)
         {
             getData();
@@ -75,7 +78,13 @@ namespace QuanLyGiaiBong
         private void btn_addDB_Click(object sender, EventArgs e)
         {
             AddClub addClub = new AddClub();
+            addClub.FormClosed += addClub_FormClosed;
             addClub.ShowDialog();
         }
+        private void addClub_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ReloadData();
+        }
+
     }
 }

@@ -18,8 +18,18 @@ namespace QuanLyGiaiBong
         {
             InitializeComponent();
         }
-
         private void DSTD_Load(object sender, EventArgs e)
+        {
+            getData();
+        }
+
+        public void ReloadData()
+        {
+            getData();
+        }
+
+
+        private void getData()
         {
             DataTable dtTranDau = dtBase.DocBang("SELECT Luotdau, DB1.TenDoi AS TenDoiNha,SoBanThangDoiNha,SoBanThuaDoiNha," +
                 "DB2.TenDoi AS TenDoiKhach, SoTheDoDoiNha, MaTranDau " +
@@ -94,10 +104,13 @@ namespace QuanLyGiaiBong
 		private void add_Click(object sender, EventArgs e)
 		{
 				AddTranDau TD = new AddTranDau();
-				TD.ShowDialog();
-
+                TD.FormClosed += AddTranDau_FormClosed;
+                TD.ShowDialog();
 		}
-
+        private void AddTranDau_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ReloadData();
+        }
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
             if (dgvDSTD.SelectedRows.Count > 0)
@@ -105,8 +118,15 @@ namespace QuanLyGiaiBong
                 DataGridViewRow selectedRow = dgvDSTD.SelectedRows[0];
                 int maTD = Convert.ToInt32(selectedRow.Cells["MaTranDau"].Value);
                 ThemCTTDForm cttd = new ThemCTTDForm(maTD);
+
+                cttd.FormClosed += ThemCTTDForm_FormClosed;
+
                 cttd.ShowDialog();
             }
+        }
+        private void ThemCTTDForm_FormClosed(object sender, EventArgs e)
+        {
+            ReloadData();
         }
     }
 }

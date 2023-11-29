@@ -100,6 +100,7 @@ namespace QuanLyGiaiBong
                 MessageBox.Show("New club added!");
                 get_ms.Dispose();
                 get_mt.Dispose();
+                this.Close();
             }
         }
         private void btn_clear_Click(object sender, EventArgs e)

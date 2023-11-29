@@ -107,8 +107,9 @@ namespace QuanLyGiaiBong
                 MessageBox.Show("Đã thêm cầu thủ!");
 
                 dtBase.CapNhatDuLieu("update DoiBong set SoLuongCT = ISNULL(SoLuongCT,0) + 1 where DoiBong.MaDoi = '" + (cmbDoi.SelectedIndex + 1) + "'");
-
+                this.Close();
             }
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
