@@ -291,6 +291,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VPL.resx">
       <DependentUpon>VPL.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />

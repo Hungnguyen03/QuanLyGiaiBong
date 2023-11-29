@@ -66,48 +66,53 @@ namespace QuanLyGiaiBong
             }
         }
 
-            //Excel.Application exApp = new Excel.Application();
-            //Excel.Workbook exBook = exApp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
-            //Excel.Worksheet exSheet = (Excel.Worksheet)exBook.Worksheets[1]; //Thể hiện rằng file này có 1 trang tính
-            //Excel.Range exRange = (Excel.Range)exSheet.Cells[1, 1]; // Con trỏ chạy vào ô A1 
-            //exRange.Font.Size = 15;
-            //exRange.Font.Bold = true;
-            //exRange.Font.Color = Color.Blue;
-            //exRange.Value = "Thông tin chi tiết";
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Excel.Application exApp = new Excel.Application();
+            Excel.Workbook exBook = exApp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
+            Excel.Worksheet exSheet = (Excel.Worksheet)exBook.Worksheets[1]; //Thể hiện rằng file này có 1 trang tính
+            Excel.Range exRange = (Excel.Range)exSheet.Cells[1, 1]; // Con trỏ chạy vào ô A1 
+            exRange.Font.Size = 15;
+            exRange.Font.Bold = true;
+            exRange.Font.Color = Color.Blue;
+            exRange.Value = "Thông tin chi tiết";
 
-            //exSheet.Range["D4"].Font.Size = 20;
-            //exSheet.Range["D4"].Font.Color = Color.Red;
-            //exSheet.Range["D4"].Font.Bold = true;
-            //exSheet.Range["D4"].Value = "Vua Phá Lưới";
+            exSheet.Range["D4"].Font.Size = 20;
+            exSheet.Range["D4"].Font.Color = Color.Red;
+            exSheet.Range["D4"].Font.Bold = true;
+            exSheet.Range["D4"].Value = "Vua Phá Lưới";
 
-            ////In các thông tin chung
-            //exSheet.Range["A6:G6"].Font.Size = 12;
-            //exSheet.Range["A6:G6"].ColumnWidth = 30;
-            //exSheet.Range["A6:G6"].Font.Bold = true;
-            //exSheet.Range["A6:G6"].Font.Color = Color.Black;
+            //In các thông tin chung
+            exSheet.Range["A6:G6"].Font.Size = 12;
+            exSheet.Range["A6:G6"].ColumnWidth = 30;
+            exSheet.Range["A6:G6"].Font.Bold = true;
+            exSheet.Range["A6:G6"].Font.Color = Color.Black;
 
-            //exSheet.Range["A6"].Value = "Tên cầu thủ";
-            //exSheet.Range["B6"].Value = "Vị trí";
-            //exSheet.Range["C6"].Value = "Số bàn thắng";
-            ////In danh sách các chi tiết nhân viên
-            //int dong = 5;
-            //for (int i = 0; i < dgvVPL.Rows.Count - 1; i++)
-            //{
-            //    exSheet.Range["A" + (dong + i).ToString()].Value = dgvVPL.Rows[i].Cells["TenCT"].Value.ToString();
-            //    exSheet.Range["B" + (dong + i).ToString()].Value = dgvVPL.Rows[i].Cells["TenViTri"].Value.ToString();
-            //    exSheet.Range["C" + (dong + i).ToString()].Value = dgvVPL.Rows[i].Cells["SoBanThang"].Value.ToString();
-            //}
-            //dong = dong + dgvVPL.Rows.Count;
-            //exSheet.Range["D" + dong.ToString()].Value = "Được thực hiển bởi quản lý";
-            //exSheet.Name = "Tác phẩm";
-            //exBook.Activate();
-            ////Lưu file
-            //SaveFileDialog save = new SaveFileDialog();
-            //if (save.ShowDialog() == DialogResult.OK)
-            //{
-            //    exBook.SaveAs(save.FileName.ToLower());
-            //    MessageBox.Show("Lưu file thành công");
-            //}
-            //exApp.Quit();
+            exSheet.Range["A6"].Value = "Tên cầu thủ";
+            exSheet.Range["B6"].Value = "Vị trí";
+            exSheet.Range["C6"].Value = "Số bàn thắng";
+            //In danh sách các chi tiết nhân viên
+            int dong = 7;
+            for (int i = 0; i < dgvVPL.Rows.Count; i++)
+            {
+                exSheet.Range["A" + (dong + i).ToString()].Value = dgvVPL.Rows[i].Cells["TenCT"].Value.ToString();
+                exSheet.Range["B" + (dong + i).ToString()].Value = dgvVPL.Rows[i].Cells["TenViTri"].Value.ToString();
+                exSheet.Range["C" + (dong + i).ToString()].Value = dgvVPL.Rows[i].Cells["SoBanThang"].Value.ToString();
+            }
+            dong = dong + dgvVPL.Rows.Count;
+            exSheet.Range["D" + dong.ToString()].Value = "Được thực hiển bởi quản lý";
+            exSheet.Name = "Tác phẩm";
+            exBook.Activate();
+            //Lưu file
+            SaveFileDialog save = new SaveFileDialog();
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                exBook.SaveAs(save.FileName.ToLower());
+                MessageBox.Show("Lưu file thành công");
+            }
+            exApp.Quit();
+        }
+
+
     }
 }
