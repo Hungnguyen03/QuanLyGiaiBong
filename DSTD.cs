@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Excel = Microsoft.Office.Interop.Excel;
 using System.Windows.Forms;
-using static QuanLyGiaiBong.ProcessDataBase;
+using System.Drawing;
 
 namespace QuanLyGiaiBong
 {
@@ -43,7 +38,7 @@ namespace QuanLyGiaiBong
             dgvDSTD.Columns[2].HeaderText = "  ";
             dgvDSTD.Columns[3].HeaderText = "  ";
             dgvDSTD.Columns["TenDoiKhach"].HeaderText = "Đội khách";
-            dgvDSTD.Columns["SoTheDoDoiNha"].HeaderText = "Số thẻ đỏ";
+            dgvDSTD.Columns["SoTheDoDoiNha"].HeaderText = "Thẻ đỏ ĐN";
             dgvDSTD.Columns[0].Width = 100;
             dgvDSTD.Columns[5].Width = 100;
             dgvDSTD.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -91,7 +86,7 @@ namespace QuanLyGiaiBong
             dgvDSTD.Columns[2].HeaderText = "  ";
             dgvDSTD.Columns[3].HeaderText = "  ";
             dgvDSTD.Columns[4].HeaderText = "Đội khách";
-            dgvDSTD.Columns[5].HeaderText = "Số thẻ đỏ";
+            dgvDSTD.Columns[5].HeaderText = "Thẻ đỏ ĐN";
             dgvDSTD.Columns[0].Width = 100;
             dgvDSTD.Columns[5].Width = 100;
             dgvDSTD.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -127,6 +122,59 @@ namespace QuanLyGiaiBong
         private void ThemCTTDForm_FormClosed(object sender, EventArgs e)
         {
             ReloadData();
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            if (dgvDSTD.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvDSTD.SelectedRows[0];
+                Excel.Application exApp = new Excel.Application();
+                Excel.Workbook exBook = exApp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
+                Excel.Worksheet exSheet = (Excel.Worksheet)exBook.Worksheets[1]; //Thể hiện rằng file này có 1 trang tính
+                Excel.Range exRange = (Excel.Range)exSheet.Cells[1, 1]; // Con trỏ chạy vào ô A1 
+                exRange.Font.Size = 15;
+                exRange.Font.Bold = true;
+                exRange.Font.Color = Color.Blue;
+                exRange.Value = "Thông tin chi tiết";
+
+                exSheet.Range["D4"].Font.Size = 20;
+                exSheet.Range["D4"].Font.Color = Color.Red;
+                exSheet.Range["D4"].Font.Bold = true;
+                exSheet.Range["D4"].Value = "Kết quả trận đấu";
+
+                //In các thông tin chung
+                exSheet.Range["A6:G6"].Font.Size = 12;
+                exSheet.Range["A6:G6"].ColumnWidth = 30;
+                exSheet.Range["A6:G6"].Font.Bold = true;
+                exSheet.Range["A6:G6"].Font.Color = Color.Black;
+
+                exSheet.Range["A6"].Value = "Lượt đấu";
+                exSheet.Range["B6"].Value = "Đội nhà";
+                exSheet.Range["C6"].Value = "Bàn thắng đội nhà";
+                exSheet.Range["D6"].Value = "Bàn thắng đội khách";
+                exSheet.Range["E6"].Value = "Đội khách";
+                exSheet.Range["F6"].Value = "Số thẻ đỏ đội nhà";
+                //In danh sách các chi tiết nhân viên
+                int dong = 7;
+                exSheet.Range["A" + dong.ToString()].Value = selectedRow.Cells["Luotdau"].Value.ToString();
+                exSheet.Range["B" + dong.ToString()].Value = selectedRow.Cells["TenDoiNha"].Value.ToString();
+                exSheet.Range["C" + dong.ToString()].Value = selectedRow.Cells["SoBanThangDoiNha"].Value.ToString();
+                exSheet.Range["D" + dong.ToString()].Value = selectedRow.Cells["SoBanThuaDoiNha"].Value.ToString();
+                exSheet.Range["E" + dong.ToString()].Value = selectedRow.Cells["TenDoiKhach"].Value.ToString();
+                exSheet.Range["F" + dong.ToString()].Value = selectedRow.Cells["SoTheDoDoiNha"].Value.ToString();
+                exSheet.Range["F" + 10.ToString()].Value = "Được thực hiển bởi quản lý";
+                exSheet.Name = "Tác phẩm";
+                exBook.Activate();
+                //Lưu file
+                SaveFileDialog save = new SaveFileDialog();
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    exBook.SaveAs(save.FileName.ToLower());
+                    MessageBox.Show("Lưu file thành công");
+                }
+                exApp.Quit();
+            }       
         }
     }
 }

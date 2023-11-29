@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClubDetail));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.logo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.txtTenDoi = new System.Windows.Forms.Label();
             this.txt_demCT = new System.Windows.Forms.Label();
+            this.btnExcel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DsCauThu)).BeginInit();
             this.pTitlebar.SuspendLayout();
@@ -55,8 +57,8 @@
             // 
             // logo
             // 
-            this.logo.Location = new System.Drawing.Point(71, 124);
-            this.logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logo.Location = new System.Drawing.Point(68, 94);
+            this.logo.Margin = new System.Windows.Forms.Padding(2);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(138, 153);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -224,7 +226,7 @@
             this.DsCauThu.HeaderBgColor = System.Drawing.Color.Empty;
             this.DsCauThu.HeaderForeColor = System.Drawing.Color.White;
             this.DsCauThu.Location = new System.Drawing.Point(8, 318);
-            this.DsCauThu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DsCauThu.Margin = new System.Windows.Forms.Padding(2);
             this.DsCauThu.Name = "DsCauThu";
             this.DsCauThu.ReadOnly = true;
             this.DsCauThu.RowHeadersVisible = false;
@@ -262,7 +264,7 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnClose.Location = new System.Drawing.Point(674, 2);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(24, 37);
             this.btnClose.TabIndex = 8;
@@ -293,11 +295,102 @@
             this.txt_demCT.TabIndex = 3;
             this.txt_demCT.Text = "Số cầu thủ: ";
             // 
+            // btnExcel
+            // 
+            this.btnExcel.AllowAnimations = true;
+            this.btnExcel.AllowMouseEffects = true;
+            this.btnExcel.AllowToggling = false;
+            this.btnExcel.AnimationSpeed = 200;
+            this.btnExcel.AutoGenerateColors = false;
+            this.btnExcel.AutoRoundBorders = false;
+            this.btnExcel.AutoSizeLeftIcon = true;
+            this.btnExcel.AutoSizeRightIcon = true;
+            this.btnExcel.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcel.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExcel.BackgroundImage")));
+            this.btnExcel.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnExcel.ButtonText = "Xuất Excel";
+            this.btnExcel.ButtonTextMarginLeft = 0;
+            this.btnExcel.ColorContrastOnClick = 45;
+            this.btnExcel.ColorContrastOnHover = 45;
+            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnExcel.CustomizableEdges = borderEdges1;
+            this.btnExcel.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnExcel.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnExcel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnExcel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExcel.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcel.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnExcel.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnExcel.IconMarginLeft = 11;
+            this.btnExcel.IconPadding = 10;
+            this.btnExcel.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcel.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnExcel.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnExcel.IconSize = 25;
+            this.btnExcel.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.IdleBorderRadius = 1;
+            this.btnExcel.IdleBorderThickness = 1;
+            this.btnExcel.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.IdleIconLeftImage = null;
+            this.btnExcel.IdleIconRightImage = null;
+            this.btnExcel.IndicateFocus = false;
+            this.btnExcel.Location = new System.Drawing.Point(8, 282);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.OnDisabledState.BorderRadius = 1;
+            this.btnExcel.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnExcel.OnDisabledState.BorderThickness = 1;
+            this.btnExcel.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.OnDisabledState.IconLeftImage = null;
+            this.btnExcel.OnDisabledState.IconRightImage = null;
+            this.btnExcel.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.onHoverState.BorderRadius = 1;
+            this.btnExcel.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnExcel.onHoverState.BorderThickness = 1;
+            this.btnExcel.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnExcel.onHoverState.IconLeftImage = null;
+            this.btnExcel.onHoverState.IconRightImage = null;
+            this.btnExcel.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.OnIdleState.BorderRadius = 1;
+            this.btnExcel.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnExcel.OnIdleState.BorderThickness = 1;
+            this.btnExcel.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.OnIdleState.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExcel.OnIdleState.IconLeftImage = null;
+            this.btnExcel.OnIdleState.IconRightImage = null;
+            this.btnExcel.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.OnPressedState.BorderRadius = 1;
+            this.btnExcel.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnExcel.OnPressedState.BorderThickness = 1;
+            this.btnExcel.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(148)))), ((int)(((byte)(23)))));
+            this.btnExcel.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnExcel.OnPressedState.IconLeftImage = null;
+            this.btnExcel.OnPressedState.IconRightImage = null;
+            this.btnExcel.Size = new System.Drawing.Size(109, 34);
+            this.btnExcel.TabIndex = 37;
+            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnExcel.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnExcel.TextMarginLeft = 0;
+            this.btnExcel.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnExcel.UseDefaultRadiusAndThickness = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
             // ClubDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 491);
+            this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.txtTenDoi);
             this.Controls.Add(this.pTitlebar);
             this.Controls.Add(this.DsCauThu);
@@ -313,7 +406,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.txt_demCT);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ClubDetail";
             this.Text = "ClubDetail";
             this.Load += new System.EventHandler(this.ClubDetail_Load);
@@ -344,5 +437,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label txtTenDoi;
         private System.Windows.Forms.Label txt_demCT;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnExcel;
     }
 }
