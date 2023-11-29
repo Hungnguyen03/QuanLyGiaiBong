@@ -122,6 +122,23 @@ namespace QuanLyGiaiBong
         {
             this.Close();
         }
+
+        private void tbLuot_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbVong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void pTitlebar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();

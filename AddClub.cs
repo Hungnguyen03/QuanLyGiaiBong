@@ -71,7 +71,7 @@ namespace QuanLyGiaiBong
         private void btn_add_Click(object sender, EventArgs e)
         {
             if (txtAddTenSan.Text.Trim() == "" || txtAddTenDoi.Text == "" ||
-                txtAddHLV.Text == "" || txtAddTinh.Text == "")
+                txtAddHLV.Text == "" || txtAddTinh.Text == "" || pbAnh.Image == null)
             {
                 MessageBox.Show("Điền đầy đủ thông tin đội bóng!");
                 txtAddTenDoi.Focus();

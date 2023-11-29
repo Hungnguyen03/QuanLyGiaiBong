@@ -87,7 +87,7 @@ namespace QuanLyGiaiBong
         {
             if (cmbDoi.SelectedIndex == -1 || tbTen.Text.Trim() == "" ||
                 cmbViTri.SelectedIndex == -1 || tbSoAo.Text.Trim() == "" ||
-                tbQuocTich.Text.Trim() == "")
+                tbQuocTich.Text.Trim() == "" || pbAnh.Image == null)
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin cầu thủ!");
             }
@@ -120,6 +120,14 @@ namespace QuanLyGiaiBong
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void tbSoAo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
